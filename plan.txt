@@ -1,0 +1,10 @@
+Thesis on:
+- Adapting Multi-Layered Models for Indoor RSSI Localization for on the move predictions OR
+- Selective AP use for Multi-Layered Models for Indoor RSSI Localization
+
+Currently working on:
+- Trilateration
+-- Formula programmed, further analysis on performance required
+
+- Machine Learning Model
+-- Figured out how to generate a model. Need to look into how to generate a prediction with it.
