@@ -38,7 +38,7 @@ def Scan(interface = VU_IF, frequencies = []) -> Result[list[Cell], str]:
         return Ok(cell_list)
     
     except Exception as e:
-        print("oh no!")
+        #TODO: error handling
         return Err(e)
     
 def FindAPs(ssid, interface, frequencies) -> tuple[list[Cell], list[Cell]]:
@@ -77,6 +77,6 @@ def FindAPs(ssid, interface, frequencies) -> tuple[list[Cell], list[Cell]]:
             return excel_aps, other_aps
         
         case Err(_e):
+            #TODO: error handling
             print(_e)
-            print("not this!")
             return [], []
