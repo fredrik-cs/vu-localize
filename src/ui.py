@@ -1,4 +1,4 @@
-from enums import Colors
+from src.enums import Colors
 
 def ColorPrint(string, color):
     print(color + string, Colors.RESET)

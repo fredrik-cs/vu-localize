@@ -1,23 +1,25 @@
-from coordinates import Coordinate, UnityCoordinate
-from iw_interpret import Cell
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 import pandas as pd
 from datetime import datetime
-from enums import Data
+from src.coordinates import Coordinate, UnityCoordinate
+from src.iw_interpret import Cell
+from src.enums import Data
 
 class SampleTableManager:
     def __init__(self, floor):
         data = []
-        columns = self._GetAPs()
+        columns = ['x', 'y', 'z', 'cardinal', 'timestamp', 'APE', 'WPE']
         #TODO: APE and WPE are a hack. 
         # It's for looking at all predictions and comparing it to the real coords
         # This needs a real strategy
-        columns.extend(['x', 'y', 'z', 'cardinal', 'timestamp', 'APE', 'WPE'])
+        columns.extend(self._GetAPs())
         self.df = pd.DataFrame(data, columns=columns)
         now = datetime.now()
-        self.filename = f"data/samplesf{floor}M{now.month}D{now.day}h{now.hour}m{now.hour}.csv"
+        self.filename = f"data/samplesf{floor}M{now.month}D{now.day}h{now.hour}m{now.minute}.csv"
+        self.WriteCSV()
+        print(f"Started writing results to {self.filename}")
         
     def _GetAPs(self):
         df = pd.read_excel(Data.AP_MAC)

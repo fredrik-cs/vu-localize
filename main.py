@@ -1,11 +1,11 @@
 from itertools import combinations
 import statistics
-from coordinates import GetAPUnityCoordinates, GetCoordinates, GetUnityCoordinates
-from enums import Band, SSIDs, WifiInterface
-from sampling import SampleTableManager
-from scan import FindAPs
-from loggers import LogFrequencies, LogUnknowns
-from trilateration import AnalyticalDistanceToAP, Trilaterate3D    
+from src.coordinates import GetAPUnityCoordinates, GetCoordinates, GetUnityCoordinates
+from src.enums import Band, SSIDs, WifiInterface
+from src.sampling import SampleTableManager
+from src.scan import FindAPs
+from src.loggers import LogFrequencies, LogUnknowns
+from src.trilateration import AnalyticalDistanceToAP, Trilaterate3D    
   
 def PredictTrilaterate(valids, unity_coordinate):
     worst_predicted_error = -1
@@ -60,7 +60,7 @@ def ScanFloor(interface, ssid, selected_floor, frequencies = []):
             
             input(f"Press any key while facing {cardinal}")
             for i in range(4):
-                valids, unknowns = FindAPs(ssid, frequencies, interface)
+                valids, unknowns = FindAPs(ssid, frequencies, interface, min_aps=3)
                 LogUnknowns(unknowns)
                 LogFrequencies(valids)
                 # Multilateration requires at least 3 points, which is trilateration.
@@ -76,8 +76,17 @@ if __name__ == "__main__":
     interface = WifiInterface.WLP1S0
     ssid = SSIDs.VU_CAMPUSNET
     
-    floor = int(input("Are you scanning floor 5 or 6? "))
-    if (floor != 5) and (floor != 6):
+    floor = input("Are you scanning floor 5 or 6? ")
+    if (floor != '5') and (floor != '6'):
         raise Exception("Invalid floor provided")
+    floor = int(floor)
     
-    ScanFloor(interface, ssid, 5, Band.ALL)
+    band = input("What band are you scanning on? Select 1-4\n   1) 2.4 GHz\n   2) 5 GHz\n   3) Both\n   4) All (Not recommended)\n")
+    match band:
+        case '1': band = Band.G2_4
+        case '2': band = Band.G5
+        case '3': band = Band.BOTH
+        case '4': band = Band.ALL
+        case _: raise Exception("Invalid band provided, please select between 1-3")
+    
+    ScanFloor(interface, ssid, floor, band)

@@ -3,7 +3,7 @@ import re
 import pandas as pd
 from itertools import islice
 
-from enums import Data
+from src.enums import Data
 
 class UnityCoordinate:
     def __init__(self, x, y, z):

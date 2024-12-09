@@ -1,7 +1,7 @@
 import re
-from iw_interpret import Cell
 from functools import partial
-from enums import Log
+from src.enums import Log
+from src.iw_interpret import Cell
 
 def Logger(regex_pattern, log_uri):
     def _InnerDecorator(function):

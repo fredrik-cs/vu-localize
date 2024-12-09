@@ -1,4 +1,4 @@
-from coordinates import MeterToUnity, UnityCoordinate, UnityToMeter
+from src.coordinates import MeterToUnity, UnityCoordinate, UnityToMeter
 
 def AnalyticalDistanceToAP(power, base_power = -47.0, environmental_factor = 4.0):
     ### power = measured signal right now

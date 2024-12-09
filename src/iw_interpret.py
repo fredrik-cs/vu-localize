@@ -1,3 +1,4 @@
+from random import uniform
 import re
 import subprocess
 import time
@@ -9,6 +10,13 @@ class Cell:
         self.signal = None
         self.frequency = None
         self.ssid = None
+        self.name = None
+    
+    def __str__(self):
+        return self.__repr__()
+    
+    def __repr__(self):
+        return self.name
        
     @classmethod
     def all(cls, interface: str, freqs: list[int] = []):
@@ -19,7 +27,8 @@ class Cell:
             try:
                 if freqs:
                     freqs = list(map(str, freqs))
-                    print(freqs)
+                    # print(interface)
+                    # print(freqs)
                     iwlist_scan = subprocess.check_output(
                         ['sudo', '/sbin/iw', 'dev', interface, 'scan', 'freq', *freqs, 'flush'],
                                                             stderr=subprocess.STDOUT)
@@ -28,7 +37,9 @@ class Cell:
                         ['sudo', '/sbin/iw', 'dev', interface, 'scan', 'flush'],
                                                             stderr=subprocess.STDOUT)
             except Exception as e:
-                time.sleep(.1)
+                print(f"IW_ERROR:{e}")
+                duration = uniform(0.1, 0.5)
+                time.sleep(duration)
         
         iwlist_scan = iwlist_scan.decode('utf-8')
         parts = cells_re.split(iwlist_scan)[1:]
