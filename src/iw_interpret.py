@@ -6,11 +6,11 @@ import time
 class Cell:
     
     def __init__(self):
-        self.address = None
-        self.signal = None
-        self.frequency = None
-        self.ssid = None
-        self.name = None
+        self.address: str = ""
+        self.signal: int = -999
+        self.frequency: int = -999
+        self.ssid = ""
+        self.name: str = ""
     
     def __str__(self):
         return self.__repr__()
@@ -26,11 +26,11 @@ class Cell:
             #Looping here because of an error where resources are busy
             try:
                 if freqs:
-                    freqs = list(map(str, freqs))
+                    freqs_strs = list(map(str, freqs))
                     # print(interface)
                     # print(freqs)
                     iwlist_scan = subprocess.check_output(
-                        ['sudo', '/sbin/iw', 'dev', interface, 'scan', 'freq', *freqs, 'flush'],
+                        ['sudo', '/sbin/iw', 'dev', interface, 'scan', 'freq', *freqs_strs, 'flush'],
                                                             stderr=subprocess.STDOUT)
                 else:
                     iwlist_scan = subprocess.check_output(
@@ -39,6 +39,7 @@ class Cell:
             except Exception as e:
                 print(f"IW_ERROR:{e}")
                 duration = uniform(0.1, 0.5)
+                duration = 0.001
                 time.sleep(duration)
         
         iwlist_scan = iwlist_scan.decode('utf-8')
@@ -69,12 +70,12 @@ def extract(text):
         
         frequency_match = re.search(RE_FREQUENCY, line)
         if frequency_match:
-            cell.frequency = frequency_match.group(1)
+            cell.frequency = int(frequency_match.group(1))
             continue
         
         signal_match = re.search(RE_SIGNAL, line)
         if signal_match:
-            cell.signal = signal_match.group(1)
+            cell.signal = int(signal_match.group(1))
             continue
         
         ssid_match = re.search(RE_SSID, line)
