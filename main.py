@@ -5,7 +5,7 @@ from src.enums import Band, SSIDs, WifiInterface
 from src.sampling import SampleTableManager
 from src.scan import FindAPs
 from src.loggers import LogFrequencies, LogUnknowns
-from src.trilateration import AnalyticalDistanceToAP, Trilaterate3D    
+from src.trilateration import AnalyticalDistanceToAP, Trilaterate3D, Trilaterate3DAlternate   
   
 def PredictTrilaterate(valids, unity_coordinate):
     worst_predicted_error = -1
@@ -20,7 +20,7 @@ def PredictTrilaterate(valids, unity_coordinate):
             try:
                 for cell in combo:
                     cell.distance = AnalyticalDistanceToAP(cell.signal)
-                predicted_coord = Trilaterate3D(combo[0].coords, combo[1].coords, combo[2].coords,
+                predicted_coord = Trilaterate3DAlternate(combo[0].coords, combo[1].coords, combo[2].coords,
                             combo[0].distance, combo[1].distance, combo[2].distance)
                 predicted_coords.append(predicted_coord)
             except Exception as e:
@@ -61,8 +61,8 @@ def ScanFloor(interface, ssid, selected_floor, frequencies = []):
             input(f"Press any key while facing {cardinal}")
             for i in range(4):
                 valids, unknowns = FindAPs(ssid, frequencies, interface, min_aps=3)
-                LogUnknowns(unknowns)
-                LogFrequencies(valids)
+                LogUnknowns(unknowns)    # type: ignore
+                LogFrequencies(valids) # type: ignore
                 # Multilateration requires at least 3 points, which is trilateration.
                 # If the program goes this way it might be a good idea to keep scanning until there are at least 3 matches.
                 # TODO: Look into multilateration for localization
@@ -71,7 +71,6 @@ def ScanFloor(interface, ssid, selected_floor, frequencies = []):
                 
         table_manager.WriteCSV()
         
-                 
 if __name__ == "__main__":
     interface = WifiInterface.WLP1S0
     ssid = SSIDs.VU_CAMPUSNET
