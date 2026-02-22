@@ -2,6 +2,7 @@ from random import uniform
 import re
 import subprocess
 import time
+from enums import WifiInterface, SSIDs
 
 class Cell:
     
@@ -10,6 +11,7 @@ class Cell:
         self.signal: int = -999
         self.frequency: int = -999
         self.ssid = ""
+        self.age = 999999
         self.name: str = ""
     
     def __str__(self):
@@ -51,7 +53,49 @@ class Cell:
     @classmethod 
     def from_string(cls, text):
         return extract(text)
-        
+    
+    @classmethod
+    def trigger_scan(cls):
+        subprocess.run(
+            ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'trigger', 'flush']
+        )
+
+    @classmethod
+    def dump_scan(cls):
+        try:
+            iwlist_scan = subprocess.run(
+                ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'dump'],
+                        capture_output=True).stdout
+            
+            pattern = r"(BSS (?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?signal: )(-\d+)(?:\.\d* dBm\\n\\tlast seen: )(\d+ ms ago)(?:.*?)(SSID: [^\\]+)"
+            readable_scans = re.findall(pattern, str(iwlist_scan))
+
+            campnet_scan = filter(lambda x: str(x[3]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
+            sorted_scan = sorted(campnet_scan, key=lambda regex_group: int(regex_group[2].split()[0]))
+            
+            cells = []
+            for scan in sorted_scan:
+                cell = Cell()
+                cell.address = scan[0]
+                cell.signal = int(scan[1])
+                cell.age = int(scan[2])
+                cell.ssid = scan[3]
+                cell.frequency = -1 #TODO: grep frequency in pattern
+
+
+            # OLDEST_IN_MS = 1000
+            # shrunk_scan = list(filter(lambda x: int(x[2].split()[0]) <= OLDEST_IN_MS, shrunk_scan))
+            # print(shrunk_scan)
+            # strengths = map(lambda x: int(x[1].split(".")[0]), campnet_scan)
+            
+            # for result in results:
+            #     print(result)
+            # print("func2 succeeded!")
+            return (cells)
+        except:
+            # print("func2 failed!")
+            time.sleep(0.05)
+            return ([])
         
 def extract(text):
     RE_ADDRESS = r'(([0-9a-f]{2}:){5}([0-9a-f]{2}))'
