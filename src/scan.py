@@ -142,16 +142,37 @@ if __name__ == "__main__":
     # runner = pyperf.Runner()
     
     def func():
-        min_ms_ago, max_ms_ago, all_results, good_amounts = ([],[],[],[])
+        min_ms_ago, max_ms_ago, signals_per_dump, good_amounts = ([],[],[],[])
+        mac_signal_dict = {}
+        freq_signal_dict = {}
         sleep_time = 0.01
 
         for i in range(1000):
             
             trigger()
             min_now, max_now, results = dump()
+
             min_ms_ago.append(min_now)
             max_ms_ago.append(max_now)
-            all_results.append(results)
+
+            signals = [result[2] for result in results]
+            print(signals)
+            signals_per_dump.append(signals)
+
+            for result in results:
+                if result[0] not in mac_signal_dict:
+                    mac_signal_dict[result[0]] = [result[2]]
+                elif mac_signal_dict[result[0]][-1] != result[2]:
+                    mac_signal_dict[result[0]].append(result[2])
+                    
+                if result[1] not in freq_signal_dict:
+                    freq_signal_dict[result[1]] = {result[2]: 1}
+                elif result[2] not in freq_signal_dict[result[1]]:
+                    freq_signal_dict[result[1]][result[2]] = 1
+                else:
+                   freq_signal_dict[result[1]][result[2]] += 1 
+            freq_signal_dict = {k: v for k, v in sorted(freq_signal_dict.items(), key=lambda item: int(item[0]))}
+
             time.sleep(sleep_time)
         
         min_ms_ago = sorted(min_ms_ago)
@@ -159,12 +180,37 @@ if __name__ == "__main__":
         print(f"Min: {min_ms_ago}")
         print(f"Max: {max_ms_ago}")
         
-        for i, result in enumerate(all_results):
-            print(f"Result {i}: {result}")
-            good_result_amount = len(list(filter(lambda x: x>=-67, result)))
-            good_amounts.append(good_result_amount)
-        print(good_amounts)
+        previous_new_result = []
+        for i, signals in enumerate(signals_per_dump):
+            if signals != previous_new_result:
+                print(f"Result {i}: {signals}")
+                previous_new_result = signals
+            good_signals_amount = len(list(filter(lambda signal: signal>=-67, signals)))
+            good_amounts.append(good_signals_amount)
+        # print(good_amounts)
         print({x: good_amounts.count(x) for x in set(good_amounts)})
+
+        # Variance when standing still measure
+        for mac in mac_signal_dict:
+            print(f"MAC<{mac}> received (repeated) signals, in order: {mac_signal_dict[mac]}")
+        
+        # Signal strength per band measure
+        signals_count = 0
+        previous_freq = 0
+        print("-----2.4GHz band-----")
+        for freq in freq_signal_dict:
+            if int(previous_freq) < 3000 and int(freq) > 4000:
+                print(f"Band total: {signals_count} signals")
+                signals_count = 0
+                print("-----5GHz band-----")
+
+            print(f"@{freq} MHz")
+            for signal in freq_signal_dict[freq]:
+                count = freq_signal_dict[freq][signal]
+                print(f"\t{count} signals at {signal} dBM were received")
+                signals_count += count 
+            previous_freq = freq
+        print(f"Band total: {signals_count} signals")
 
 
     def trigger():
@@ -182,30 +228,32 @@ if __name__ == "__main__":
             # print(str(iwlist_scan))
 
             # 0 = BSS, 1 = frequency, 2 = signal, 3 = last seen, 4 = SSID
-            pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+\.\d*)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
+            pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
             readable_scan = re.findall(pattern, str(iwlist_scan))
             # print(readable_scan)
             ssid_specific = filter(lambda scan_params: str(scan_params[4]).endswith("VU-Campusnet"), readable_scan)
             chronological_scan = sorted(ssid_specific, key=lambda scan_params: int(scan_params[3]))
             OLDEST_IN_MS = 6000
-            fresh_results = list(filter(lambda scan_params: int(scan_params[3].split()[0]) <= OLDEST_IN_MS, chronological_scan))
+            fresh_results = list(filter(lambda scan_params: int(scan_params[3]) <= OLDEST_IN_MS, chronological_scan))
 
             for result in fresh_results:
                 print(f"MAC <{result[0]}> (@freq: {result[1]} MHz) = {result[2]} dBm")
                 print(f"\tlast seen {result[3]} ms ago")
 
-            minimum = int(chronological_scan[0][2].split()[0])
-            maximum = int(chronological_scan[-1][2].split()[0])
-            signal_strengths = map(lambda scan_params: int(scan_params[2].split(".")[0]), fresh_results)
+            minimum_age = int(chronological_scan[0][3])
+            maximum_age = int(chronological_scan[-1][3])
+            for i, result in enumerate(fresh_results):
+                fresh_results[i] = list(result)
+                fresh_results[i][2] = int(result[2])
             
             print("scan dump succeeded!")
-            return (minimum, maximum, sorted(list(signal_strengths)))
+            return (minimum_age, maximum_age, fresh_results)
         
-        except:
-            
+        except Exception as e:
+            print(e)
             print("scan dump failed!")
             time.sleep(0.05)
-            return (9999, 0, 0)
+            return (9999, 0, [])
 
     # runner.bench_func('Cell.all', func)
     cProfile.run('func()')  
