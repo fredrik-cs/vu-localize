@@ -14,6 +14,7 @@ def PrintCellSimple(cell, index, success):
     
     ColorPrint(f"* SSID: {cell.ssid}", color)
     ColorPrint(f"* Address: {cell.address}", color)
+    ColorPrint(f"* Frequency: {cell.frequency}", color)
     ColorPrint(f"* Signal strength: {cell.signal} dBm", color)
 
     print("#" * 10)

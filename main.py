@@ -43,7 +43,7 @@ def PredictTrilaterate(valids, unity_coordinate):
     
     return worst_predicted_error, average_predicted_error
         
-def ScanFloor(interface, ssid, selected_floor, frequencies = []):
+def ScanFloor(interface, ssids, selected_floor, frequencies = []):
     coordinates = GetCoordinates(selected_floor)
     unity_coordinates = GetUnityCoordinates(selected_floor)
     cardinals = ["North", "East", "South", "West"]
@@ -60,7 +60,7 @@ def ScanFloor(interface, ssid, selected_floor, frequencies = []):
             
             input(f"Press any key while facing {cardinal}")
             for i in range(4):
-                valids, unknowns = FindAPs(ssid, frequencies, interface, min_aps=3)
+                valids, unknowns = FindAPs(ssids, frequencies, interface, min_aps=3)
                 LogUnknowns(unknowns)    # type: ignore
                 LogFrequencies(valids) # type: ignore
                 # Multilateration requires at least 3 points, which is trilateration.
@@ -73,7 +73,7 @@ def ScanFloor(interface, ssid, selected_floor, frequencies = []):
         
 if __name__ == "__main__":
     interface = WifiInterface.WLP1S0
-    ssid = SSIDs.VU_CAMPUSNET
+    ssid = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]
     
     floor = input("Are you scanning floor 5 or 6? ")
     if (floor != '5') and (floor != '6'):

@@ -101,15 +101,15 @@ def GetAPUnityCoordinates(cells):
     with open(Data.COORDS_OF_APS) as f:
         lines = f.readlines()
         
-    def APInCells(line, cells):
-        for cell in cells:
+    def CellInAPs(lines, cell):
+        for line in lines:
             if cell.name == line[:10]:
                 cell.coord = line
                 return True
         return False
         
-    lines = list(
-                filter(lambda line: APInCells(line, cells), lines)
+    cells = list(
+                filter(lambda cell: CellInAPs(lines, cell), cells)
             )
         
     coordinate_pattern = r'([A-Z\-]*[0-9]*)(?: -> )([0-9\.]*),([0-9\.]*),([0-9\.]*)'

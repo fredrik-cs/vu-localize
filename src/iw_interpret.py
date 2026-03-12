@@ -2,7 +2,7 @@ from random import uniform
 import re
 import subprocess
 import time
-from enums import WifiInterface, SSIDs
+from src.enums import WifiInterface, SSIDs
 
 class Cell:
     
@@ -100,7 +100,7 @@ class Cell:
 def extract(text):
     RE_ADDRESS = r'(([0-9a-f]{2}:){5}([0-9a-f]{2}))'
     RE_FREQUENCY = r'(?:freq: )(\d+)'
-    RE_SIGNAL = r'(?:signal: )([-\d\.]+)'
+    RE_SIGNAL = r'(?:signal: )([-\d]+)'
     RE_SSID = r'(?:SSID: )(\S+)'
     
     lines = text.split("\n")

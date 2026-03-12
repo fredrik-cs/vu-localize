@@ -5,6 +5,7 @@ class WifiInterface:
 class SSIDs:
     VU_CAMPUSNET = 'VU-Campusnet'
     EDUROAM = 'eduroam'
+    IOTROAM = 'iotroam'
 
 class Band:
     G2_4 = [2412, 2437, 2462]
