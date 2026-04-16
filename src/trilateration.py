@@ -1,4 +1,5 @@
 import math
+import numpy as np
 from src.coordinates import MeterToUnity, UnityCoordinate, UnityToMeter
 
 #https://iotandelectronics.wordpress.com/2016/10/07/how-to-calculate-distance-from-the-rssi-value-of-the-ble-beacon/
@@ -167,3 +168,45 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
     z += cAz
 
     return (x, y, z)
+
+# https://arxiv.org/pdf/1912.07801
+# input: coordinates x1, y1 to xn, yn; distances d1 to dn
+# Construct a 2 by n matrix A as in column 1 the difference between x1 to xn-1 and xn multiplied by -2
+# and in column 2 the difference between y1 and yn-1 and yn multiplied by -2
+# Then construct matrix B as a column matrix of difference of the square of d1 to dn-1 and the square of dn
+# minus the difference of the square of x1 to xn-1 and the square of xn
+# minus the difference of the square of y1 to yn-1 and the square of yn
+# Find the (left) inverse of A, catching if none exist
+# The estimated coordinate is the product of the inverse of A times B
+# This doesn't take height difference in APs into account.
+# since the coords are encoded with y as the height, z takes the role of "y"
+def Multilateration2D (coords: list, distances: list):
+    last_coord = coords[-1]
+    coords = coords[:-1]
+    last_distance = distances[-1]
+    distances = distances[:-1]
+    
+    matrix_form_A = []
+    matrix_form_B = []
+    for coord, distance in zip(coords, distances):
+        matrix_form_A.append([
+            -2 * (coord.x - last_coord.x), 
+            -2 * (coord.z - last_coord.z)
+        ])
+
+        matrix_form_B.append([
+            (distance ** 2 - last_distance ** 2) -
+            (coord.x ** 2 - last_coord.x ** 2) -
+            (coord.z ** 2 - last_coord.z ** 2)
+            ])
+        
+    matrix_A = np.matrix(matrix_form_A)    
+    matrix_B = np.matrix(matrix_form_B)
+
+    # TODO: uncaught errors?
+    inverse_A = np.linalg.pinv(matrix_A)
+
+    result = np.matmul(inverse_A, matrix_B)
+    
+    # Since we assume the difference in height to be trivial, we take any y coordinate
+    return UnityCoordinate(result[0], last_coord.y, result[1])
