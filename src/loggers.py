@@ -9,7 +9,7 @@ from src.iw_interpret import Cell
 def new_logger(name):
 
         logger = logging.getLogger(name)
-        handler = logging.FileHandler("scans/"+name+".log")
+        handler = logging.FileHandler("experiments/draftzero/"+name+".log")
         logger.addHandler(handler)
 
         return logger

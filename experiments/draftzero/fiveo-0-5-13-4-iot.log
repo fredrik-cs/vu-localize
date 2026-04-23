@@ -1,0 +1,20 @@
+
+from MAC<48:00:b3:5f:58:0f>
+margins = 71-70 = 1 | total = 1
+
+from MAC<48:00:b3:5e:6e:6f>
+margins = 88-87 = 1 | total = 2
+
+-----2.4GHz band-----
+Band total: 0 signals
+
+-----5GHz band-----
+@5220 MHz
+= -87.2
+
+@5300 MHz
+= -70.24719101123596
+
+Band total: 253 signals
+ = -75.27272727272727
+

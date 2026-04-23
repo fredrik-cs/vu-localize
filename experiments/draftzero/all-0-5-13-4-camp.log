@@ -1,0 +1,81 @@
+
+from MAC<48:00:b3:5f:58:02>
+margins = 48-47 = 1 | total = 1
+
+from MAC<10:e3:76:47:55:c2>
+margins = 73-72 = 1 | total = 2
+
+from MAC<48:00:b3:5f:58:0d>
+margins = 69-68 = 1 | total = 1
+
+from MAC<48:00:b3:5f:63:2d>
+margins = 80-78 = 2 | total = 2
+
+from MAC<10:e3:76:47:55:cd>
+margins = 89-89 = 0 | total = 0
+
+from MAC<48:00:b3:5f:7c:02>
+margins = 71-70 = 1 | total = 1
+
+from MAC<48:00:b3:5f:63:22>
+margins = 66-63 = 3 | total = 3
+
+from MAC<48:00:b3:5e:6e:6d>
+margins = 87-87 = 0 | total = 0
+
+from MAC<48:00:b3:5f:64:22>
+margins = 77-77 = 0 | total = 0
+
+from MAC<48:00:b3:5e:1b:42>
+margins = 74-74 = 0 | total = 0
+
+from MAC<48:00:b3:5f:43:82>
+margins = 82-82 = 0 | total = 0
+
+from MAC<48:00:b3:5f:36:42>
+margins = 84-84 = 0 | total = 0
+
+from MAC<48:00:b3:5e:16:62>
+margins = 75-75 = 0 | total = 0
+
+from MAC<10:e3:76:47:4b:42>
+margins = 75-75 = 0 | total = 0
+
+from MAC<48:00:b3:5f:70:22>
+margins = 82-82 = 0 | total = 0
+
+from MAC<48:00:b3:5f:7c:0d>
+margins = 89-89 = 0 | total = 0
+
+-----2.4GHz band-----
+@2412 MHz
+= -57.011583011583014
+
+@2437 MHz
+= -68.125
+
+@2462 MHz
+= -74.4088888888889
+
+Band total: 780 signals
+= -66.24743589743589
+
+-----5GHz band-----
+@5220 MHz
+= -87.0
+
+@5260 MHz
+= -89.0
+
+@5300 MHz
+= -68.26143790849673
+
+@5660 MHz
+= -79.46938775510205
+
+@5700 MHz
+= -89.0
+
+Band total: 456 signals
+ = -78.75877192982456
+

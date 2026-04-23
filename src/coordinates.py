@@ -61,14 +61,14 @@ def GetCoordinates(selected_floor) -> list[Coordinate]:
     with open(Data.INTEGER_COORDS_ON_FLOOR.format(selected_floor)) as f:
         lines = f.readlines()
     
-    coordinate_pattern = r'([0-9]*):([0-9]*),([0-9]*);([0-9\.]*),([0-9\.]*),([0-9\.]*)'
+    coordinate_pattern = r'([0-9]*),([0-9]*);([0-9\.]*),([0-9\.]*),([0-9\.]*)'
     
     for line in lines:
         coord_line = re.match(coordinate_pattern, line)
         if coord_line:
-            floor = coord_line.group(1)
-            x = coord_line.group(2)
-            y = coord_line.group(3)
+            floor = selected_floor
+            x = coord_line.group(1)
+            y = coord_line.group(2)
             
             coordinates.append(Coordinate(floor, x, y))
             
@@ -81,14 +81,14 @@ def GetUnityCoordinates(selected_floor) -> list[UnityCoordinate]:
     with open(Data.UNITY_COORDS_ON_FLOOR.format(selected_floor)) as f:
         lines = f.readlines()
     
-    coordinate_pattern = r'([0-9]*):([0-9]*),([0-9]*);([0-9\.]*),([0-9\.]*),([0-9\.]*)'
+    coordinate_pattern = r'([0-9]*),([0-9]*);([0-9\.]*),([0-9\.]*),([0-9\.]*)'
     
     for line in lines:
         coord_line = re.match(coordinate_pattern, line)
         if coord_line:
-            x = float(coord_line.group(4))
-            y = float(coord_line.group(5))
-            z = float(coord_line.group(6))
+            x = float(coord_line.group(3))
+            y = float(coord_line.group(4))
+            z = float(coord_line.group(5))
             
             unity_coordinates.append(UnityCoordinate(x, y, z))
             
