@@ -34,3 +34,8 @@ class Colors:
     FAIL = '\033[91m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+
+class Experiment:
+    SCAN_FLOOR = 1
+    DRAFT_ZERO = 0
+    DRAFT_ONE = -1

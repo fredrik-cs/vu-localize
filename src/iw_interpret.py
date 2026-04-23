@@ -4,6 +4,8 @@ import subprocess
 import time
 from src.enums import WifiInterface, SSIDs
 
+VU_IF = WifiInterface.WLP1S0
+
 class Cell:
     
     def __init__(self):
@@ -55,17 +57,33 @@ class Cell:
         return extract(text)
     
     @classmethod
-    def trigger_scan(cls):
-        subprocess.run(
-            ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'trigger', 'flush']
-        )
+    def trigger_scan(cls, freqs = []):
+        # subprocess.run(
+        #     ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'trigger', 'flush']
+        # )
+
+        if freqs:
+            frequencies = list(map(lambda x: str(x), freqs))
+            subprocess.run(
+                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'freq', *frequencies, 'flush']
+                )
+
+        else:
+            subprocess.run(
+                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush']
+                )
+
+    @classmethod
+    def _dump(cls):
+        iwlist_scan = subprocess.run(
+                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'dump'],
+                        capture_output=True).stdout
+        return iwlist_scan
 
     @classmethod
     def dump_scan(cls):
         try:
-            iwlist_scan = subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'dump'],
-                        capture_output=True).stdout
+            iwlist_scan = Cell._dump()
             
             pattern = r"(BSS (?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?signal: )(-\d+)(?:\.\d* dBm\\n\\tlast seen: )(\d+ ms ago)(?:.*?)(SSID: [^\\]+)"
             readable_scans = re.findall(pattern, str(iwlist_scan))
