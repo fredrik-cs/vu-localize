@@ -1,4 +1,4 @@
-from loggers import LogBandQualities
+from src.loggers import LogBandQualities
 from src.analysis import PredictTrilaterate
 from src.sampling import SampleTableManager
 from src.scan import FindAPs

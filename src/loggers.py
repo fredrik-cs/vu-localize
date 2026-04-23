@@ -3,8 +3,8 @@ import logging
 import re
 import time
 
-from enums import SSIDs
-from iw_interpret import Cell
+from src.enums import SSIDs
+from src.iw_interpret import Cell
 
 def new_logger(name):
 
@@ -29,16 +29,10 @@ def LogBandQualities(band, file_name):
         
         for logger, ssid in zip(loggers, ssids):
             #scan_and_log(band, ssid, logger)
-
-            youngest_signals = []
-            oldest_signals = []
             scans = []
 
             for i in range(ITERATIONS):
-                youngest, oldest, results = debug_scan(band, ssid)
-
-                youngest_signals.append(youngest)
-                oldest_signals.append(oldest)
+                results = debug_scan(band, ssid)
                 scans.append(results)
 
                 time.sleep(ITERATION_DELAY)
@@ -55,7 +49,7 @@ def debug_scan(band, ssid):
             print(e)
             print("scan dump failed!")
             time.sleep(0.05)
-            return []
+            return [None]
 
 def process_dump(scan_dump, ssid):
         
