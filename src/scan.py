@@ -143,244 +143,184 @@ def FindAPs(ssids, frequencies, interface, min_aps = -1) -> tuple[list[Cell], li
 
 if __name__ == "__main__":
     
-    def func(band, file_name): 
-        loggers = []
-        loggers.append(new_logger(file_name+"-camp"))
-        loggers.append(new_logger(file_name+"-edu"))
-        loggers.append(new_logger(file_name+"-iot"))
-        ssids = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]
-        level = logging.INFO
+    pass
 
-        logging.basicConfig(level=level, format="%(message)s")
-        
-        for logger, ssid in zip(loggers, ssids):
-            scan_and_log(band, ssid, logger)
+    
 
-    def scan_and_log(band, ssid, logger: logging.Logger):
-        min_ms_ago, max_ms_ago, signals_per_dump, good_amounts = ([],[],[],[])
-        mac_signal_dict = {}
-        freq_signal_dict = {}
-        ITERATION_DELAY = 0.01
-        ITERATIONS = 192 # 1920 - 2000 
+    # def scan_and_log(band, ssid, logger: logging.Logger):
+    #     min_ms_ago, max_ms_ago, signals_per_dump, good_amounts = ([],[],[],[])
+    #     mac_signal_dict = {}
+    #     freq_signal_dict = {}
+    #     ITERATION_DELAY = 0.01
+    #     ITERATIONS = 192 # 1920 - 2000 
 
-        for i in range(ITERATIONS):
+    #     for i in range(ITERATIONS):
             
-            trigger(band)
-            min_now, max_now, results = dump(ssid)
+    #         Cell.trigger_scan(band)
+    #         dump = Cell._dump()
+    #         min_now, max_now, results = process_dump(ssid, dump)
 
-            min_ms_ago.append(min_now)
-            max_ms_ago.append(max_now)
+    #         min_ms_ago.append(min_now)
+    #         max_ms_ago.append(max_now)
 
-            signals = [result[2] for result in results]
-            print(signals)
-            signals_per_dump.append(signals)
+    #         signals = [result[2] for result in results]
+    #         print(signals)
+    #         signals_per_dump.append(signals)
 
-            for result in results:
-                if result[0] not in mac_signal_dict:
-                    mac_signal_dict[result[0]] = [{result[2]: 1}]
-                elif list(mac_signal_dict[result[0]][-1].keys()) != [result[2]]:
-                    mac_signal_dict[result[0]].append({result[2]: 1})
-                else:
-                    mac_signal_dict[result[0]][-1][result[2]] += 1
+    #         for result in results:
+    #             if result[0] not in mac_signal_dict:
+    #                 mac_signal_dict[result[0]] = [{result[2]: 1}]
+    #             elif list(mac_signal_dict[result[0]][-1].keys()) != [result[2]]:
+    #                 mac_signal_dict[result[0]].append({result[2]: 1})
+    #             else:
+    #                 mac_signal_dict[result[0]][-1][result[2]] += 1
                     
-                if result[1] not in freq_signal_dict:
-                    freq_signal_dict[result[1]] = {result[2]: 1}
-                elif result[2] not in freq_signal_dict[result[1]]:
-                    freq_signal_dict[result[1]][result[2]] = 1
-                else:
-                   freq_signal_dict[result[1]][result[2]] += 1 
-            freq_signal_dict = {k: v for k, v in sorted(freq_signal_dict.items(), key=lambda item: int(item[0]))}
+    #             if result[1] not in freq_signal_dict:
+    #                 freq_signal_dict[result[1]] = {result[2]: 1}
+    #             elif result[2] not in freq_signal_dict[result[1]]:
+    #                 freq_signal_dict[result[1]][result[2]] = 1
+    #             else:
+    #                freq_signal_dict[result[1]][result[2]] += 1 
+    #         freq_signal_dict = {k: v for k, v in sorted(freq_signal_dict.items(), key=lambda item: int(item[0]))}
 
-            time.sleep(ITERATION_DELAY)
+    #         time.sleep(ITERATION_DELAY)
         
-        min_ms_ago = sorted(min_ms_ago)
-        max_ms_ago = sorted(max_ms_ago, reverse=True)
-        print(f"Min: {min_ms_ago}")
-        print(f"Max: {max_ms_ago}")
+    #     min_ms_ago = sorted(min_ms_ago)
+    #     max_ms_ago = sorted(max_ms_ago, reverse=True)
+    #     print(f"Min: {min_ms_ago}")
+    #     print(f"Max: {max_ms_ago}")
         
-        previous_new_result = []
-        MIN_SIGNAL_STRENGTH = -67
-        for i, signals in enumerate(signals_per_dump):
-            if signals != previous_new_result:
-                print(f"Result {i}: {signals}")
-                previous_new_result = signals
-            good_signals_amount = len(list(filter(lambda signal: signal>=MIN_SIGNAL_STRENGTH, signals)))
-            good_amounts.append(good_signals_amount)
-        # print(good_amounts)
-        print({x: good_amounts.count(x) for x in set(good_amounts)})
+    #     previous_new_result = []
+    #     MIN_SIGNAL_STRENGTH = -67
+    #     for i, signals in enumerate(signals_per_dump):
+    #         if signals != previous_new_result:
+    #             print(f"Result {i}: {signals}")
+    #             previous_new_result = signals
+    #         good_signals_amount = len(list(filter(lambda signal: signal>=MIN_SIGNAL_STRENGTH, signals)))
+    #         good_amounts.append(good_signals_amount)
+    #     # print(good_amounts)
+    #     print({x: good_amounts.count(x) for x in set(good_amounts)})
 
-        # Variance when standing still measure
-        prev_strength = 0
+    #     # Variance when standing still measure
+    #     prev_strength = 0
         
-        for mac in mac_signal_dict:
+    #     for mac in mac_signal_dict:
 
-            summary = ""
-            distance_moved = 0
-            distance_traveled = 0
-            white_space_counter = 0
-            log_line = "\t"
-            max_strength = -100
-            min_strength = 0
+    #         summary = ""
+    #         distance_moved = 0
+    #         distance_traveled = 0
+    #         white_space_counter = 0
+    #         log_line = "\t"
+    #         max_strength = -100
+    #         min_strength = 0
 
-            # received signals, in order:
-            logger.info(f"\nfrom MAC<{mac}>")
+    #         # received signals, in order:
+    #         logger.info(f"\nfrom MAC<{mac}>")
             
-            for signal in mac_signal_dict[mac]:
+    #         for signal in mac_signal_dict[mac]:
 
-                strength = list(signal.keys())[0] 
-                count = signal[strength]
-                log_line += f"{count} at {strength} dBm, "
+    #             strength = list(signal.keys())[0] 
+    #             count = signal[strength]
+    #             log_line += f"{count} at {strength} dBm, "
 
-                white_space_counter += 1
+    #             white_space_counter += 1
                 
-                if white_space_counter >= 5:
-                    logger.debug(log_line)
-                    log_line = "\t"
-                    white_space_counter = 0
+    #             if white_space_counter >= 5:
+    #                 logger.debug(log_line)
+    #                 log_line = "\t"
+    #                 white_space_counter = 0
 
-                if prev_strength != 0:
-                    difference = strength - prev_strength
-                    summary += f"+{difference} "
-                    distance_moved += (difference)
-                    distance_traveled += abs(difference)
+    #             if prev_strength != 0:
+    #                 difference = strength - prev_strength
+    #                 summary += f"+{difference} "
+    #                 distance_moved += (difference)
+    #                 distance_traveled += abs(difference)
 
-                max_strength = max(max_strength, strength)
-                min_strength = min(min_strength, strength)
-                prev_strength = strength 
+    #             max_strength = max(max_strength, strength)
+    #             min_strength = min(min_strength, strength)
+    #             prev_strength = strength 
 
-            if log_line != "\t":
-                logger.debug(f"{log_line}")
+    #         if log_line != "\t":
+    #             logger.debug(f"{log_line}")
             
-            logger.debug(f"Changes: ( {summary})")
-            logger.debug(f"= {distance_moved}")
-            logger.info(f"margins = {abs(min_strength)}-{abs(max_strength)} = {max_strength - min_strength} | total = {distance_traveled}")
-            prev_strength = 0
-            logger.debug(f"\n{'-' * 90}")
+    #         logger.debug(f"Changes: ( {summary})")
+    #         logger.debug(f"= {distance_moved}")
+    #         logger.info(f"margins = {abs(min_strength)}-{abs(max_strength)} = {max_strength - min_strength} | total = {distance_traveled}")
+    #         prev_strength = 0
+    #         logger.debug(f"\n{'-' * 90}")
             
-        # Signal strength per band measure
+    #     # Signal strength per band measure
 
-        signals_count = 0
-        previous_freq = 0
-        mid_log = ""
-        end_log = ""
-        mid_sum = 0
-        end_sum = 0
-        mid_count = 0
-        end_count = 0
+    #     signals_count = 0
+    #     previous_freq = 0
+    #     mid_log = ""
+    #     end_log = ""
+    #     mid_sum = 0
+    #     end_sum = 0
+    #     mid_count = 0
+    #     end_count = 0
 
-        logger.info("\n-----2.4GHz band-----")
-        for freq in freq_signal_dict:
+    #     logger.info("\n-----2.4GHz band-----")
+    #     for freq in freq_signal_dict:
 
-            if int(previous_freq) < 3000 and int(freq) > 4000:
-                logger.info(f"Band total: {signals_count} signals")
-                if (end_count > 0):
-                    logger.debug(f"Average Strength on band: ({end_log[:-1]}) / {end_count}")
-                    logger.info(f"= {end_sum / end_count}") 
+    #         if int(previous_freq) < 3000 and int(freq) > 4000:
+    #             logger.info(f"Band total: {signals_count} signals")
+    #             if (end_count > 0):
+    #                 logger.debug(f"Average Strength on band: ({end_log[:-1]}) / {end_count}")
+    #                 logger.info(f"= {end_sum / end_count}") 
 
-                end_log = ""
-                end_count = 0
-                end_sum = 0
-                signals_count = 0
+    #             end_log = ""
+    #             end_count = 0
+    #             end_sum = 0
+    #             signals_count = 0
 
-                logger.info("\n-----5GHz band-----")
+    #             logger.info("\n-----5GHz band-----")
 
-            logger.info(f"@{freq} MHz")
+    #         logger.info(f"@{freq} MHz")
 
-            for signal in freq_signal_dict[freq]:
+    #         for signal in freq_signal_dict[freq]:
 
-                count = freq_signal_dict[freq][signal]
-                logger.debug(f"\t{count} signals at {signal} dBM were received")
+    #             count = freq_signal_dict[freq][signal]
+    #             logger.debug(f"\t{count} signals at {signal} dBM were received")
 
-                signals_count += count
-                mid_log += f" {count}*{signal} +"
-                mid_count += count
-                mid_sum += count*signal
+    #             signals_count += count
+    #             mid_log += f" {count}*{signal} +"
+    #             mid_count += count
+    #             mid_sum += count*signal
             
-            if (mid_count > 0): 
-                logger.debug(f"Average Strength on channel: ({mid_log[:-1]}) / {mid_count}")
-                logger.info(f"= {mid_sum / mid_count}\n")
+    #         if (mid_count > 0): 
+    #             logger.debug(f"Average Strength on channel: ({mid_log[:-1]}) / {mid_count}")
+    #             logger.info(f"= {mid_sum / mid_count}\n")
 
-            end_log += mid_log
-            end_count += mid_count
-            end_sum += mid_sum
-            mid_log = ""
-            mid_count = 0
-            mid_sum = 0
-            previous_freq = freq
+    #         end_log += mid_log
+    #         end_count += mid_count
+    #         end_sum += mid_sum
+    #         mid_log = ""
+    #         mid_count = 0
+    #         mid_sum = 0
+    #         previous_freq = freq
 
-        logger.info(f"Band total: {signals_count} signals")
-        if (end_count > 0):
-            logger.debug(f"Average Strength on band: ({end_log[:-1]}) / {end_count}")
-            logger.info(f" = {end_sum / end_count}\n")
+    #     logger.info(f"Band total: {signals_count} signals")
+    #     if (end_count > 0):
+    #         logger.debug(f"Average Strength on band: ({end_log[:-1]}) / {end_count}")
+    #         logger.info(f" = {end_sum / end_count}\n")
         
 
-    def new_logger(name):
+    # def trigger(freqs):
 
-        logger = logging.getLogger(name)
-        handler = logging.FileHandler("scans/"+name+".log")
-        logger.addHandler(handler)
+    #     if freqs:
+    #         frequencies = list(map(lambda x: str(x), freqs))
+    #         subprocess.run(
+    #             ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'freq', *frequencies, 'flush']
+    #             )
 
-        return logger
-
-    def trigger(freqs):
-
-        if freqs:
-            frequencies = list(map(lambda x: str(x), freqs))
-            subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'freq', *frequencies, 'flush']
-                )
-
-        else:
-            subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush']
-                )
+    #     else:
+    #         subprocess.run(
+    #             ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush']
+    #             )
         
-    def dump(ssid):
+    
         
-        try:
-            
-            iwlist_scan = subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'dump'],
-                        capture_output=True).stdout
-            
-            ts = time.time_ns()
-            # print(str(iwlist_scan))
-
-            # 0 = BSS, 1 = frequency, 2 = signal, 3 = last seen, 4 = SSID
-            pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
-            readable_scan = re.findall(pattern, str(iwlist_scan))
-            # print(readable_scan)
-            # ssid = "Windroos-Studenten"
-            # ssid_specific = readable_scan
-            ssid_specific = filter(lambda scan_params: str(scan_params[4]).endswith(ssid), readable_scan)
-            chronological_scan = sorted(ssid_specific, key=lambda scan_params: int(scan_params[3]))
-            OLDEST_IN_MS = 6000
-            fresh_results = list(filter(lambda scan_params: int(scan_params[3]) <= OLDEST_IN_MS, chronological_scan))
-
-            for i, result in enumerate(fresh_results):
-                print(f"MAC <{result[0]}> (@freq: {result[1]} MHz) = {result[2]} dBm")
-                print(f"\tlast seen {result[3]} ms ago")
-                result = list(result)
-                result[3] = ts - float(result[3]) * 1_000_000
-                print(f"\tor at timestamp {[result[3]]} ({datetime.fromtimestamp(result[3] / 1e9)})")
-                fresh_results[i] = result
-
-
-            minimum_age = int(chronological_scan[0][3])
-            maximum_age = int(chronological_scan[-1][3])
-            for i, result in enumerate(fresh_results):
-                fresh_results[i][2] = int(result[2])
-            
-            print("scan dump succeeded!")
-            return (minimum_age, maximum_age, fresh_results)
         
-        except Exception as e:
-            print(e)
-            print("scan dump failed!")
-            time.sleep(0.05)
-            return (9999, 0, [])
 
-    file_name = input("log to what files?\n")
-    func(Band.ALL, "all-"+file_name)
-    func(Band.G2_4, "twofour-"+file_name)
-    func(Band.G5, "fiveo-"+file_name)
+    
