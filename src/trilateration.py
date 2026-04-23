@@ -167,7 +167,7 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
     y += cAy
     z += cAz
 
-    return (x, y, z)
+    return UnityCoordinate(x, y, z)
 
 # https://arxiv.org/pdf/1912.07801
 # input: coordinates x1, y1 to xn, yn; distances d1 to dn
