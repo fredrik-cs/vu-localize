@@ -3,7 +3,7 @@ from src.experiments import ScanFloor, ThesisDraftZero, ThesisDraftOne
   
         
 if __name__ == "__main__":
-    SELECTED_EXPERIMENT = Experiment.DRAFT_ZERO
+    SELECTED_EXPERIMENT = Experiment.DRAFT_ONE
 
     interface = WifiInterface.WLP1S0
     ssid = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]

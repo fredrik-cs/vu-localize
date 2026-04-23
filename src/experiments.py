@@ -1,3 +1,9 @@
+from queue import Queue
+from threading import Thread
+import time
+
+from src.iw_interpret import Cell
+from src.producer_consumer import consumer, producer
 from src.loggers import LogBandQualities
 from src.analysis import PredictTrilaterate
 from src.sampling import SampleTableManager
@@ -57,4 +63,30 @@ def ThesisDraftZero():
     LogBandQualities(Band.G5, "fiveo-"+file_name) 
 
 def ThesisDraftOne(interface, ssid):
-    pass
+    queue = Queue()
+    # prod_thread = Thread(target=producer, args=(queue, Band.G2_4))
+    # cons_thread = Thread(target=consumer, args=(queue,))
+    # prod_thread.start()
+    # cons_thread.start()
+    # time.sleep(30)
+    # prod_thread.join()
+    # cons_thread.join()
+    AS_SLEEP_DURATION = 0.01
+    AS_ITERATIONS = 10
+
+    while True:
+        unfiltered_cells: list[Cell] = []
+        # unfiltered_cells = ""
+
+        for i in range(AS_ITERATIONS):
+            Cell.trigger_scan(Band.G2_4)
+            cell_dump = Cell.dump_scan()
+            # print(cell_dump)
+            # cell_dump = Cell._dump()
+            unfiltered_cells.extend(cell_dump)
+            # unfiltered_cells += str(cell_dump)
+            time.sleep(AS_SLEEP_DURATION)
+
+        # good_cells = list(filter(lambda cell: cell.signal>=-100, unfiltered_cells))
+        
+        print(unfiltered_cells)

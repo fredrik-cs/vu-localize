@@ -65,6 +65,7 @@ def RegisterUnknowns(unknowns: list[Cell], lines: list[str], matches: list[re.Ma
     register_uri = Log.FREQUENCIES
 )
 def RegisterFrequencies(cells: list[Cell], lines:list[str], matches: list[re.Match[str]]):
+    # TODO: Fix duplicates
     register = []
     name_to_frequencies = {}
     

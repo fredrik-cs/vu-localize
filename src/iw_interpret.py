@@ -12,15 +12,15 @@ class Cell:
         self.address: str = ""
         self.signal: int = -999
         self.frequency: int = -999
-        self.ssid = ""
-        self.age = 999999
+        self.ssid: str = ""
+        self.age: int = 999999
         self.name: str = ""
     
     def __str__(self):
         return self.__repr__()
     
     def __repr__(self):
-        return self.name
+        return f"{self.ssid}: {self.signal} dBm at {self.frequency} Mhz"
        
     @classmethod
     def all(cls, interface: str, freqs: list[int] = []):
@@ -61,7 +61,7 @@ class Cell:
         # subprocess.run(
         #     ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'trigger', 'flush']
         # )
-
+        # print("Triggering scan")
         if freqs:
             frequencies = list(map(lambda x: str(x), freqs))
             subprocess.run(
@@ -72,9 +72,11 @@ class Cell:
             subprocess.run(
                 ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush']
                 )
+        # print("Finished triggering")
 
     @classmethod
     def _dump(cls):
+        # print("Dumping scan")
         iwlist_scan = subprocess.run(
                 ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'dump'],
                         capture_output=True).stdout
@@ -85,20 +87,25 @@ class Cell:
         try:
             iwlist_scan = Cell._dump()
             
-            pattern = r"(BSS (?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?signal: )(-\d+)(?:\.\d* dBm\\n\\tlast seen: )(\d+ ms ago)(?:.*?)(SSID: [^\\]+)"
+            pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
+            # pattern = r"(BSS (?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?signal: )(-\d+)(?:\.\d* dBm\\n\\tlast seen: )(\d+ ms ago)(?:.*?)(SSID: [^\\]+)"
+            # print("no?")
             readable_scans = re.findall(pattern, str(iwlist_scan))
+            # print("yes!")
 
-            campnet_scan = filter(lambda x: str(x[3]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
-            sorted_scan = sorted(campnet_scan, key=lambda regex_group: int(regex_group[2].split()[0]))
-            
-            cells = []
+            campnet_scan = filter(lambda x: str(x[4]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
+            sorted_scan = sorted(campnet_scan, key=lambda regex_group: int(regex_group[3]))
+            print(sorted_scan)
+
+            cells: list[Cell] = []
             for scan in sorted_scan:
                 cell = Cell()
                 cell.address = scan[0]
-                cell.signal = int(scan[1])
-                cell.age = int(scan[2])
-                cell.ssid = scan[3]
-                cell.frequency = -1 #TODO: grep frequency in pattern
+                cell.frequency = int(scan[1])
+                cell.signal = int(scan[2])
+                cell.age = int(scan[3])
+                cell.ssid = scan[4]
+                cells.append(cell)
 
 
             # OLDEST_IN_MS = 1000
@@ -111,9 +118,10 @@ class Cell:
             # print("func2 succeeded!")
             return (cells)
         except:
-            # print("func2 failed!")
+            print("dump failed!")
             time.sleep(0.05)
-            return ([])
+            empty: list[Cell] = []
+            return (empty)
         
 def extract(text):
     RE_ADDRESS = r'(([0-9a-f]{2}:){5}([0-9a-f]{2}))'
