@@ -84,31 +84,37 @@ def Trilaterate3D(cA, cB, cC, dA, dB, dC):
 def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
     # https://en.wikipedia.org/wiki/True-range_multilateration#Three_Cartesian_dimensions,_three_measured_slant_ranges
     
-    cAx = UnityToMeter(cA.x)
-    cAy = UnityToMeter(cA.y)
-    cAz = UnityToMeter(cA.z)
+    # print(cA, cB, cC, dA, dB, dC)
+
+    cAx = cA.x
+    cAy = cA.y
+    cAz = cA.z
     
-    cBx = UnityToMeter(cB.x)
-    cBy = UnityToMeter(cB.y)
-    cBz = UnityToMeter(cB.z)
+    cBx = cB.x
+    cBy = cB.y
+    cBz = cB.z
     
-    cCx = UnityToMeter(cC.x)
-    cCy = UnityToMeter(cC.y)
-    cCz = UnityToMeter(cC.z)
+    cCx = cC.x
+    cCy = cC.y
+    cCz = cC.z
+    
     
     dA = float(dA)
     dB = float(dB)
     dC = float(dC)
-    
+    # print(f"dA = {dA} | dB = {dB} | dC = {dC}")
     # Translate and rotate the problem to an easier to solve space, then rotate and translate back.
-
+    # print(f"A = {(cAx,cAy,cAz)} | B = {cBx,cBy,cBz} | C = {cCx,cCy,cCz}")
     cBx -= cAx
     cBy -= cAy
     cBz -= cAz
     cCx -= cAx
     cCy -= cAy
     cCz -= cAz
+    # print(f"A = {(cAx,cAy,cAz)} | B = {cBx,cBy,cBz} | C = {cCx,cCy,cCz}")
     #cA = 0, but keep same for later
+
+    # TODO: cannot handle cBz = cAz, cCy = cAy, cBx = cAx
 
     #Now the rotations. First rotate B around the X-axis to eliminate Y, applying the same rotation to C.
     # Then rotate B around Y to eliminate Z, applying the same for C
@@ -121,46 +127,83 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
     # sin(theta)/cos(theta) = y/z
     # theta = atan(y/z)
     # so x = x, y = ycos(theta) - zsin(theta) = 0 and z = ysin(theta) + zcos(theta)
-    
-    x_rot = math.atan(cBy/cBz)
-    cBz = cBy*math.sin(x_rot) + cBz*math.cos(x_rot)
-    cCy_temp = cCy
-    cCy = cCy_temp*math.cos(x_rot) - cCz*math.sin(x_rot)
-    cCz = cCy_temp*math.sin(x_rot) + cCz*math.cos(x_rot)
+    try: 
+        x_rot = round(math.atan(cBy/cBz), 2)
+        # print(f"x_rot == {x_rot}")
+        #cBy == 0?
+        # print(f"{cBy*math.cos(x_rot) - cBz*math.sin(x_rot)} == 0?")
+        cBz = round(cBy*math.sin(x_rot) + cBz*math.cos(x_rot), 2)
+        cCy_temp = round(cCy, 2)
+        cCy = round(cCy_temp*math.cos(x_rot) - cCz*math.sin(x_rot), 2)
+        cCz = round(cCy_temp*math.sin(x_rot) + cCz*math.cos(x_rot), 2)
 
-    # Rotate B around Y axis till Z = 0, -xsin(theta) + zcos(theta) = 0, theta = atan(x/z)
+        # Rotate B around Y axis till Z=0, -xsin(theta) + zcos(theta)=0, theta=atan(x/z)
 
-    y_rot = math.atan(cBx/cBz) 
-    cBx = cBx*math.cos(y_rot) + cBz*math.sin(y_rot)
-    cCx_temp = cCx
-    cCx = cCx_temp*math.cos(y_rot) + cCz*math.sin(y_rot)
-    cCz = cCz*math.cos(y_rot) - cCx_temp*math.sin(y_rot)
+        y_rot = round(math.atan(cBz/cBx) , 2)
+        # print(f"y_rot == {y_rot}")
+        # Cbz == 0?
+        # print(f"{cBz*math.cos(y_rot) - cBx*math.sin(y_rot)} == 0?")
+        cBx = round(cBx*math.cos(y_rot) + cBz*math.sin(y_rot), 2)
+        cCx_temp = round(cCx, 2)
+        cCx = round(cCx_temp*math.cos(y_rot) + cCz*math.sin(y_rot), 2)
+        cCz = round(cCz*math.cos(y_rot) - cCx_temp*math.sin(y_rot), 2)
 
-    #ysin(theta) + zcos(theta) = 0
+        #ysin(theta) + zcos(theta)=0
 
-    theta = math.atan(-cCz/cCy)
-    cCy = cCy*math.cos(theta) - cCz*math.sin(theta) 
-    
-    #calculate midway result
-    x = (dA**2 - dB**2 + cBx**2) / (2*cBx)
-    y = (dA**2 - dC**2 + cCx**2 + cCy**2 - 2*cCx*x) / (2*cCy)
-    d = dA**2 - x**2 - y**2
+        theta = round(math.atan(-cCz/cCy), 2)
+        cCy = round(cCy*math.cos(theta) - cCz*math.sin(theta) , 2)
+        
+        #calculate midway result
+        x = round((dA**2 - dB**2 + cBx**2) / (2*cBx), 2)
+        y = round((dA**2 - dC**2 + cCx**2 + cCy**2 - 2*cCx*x) / (2*cCy), 2)
+   
+    except:
+        print("Math error in Alternative trilateration algo")
+        return UnityCoordinate(-555, -555, -555)
+   
+    d = round(dA**2 - x**2 - y**2, 2)
+   
     if (d < 0):
-        return UnityCoordinate(-999, -999, -999)
+        print(f"Trilateration impossible: d({d}) < 0")
+        return UnityCoordinate(d, -999, -999)
     
-    print(f"Z = +-{math.sqrt(d)}, but we take the average (0)")
-    z = 0
+    print(f"Z == +-{math.sqrt(d)}, but we take the average (0)")
+    z = round(0, 2)
+    z_1 = round(math.sqrt(d), 2)
+    z_2 = round(-math.sqrt(d), 2)
     
     #rotate back, x y x
-    y_temp = y
-    y = y_temp*math.cos(-theta) # -z*sin
-    z = y_temp*math.sin(-theta) # +z*cos
-    x_temp = x
-    x = x_temp*math.cos(-y_rot) + z*math.sin(-y_rot)
-    z = z*math.cos(-y_rot) - x_temp*math.sin(-y_rot)
-    y_temp = y
-    y = y_temp*math.cos(-x_rot) - z*math.sin(-x_rot)
-    z = y_temp*math.sin(-theta) + z*math.cos(-x_rot)
+    y_temp_1 = round(y, 2)
+    y_1 = round(y_temp_1*math.cos(-theta), 2) # -z*sin
+    z_1 = round(y_temp_1*math.sin(-theta), 2) # +z*cos
+    x_temp_1 = round(x, 2)
+    x_1 = round(x_temp_1*math.cos(-y_rot) + z_1*math.sin(-y_rot), 2)
+    z_1 = round(z_1*math.cos(-y_rot) - x_temp_1*math.sin(-y_rot), 2)
+    y_temp_1 = round(y_1, 2)
+    y_1 = round(y_temp_1*math.cos(-x_rot) - z_1*math.sin(-x_rot), 2)
+    z_1 = round(y_temp_1*math.sin(-theta) + z_1*math.cos(-x_rot), 2)
+    print(f"with z1 == ({x_1}, {y_1}, {z_1})")
+
+    y_temp_2 = round(y, 2)
+    y_2 = round(y_temp_2*math.cos(-theta) -z_1*math.sin(-theta), 2)
+    z_2 = round(y_temp_2*math.sin(-theta) +z_1*math.cos(-theta), 2)
+    x_temp_2 = round(x, 2)
+    x_2 = round(x_temp_2*math.cos(-y_rot) + z_2*math.sin(-y_rot), 2)
+    z_2 = round(z_2*math.cos(-y_rot) - x_temp_2*math.sin(-y_rot), 2)
+    y_temp_2 = round(y_2, 2)
+    y_2 = round(y_temp_2*math.cos(-x_rot) - z_2*math.sin(-x_rot), 2)
+    z_2 = round(y_temp_2*math.sin(-theta) + z_2*math.cos(-x_rot), 2)
+    print(f"with z2 == ({x_2}, {y_2}, {z_2})")
+
+    y_temp = round(y, 2)
+    y = round(y_temp*math.cos(-theta) -z_2*math.sin(-theta), 2)
+    z = round(y_temp*math.sin(-theta) +z_2*math.cos(-theta), 2)
+    x_temp = round(x, 2)
+    x = round(x_temp*math.cos(-y_rot) + z*math.sin(-y_rot), 2)
+    z = round(z*math.cos(-y_rot) - x_temp*math.sin(-y_rot), 2)
+    y_temp = round(y, 2)
+    y = round(y_temp*math.cos(-x_rot) - z*math.sin(-x_rot), 2)
+    z = round(y_temp*math.sin(-theta) + z*math.cos(-x_rot), 2)
 
     #translate back
     x += cAx
@@ -181,6 +224,10 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
 # This doesn't take height difference in APs into account.
 # since the coords are encoded with y as the height, z takes the role of "y"
 def Multilateration2D (coords: list, distances: list):
+    if len(coords) < 3 or len(distances) < 3:
+        print("Too few data points for multilateration")
+        return UnityCoordinate(-777, -777, -777)
+
     last_coord = coords[-1]
     coords = coords[:-1]
     last_distance = distances[-1]
@@ -207,6 +254,34 @@ def Multilateration2D (coords: list, distances: list):
     inverse_A = np.linalg.pinv(matrix_A)
 
     result = np.matmul(inverse_A, matrix_B)
+    # print(f"Multilateration result: ({result[0, 0]},{last_coord.y},{result[1, 0]})")
     
     # Since we assume the difference in height to be trivial, we take any y coordinate
-    return UnityCoordinate(result[0], last_coord.y, result[1])
+    return UnityCoordinate(result[0, 0], last_coord.y, result[1, 0])
+
+# https://www-sciencedirect-com.vu-nl.idm.oclc.org/science/article/pii/S0140366408004751?via%3Dihub
+# Works on 4 points and 4 distances
+def MobileTrilateration(coords: list, distances: list):
+    G = np.array([
+        [coords[1].x - coords[0].x, coords[1].y - coords[0].y, coords[1].z - coords[0].z],
+        [coords[3].x - coords[0].x, coords[2].y - coords[0].y, coords[2].z - coords[0].z],
+        [coords[2].x - coords[0].x, coords[3].y - coords[0].y, coords[3].z - coords[0].z],
+        ])
+    sq_coords = list(map(lambda p: UnityCoordinate(p.x**2, p.y**2, p.z**2), coords))
+    sq_distances = list(map(lambda d: d**2, distances))
+    h = np.array(
+        [
+            .5*(sq_coords[1].x + sq_coords[1].y + sq_coords[1].z - sq_coords[0].x - sq_coords[0].y - sq_distances[1] + sq_distances[0]),
+            .5*(sq_coords[2].x + sq_coords[2].y + sq_coords[2].z - sq_coords[0].x - sq_coords[0].y - sq_distances[2] + sq_distances[0]),
+            .5*(sq_coords[3].x + sq_coords[3].y + sq_coords[3].z - sq_coords[0].x - sq_coords[0].y - sq_distances[3] + sq_distances[0]),
+        ])
+    
+    try:
+        G_inverse = np.linalg.inv(G)
+        p = G_inverse @ h 
+    except Exception as e:
+        print(e)
+        return UnityCoordinate(-333, -333, -333)
+    
+    # print(p)
+    return UnityCoordinate(p[0], p[1], p[2])

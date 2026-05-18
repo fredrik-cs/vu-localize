@@ -1,16 +1,12 @@
 from datetime import datetime
-import logging
 from random import uniform
-import subprocess
 import time
 from pandas import read_excel
 from rusty_results import Ok, Err, Result # type: ignore
 from src.iw_interpret import Cell
 # from ui import PrintCellSimple
-from src.enums import Data, WifiInterface, SSIDs, Band
-import pyperf
-import cProfile
-import re
+from src.enums import Data, WifiInterface
+
 from src.ui import PrintCellSimple
 
 VU_IF = WifiInterface.WLP1S0

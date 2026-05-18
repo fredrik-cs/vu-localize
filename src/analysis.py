@@ -1,5 +1,5 @@
 from src.trilateration import AnalyticalDistanceToAP, Trilaterate3D, Trilaterate3DAlternate 
-from src.coordinates import GetAPUnityCoordinates
+from src.coordinates import GetAPUnityCoordinates, UnityCoordinate
 from itertools import combinations
 
 
@@ -16,10 +16,13 @@ def PredictTrilaterate(valids, unity_coordinate):
         combos = list(combinations(valids, 3))
         for combo in combos:
             try:
+                coords: list[UnityCoordinate] = []
+                distances = []
                 for cell in combo:
-                    cell.distance = AnalyticalDistanceToAP(cell.signal)
-                predicted_coord = Trilaterate3DAlternate(combo[0].coords, combo[1].coords, combo[2].coords,
-                            combo[0].distance, combo[1].distance, combo[2].distance)
+                    distances.append(AnalyticalDistanceToAP(cell.signal))
+                    coords.append(UnityCoordinate(*cell.coords))
+                predicted_coord = Trilaterate3DAlternate(coords[0], coords[1], coords[2],
+                            distances[0], distances[1], distances[2])
                 predicted_coords.append(predicted_coord)
             except Exception as e:
                 #TODO: Why are there division by zero errors?

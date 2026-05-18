@@ -1,7 +1,21 @@
 import re
+import matplotlib.pyplot as plt
+import matplotlib.colors as clr
+import numpy as np
+import os
 
-from enums import Data
+from src.enums import Data
 
+def PlotPointsOnFloor(points, floor):
+    pts = np.array(points)
+    image = ''
+    if floor == 5:
+        image = 'map floor five.jpg'
+    else:
+        image = 'map floor six.jpg'
+    plt.imread(image)
+    plt.scatter(pts[:, 0], pts[:, 1], marker='o', cmap="hsv", s=5)
+    
 
 def GetUnityCoordinates(selected_floor) -> list:
     lines = []
@@ -58,14 +72,12 @@ def APCoordinates():
     
     return coordinates
 
+
 if __name__ == "__main__":
     import matplotlib as mpimg
-    import matplotlib.pyplot as plt
-    import numpy as np
-    import os
 
-    cwd = os.getcwd()
-    print(cwd)
+    # cwd = os.getcwd()
+    # print(cwd)
 
     image = plt.imread("map floor five.jpg")
     ap_pts = np.array(APCoordinates())

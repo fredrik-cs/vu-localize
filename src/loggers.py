@@ -1,4 +1,5 @@
 from datetime import datetime
+from logging import Logger
 import logging
 import re
 import time
@@ -6,10 +7,10 @@ import time
 from src.enums import SSIDs
 from src.iw_interpret import Cell
 
-def new_logger(name):
+def new_logger(folder: str, name: str):
 
         logger = logging.getLogger(name)
-        handler = logging.FileHandler("experiments/draftzero/"+name+".log")
+        handler = logging.FileHandler(f"experiments/{folder}/{name}.log")
         logger.addHandler(handler)
 
         return logger
@@ -18,10 +19,10 @@ def LogBandQualities(band, file_name):
         ITERATION_DELAY = 0.01
         ITERATIONS = 192 # 1920 - 2000
 
-        loggers = []
-        loggers.append(new_logger(file_name+"-camp"))
-        loggers.append(new_logger(file_name+"-edu"))
-        loggers.append(new_logger(file_name+"-iot"))
+        loggers: list[Logger] = []
+        loggers.append(new_logger("draftzero", f"{file_name}-camp"))
+        loggers.append(new_logger("draftzero", f"{file_name}-edu"))
+        loggers.append(new_logger("draftzero", f"{file_name}-iot"))
         ssids = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]
         level = logging.INFO
 
@@ -74,7 +75,7 @@ def process_dump(scan_dump, ssid):
     print("scan dump succeeded!")
     return (chronological_scan)
 
-def log_debug_scan(logger, results_per_iter):
+def log_debug_scan(logger: Logger, results_per_iter):
         signals_per_dump, good_amounts = ([],[])
         mac_signal_dict, freq_signal_dict = ({}, {})
         MIN_SIGNAL_STRENGTH = -67
@@ -138,7 +139,7 @@ def log_debug_scan(logger, results_per_iter):
         # Signal strength per band measure
         log_strength_measure(logger, freq_signal_dict)
 
-def log_variance_measure(logger, mac_signal_dict):
+def log_variance_measure(logger: Logger, mac_signal_dict):
     prev_strength = 0
         
     for mac in mac_signal_dict:
@@ -186,7 +187,7 @@ def log_variance_measure(logger, mac_signal_dict):
         prev_strength = 0
         logger.debug(f"\n{'-' * 90}")
 
-def log_strength_measure(logger, freq_signal_dict):
+def log_strength_measure(logger: Logger, freq_signal_dict):
     signals_count = 0
     previous_freq = 0
     mid_log = ""

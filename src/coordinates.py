@@ -3,7 +3,15 @@ import re
 import pandas as pd
 from itertools import islice
 
-from src.enums import Data
+# from src.iw_interpret import Cell
+# from src.enums import Data
+
+class Data:
+    AP_MAC = 'data/NU-AP-MAC.xlsx'
+    BUILDING_COORDS = 'data/samplesF5-multilayer.csv'
+    INTEGER_COORDS_ON_FLOOR = 'data/coordinates_f{}_extended.txt'
+    UNITY_COORDS_ON_FLOOR = 'data/coordinates_f{}_extended.txt'
+    COORDS_OF_APS = 'data/ap_coordinates.txt'
 
 class UnityCoordinate:
     def __init__(self, x, y, z):
@@ -28,8 +36,13 @@ class UnityCoordinate:
             y = self.y,
             z = self.z,
         )
+    
     def __repr__(self):
         return self.__str__()
+    
+    # def __format__(self, format_str):
+    #     print(str(self))
+    #     return format(str(self), format_str)
 
 class Coordinate:
     def __init__(self, floor, x, y):
@@ -94,7 +107,7 @@ def GetUnityCoordinates(selected_floor) -> list[UnityCoordinate]:
             
     return unity_coordinates
 
-def GetAPUnityCoordinates(cells):
+def GetAPUnityCoordinates(cells: list):
     lines = []
     coordinates = []
     
@@ -104,7 +117,7 @@ def GetAPUnityCoordinates(cells):
     def CellInAPs(lines, cell):
         for line in lines:
             if cell.name == line[:10]:
-                cell.coord = line
+                cell.coord_transform = line
                 return True
         return False
         
@@ -115,12 +128,12 @@ def GetAPUnityCoordinates(cells):
     coordinate_pattern = r'([A-Z\-]*[0-9]*)(?: -> )([0-9\.]*),([0-9\.]*),([0-9\.]*)'
     
     for cell in cells:
-        coord_line = re.match(coordinate_pattern, cell.coord)
+        coord_line = re.match(coordinate_pattern, cell.coord_transform)
         if coord_line:
             x = float(coord_line.group(2))
             y = float(coord_line.group(3))
             z = float(coord_line.group(4))
-            cell.coords = UnityCoordinate(x, y, z)
+            cell.coords = (x, y, z)
             # coordinates.append(UnityCoordinate(x, y, z))
 
     # return coordinates

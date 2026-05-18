@@ -2,6 +2,7 @@ from random import uniform
 import re
 import subprocess
 import time
+# from src.coordinates import UnityCoordinate
 from src.enums import WifiInterface, SSIDs
 
 VU_IF = WifiInterface.WLP1S0
@@ -15,6 +16,9 @@ class Cell:
         self.ssid: str = ""
         self.age: int = 999999
         self.name: str = ""
+        self.distance: int = -999
+        self.coord_transform = ""
+        self.coords: tuple = (None, None, None) 
     
     def __str__(self):
         return self.__repr__()
@@ -95,7 +99,7 @@ class Cell:
 
             campnet_scan = filter(lambda x: str(x[4]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
             sorted_scan = sorted(campnet_scan, key=lambda regex_group: int(regex_group[3]))
-            print(sorted_scan)
+            # print(sorted_scan)
 
             cells: list[Cell] = []
             for scan in sorted_scan:
