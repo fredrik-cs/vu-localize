@@ -1,9 +1,9 @@
 from src.enums import SSIDs, WifiInterface, Experiment
-from src.experiments import ScanFloor, ThesisDraftZero, ThesisDraftOne
+from src.experiments import ScanFloor, ThesisDraftZero, ThesisDraftOne, ThesisDraftTwo
   
         
 if __name__ == "__main__":
-    SELECTED_EXPERIMENT = Experiment.DRAFT_ONE
+    SELECTED_EXPERIMENT = Experiment.DRAFT_TWO
 
     interface = WifiInterface.WLP1S0
     ssid = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]
@@ -14,4 +14,6 @@ if __name__ == "__main__":
         case Experiment.DRAFT_ZERO:
             ThesisDraftZero()
         case Experiment.DRAFT_ONE:
-            ThesisDraftOne(interface, ssid)
+            ThesisDraftOne()
+        case Experiment.DRAFT_TWO:
+            ThesisDraftTwo()

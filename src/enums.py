@@ -39,3 +39,4 @@ class Experiment:
     SCAN_FLOOR = 1
     DRAFT_ZERO = 0
     DRAFT_ONE = -1
+    DRAFT_TWO = -2

@@ -7,14 +7,54 @@ import os
 from src.enums import Data
 
 def PlotPointsOnFloor(points, floor):
-    pts = np.array(points)
+    # print(f"points: {points}")
+
+    x_scale = 24.2
+    x_bias = 25.0
+    z_scale = -24.2
+    z_bias = 1785.0
+
+    points["ml"] = list(map(lambda x : (x[0] * x_scale + x_bias, x[1] * z_scale + z_bias), points["ml"]))
+
+    ml_pts = np.array(points["ml"])
+    tl_pts = np.array(points["tl"])
+    mb_pts = np.array(points["mb"])
+    mbf_pts = np.array(points["mbf"]) 
+    ml_steps = np.linspace(0,1,len(points["ml"]))
+    tl_steps = np.linspace(0,1,len(points["tl"]))
+    mb_steps = np.linspace(0,1,len(points["mb"]))
+    mbf_steps = np.linspace(0,1,len(points["mbf"]))
+
     image = ''
     if floor == 5:
         image = 'map floor five.jpg'
     else:
         image = 'map floor six.jpg'
-    plt.imread(image)
-    plt.scatter(pts[:, 0], pts[:, 1], marker='o', cmap="hsv", s=5)
+
+    # f = plt.figure()    
+    # f, axes = plt.subplots(nrows = 2, ncols = 2)
+
+    
+
+    cwd = os.getcwd()
+    print(cwd)
+
+    image = plt.imread(image)
+    plt.imshow(image)
+    plt.scatter(ml_pts[:, 0], ml_pts[:, 1], marker='x', c=ml_steps, cmap = 'hsv', s=10)
+    # if ml_pts.any(): 
+    #     axes[0][0].scatter(ml_pts[:, 0], ml_pts[:, 1], marker='o', c=ml_steps, cmap="hsv", s=5)
+    #     axes[0][0].set_xlabel('ML: Circles', labelpad = 5)
+    # if tl_pts.any(): 
+    #     axes[0][1].scatter(tl_pts[:, 0], tl_pts[:, 1], marker='x', c=tl_steps, cmap="hsv", s=5)
+    #     axes[0][1].set_xlabel('TL: Crosses', labelpad = 5)
+    # if mb_pts.any(): 
+    #     axes[1][0].scatter(mb_pts[:, 0], mb_pts[:, 1], marker='*', c=mb_steps, cmap="hsv", s=5)
+    #     axes[1][0].set_xlabel('MB: Stars', labelpad = 5)
+    # if mbf_pts.any(): 
+    #     axes[1][1].scatter(mbf_pts[:, 0], mbf_pts[:, 1], marker='s', c=mbf_steps, cmap="hsv", s=5)
+    #     axes[1][1].set_xlabel('MBF: Squares', labelpad = 5)
+    plt.show()
     
 
 def GetUnityCoordinates(selected_floor) -> list:

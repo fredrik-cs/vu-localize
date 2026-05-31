@@ -79,7 +79,7 @@ def FilterAPs(cells: list[Cell]) -> tuple[list[Cell], list[Cell]]:
         if in_excel:
             query = "`Base Radio MAC Address` == @address"
             name = AP_DF.query(query)["AP Name"].item()
-            print(f"Found! {name}")
+            # print(f"Found! {name}")
             cell.name = name
             excel_aps.append(cell)
             # excel_aps_names.append(name)
@@ -87,7 +87,7 @@ def FilterAPs(cells: list[Cell]) -> tuple[list[Cell], list[Cell]]:
             other_aps.append(cell)
             
         cell_index += 1    
-        PrintCellSimple(cell, cell_index, in_excel)    
+        # PrintCellSimple(cell, cell_index, in_excel)    
     
     return excel_aps, other_aps
         

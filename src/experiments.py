@@ -3,7 +3,7 @@ from threading import Thread
 import time
 
 from src.iw_interpret import Cell
-from src.producer_consumer import consumer, producer
+from src.producer_consumer import consumer, single_producer, multi_producer
 from src.loggers import LogBandQualities, new_logger
 from src.analysis import PredictTrilaterate
 from src.sampling import SampleTableManager
@@ -11,6 +11,7 @@ from src.scan import FindAPs
 from src.registries import RegisterFrequencies, RegisterUnknowns
 from src.coordinates import GetCoordinates, GetUnityCoordinates
 from src.enums import Band
+from src.makemap import PlotPointsOnFloor
      
 def ScanFloor(interface, ssids):
 
@@ -62,13 +63,17 @@ def ThesisDraftZero():
     LogBandQualities(Band.G2_4,  f"twofour-{file_name}" )
     LogBandQualities(Band.G5,    f"fiveo-{file_name}"   ) 
 
-def ThesisDraftOne(interface, ssid):
+def ThesisDraftOne():
     queue: Queue[list[Cell]] = Queue()
+    floor = int(input("what floor are we analysing?"))
     name = input("log to what file?\n")
     logger = new_logger("draftone", name)
+    result = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    stop_threads = False
 
-    prod_thread = Thread(target=producer, args=(queue, Band.G2_4))
-    cons_thread = Thread(target=consumer, args=(queue, logger))
+    prod_thread = Thread(target=single_producer, args=(lambda: stop_threads,queue, Band.G2_4,))
+    cons_thread = Thread(target=consumer, args=(lambda: stop_threads, queue, floor, logger, result,))
+    
     prod_thread.start()
     time.sleep(1)
     print("Start in 3...")
@@ -79,26 +84,77 @@ def ThesisDraftOne(interface, ssid):
     time.sleep(1)
     print("GO!")
     cons_thread.start()
+    
     time.sleep(5)
     input("Press enter to finish course")
+    
+    stop_threads = True
     prod_thread.join()
     cons_thread.join()
-    # AS_SLEEP_DURATION = 0.01
-    # AS_ITERATIONS = 10
+    
+    PlotPointsOnFloor(result, floor)
 
-    # while True:
-    #     unfiltered_cells: list[Cell] = []
-    #     # unfiltered_cells = ""
+def ThesisDraftTwo():
+    queue_all: Queue[list[Cell]] = Queue()
+    # queue_80: Queue[list[Cell]] = Queue()
+    queue_70: Queue[list[Cell]] = Queue()
+    # queue_67: Queue[list[Cell]] = Queue()
+    queue_5k: Queue[list[Cell]] = Queue()
+    queues_and_rules = [(queue_all, -100, 0, 5000),
+                    #    (queue_80, -81, 0, 5000),
+                       (queue_70, -71, 0, 5000),
+                    #    (queue_67, -68, 0, 5000),
+                       (queue_5k, -100, 4000, 10000)]
+    
+    floor = int(input("what floor are we analysing?"))
+    name = input("log to what file?\n")
+    logger_all = new_logger("drafttwo", "all_"+name)
+    # logger_80 = new_logger("drafttwo", "80_"+name)
+    logger_70 = new_logger("drafttwo", "70_"+name)
+    # logger_67 = new_logger("drafttwo", "67_"+name)
+    logger_5k = new_logger("drafttwo", "5k_"+name)
+    result_all = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    # result_80 = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    result_70 = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    # result_67 = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    result_5k = {"ml": [], "tl": [], "mb": [], "mbf": []}
+    stop_threads = False
 
-    #     for i in range(AS_ITERATIONS):
-    #         Cell.trigger_scan(Band.G2_4)
-    #         cell_dump = Cell.dump_scan()
-    #         # print(cell_dump)
-    #         # cell_dump = Cell._dump()
-    #         unfiltered_cells.extend(cell_dump)
-    #         # unfiltered_cells += str(cell_dump)
-    #         time.sleep(AS_SLEEP_DURATION)
+    prod_thread = Thread(target=multi_producer, args=(lambda: stop_threads, queues_and_rules,  Band.G2_4,))
+    cons_all = Thread(target=consumer, args=(lambda: stop_threads, queue_all, floor, logger_all,  result_all,))
+    # cons_80 = Thread(target=consumer, args=(lambda: stop_threads, queue_80, floor, logger_80,  result_80,))
+    cons_70 = Thread(target=consumer, args=(lambda: stop_threads, queue_70, floor, logger_70,  result_70,))
+    # cons_67 = Thread(target=consumer, args=(lambda: stop_threads, queue_67, floor, logger_67,  result_67,))
+    cons_5k = Thread(target=consumer, args=(lambda: stop_threads, queue_5k, floor, logger_5k,  result_5k,))
+    
+    prod_thread.start()
+    time.sleep(1)
+    print("Start in 3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print("GO!")
+    cons_all.start()
+    # cons_80.start()
+    cons_70.start()
+    # cons_67.start()
+    cons_5k.start()
 
-    #     # good_cells = list(filter(lambda cell: cell.signal>=-100, unfiltered_cells))
-        
-    #     print(unfiltered_cells)
+    time.sleep(5)
+    input("Press enter to finish course")
+
+    stop_threads = True
+    prod_thread.join()
+    cons_all.join()
+    # cons_80.join()
+    cons_70.join()
+    # cons_67.join()
+    cons_5k.join()
+
+    PlotPointsOnFloor(result_all, floor)
+    # PlotPointsOnFloor(result_80, floor)
+    PlotPointsOnFloor(result_70, floor)
+    # PlotPointsOnFloor(result_67, floor)
+    PlotPointsOnFloor(result_5k, floor)
