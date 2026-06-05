@@ -1,0 +1,4658 @@
+Time of log: 2026-05-18 20:22:07.895758
+got (24.11910711285484, 24.105 ,32.568729299175196) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:07.846564, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.838564, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.611564, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:07.596564, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:07.459564, Name: NU-AP05328
+	Signal: -67 dBm, 2462 MHz
+got (-276.13 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.848564, Name: NU-AP06161
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.846564, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.838564, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+got (-151.3634608034309,-562.14427195113,8.250005118648843) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.848564, Name: NU-AP06161
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.846564, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.838564, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.832564, Name: NU-AP04104
+	Signal: -73 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.846564, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.838564, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.611564, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:07.596564, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:08.031696
+got (27.39780575808289, 24.105 ,34.429497306443096) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:07.977358, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.965358, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.957358, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.630358, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.353358, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:07.338358, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+got (-659.41 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.989358, Name: NU-AP06161
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.988358, Name: NU-AP04105
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.977358, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+got (38.2394767648667,79.10227836718867,81.36798514217577) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.989358, Name: NU-AP06161
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.988358, Name: NU-AP04105
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.977358, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.965358, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:07.977358, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.965358, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.957358, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.630358, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:08.160958
+got (24.55092617617173, 24.105 ,35.28607565046185) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.114281, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.908281, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.756281, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.105281, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-461.82 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.114281, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.908281, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.897281, Name: NU-AP06161
+	Signal: -63 dBm, 2462 MHz
+got (61.0006903705683,61.51884905289426,-27.97064806961333) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.114281, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.908281, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.897281, Name: NU-AP06161
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.756281, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.114281, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.908281, Name: NU-AP05123
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:07.756281, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.105281, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:08.393375
+got (29.0257124686556, 24.105 ,37.301354525602775) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.359107, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.356107, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.183107, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.838107, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:06.611107, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.359107, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.356107, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.183107, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.359107, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.356107, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.183107, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.838107, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.359107, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.356107, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.183107, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:07.838107, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:08.524086
+got (28.586804120711268, 24.105 ,37.47071765906577) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.496235, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485235, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.484235, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.472235, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.408235, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:06.375235, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-1430.49,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.496235, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.488235, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485235, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+got (-128.0429588481276,-153.61682093276886,39.68876637794603) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.496235, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.488235, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485235, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.484235, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.496235, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485235, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.484235, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.472235, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:08.655029
+got (28.586804120711275, 24.105 ,37.470717659065784) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.502283, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485283, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.473283, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.335284, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.181283, Name: NU-AP05140
+	Signal: -51 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:06.148283, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-233.33 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.502283, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.495283, Name: NU-AP04104
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485283, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+got (-44.220624639209966,139.80809104232733,45.85666216547279) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.502283, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.495283, Name: NU-AP04104
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485283, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.477283, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.502283, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.485283, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.473283, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.335284, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:08.785647
+got (28.35055821182171, 24.105 ,37.3988916584511) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.757446, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.751446, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.745446, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.729446, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.100446, Name: NU-AP05136
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:05.913446, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-510.67 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.757446, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.751446, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.748446, Name: NU-AP06161
+	Signal: -65 dBm, 2462 MHz
+got (-87.54038301753178,-602.2192366315218,-20.199401559803658) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.757446, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.751446, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.748446, Name: NU-AP06161
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.745446, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.757446, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.751446, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.745446, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.729446, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:08.915385
+got (28.750939083601086, 24.105 ,37.13948111643212) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.888244, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.885244, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.874244, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.702244, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.613245, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:05.645244, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-1106.9 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.888244, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.885244, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.878244, Name: NU-AP06161
+	Signal: -64 dBm, 2462 MHz
+got (20.878465309916006,-11.915586084245518,43.29699970757686) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.888244, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.885244, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.878244, Name: NU-AP06161
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.874244, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.888244, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.885244, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.874244, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.702244, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:09.066011
+got (30.910743491451512, 24.105 ,37.735263204354624) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:09.009998, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.902998, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.891998, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.650998, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:05.337998, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-569.84 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.009998, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.995998, Name: NU-AP08304
+	Signal: -77 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.913998, Name: NU-AP04104
+	Signal: -71 dBm, 2462 MHz
+got (-8839.862345488731,2796.5596531751085,-4113.053141886047) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.009998, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.995998, Name: NU-AP08304
+	Signal: -77 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.913998, Name: NU-AP04104
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.902998, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.009998, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.902998, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.891998, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.650998, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:09.200022
+got (30.910743491451512, 24.105 ,37.735263204354624) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:08.739012, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.632012, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.621012, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.380012, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:05.067012, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-1613.71,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.168012, Name: NU-AP06330
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.805012, Name: NU-AP08304
+	Signal: -77 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.739012, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+got (-28.54526528299265,57.82651491646459,18.315479359949002) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.168012, Name: NU-AP06330
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.805012, Name: NU-AP08304
+	Signal: -77 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.739012, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.643012, Name: NU-AP04104
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:08.739012, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.632012, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.621012, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.380012, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:09.344544
+got (29.650194492632416, 24.105 ,37.387540738507596) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:09.262502, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.476502, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.369503, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.358502, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.117502, Name: NU-AP05136
+	Signal: -58 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:04.804502, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-263.18 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.301502, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.262502, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.255502, Name: NU-AP06330
+	Signal: -73 dBm, 2462 MHz
+got (81.57438677174127,51.69543328304953,1.7328971568373135) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.301502, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.262502, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.255502, Name: NU-AP06330
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.542502, Name: NU-AP08304
+	Signal: -77 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.262502, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.476502, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:08.369503, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:08.358502, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:09.510084
+got (30.631634298442524, 24.105 ,36.94662125962889) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:09.446311, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.430311, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.424311, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.419311, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.413311, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:08.205311, Name: NU-AP05140
+	Signal: -50 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:04.533311, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+got (-295.62 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.446311, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.442311, Name: NU-AP07194
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.439311, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+got (8.247976756393301,61.943313804563196,6.3477356790334385) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.446311, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.442311, Name: NU-AP07194
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.439311, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.432311, Name: NU-AP07183
+	Signal: -74 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.446311, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.430311, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.424311, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.419311, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:09.815172
+got (26.69130175528632, 24.105 ,38.69602163985615) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:09.751159, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.710159, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.699159, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.364159, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.348159, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.337159, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+got (19.620000000000005, 26.695 ,6.199999999999999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.751159, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.717159, Name: NU-AP04104
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.710159, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+got (121.66802342989484,-227.87093051542513,67.54182231928276) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.751159, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.717159, Name: NU-AP04104
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.710159, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.699159, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:09.751159, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.710159, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.699159, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.364159, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:10.260925
+got (26.55837193242685, 24.105 ,34.006174408514255) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:10.209265, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.201265, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.189265, Name: NU-AP05328
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.186265, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.007265, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.737265, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.726265, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+got (-74.85  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.216265, Name: NU-AP06150
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.209265, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.201265, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+got (-101.54615203461755,-26.581781278198804,-18.7603322651989) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.216265, Name: NU-AP06150
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.209265, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.201265, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.194265, Name: NU-AP04104
+	Signal: -68 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.209265, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.201265, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.189265, Name: NU-AP05328
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.186265, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:10.711399
+got (22.88110406361695, 24.105 ,36.80214537878932) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:10.608171, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.594171, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.591171, Name: NU-AP05116
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.226171, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.206171, Name: NU-AP05328
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.947170, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-481.17 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.608171, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.594171, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.591171, Name: NU-AP03084
+	Signal: -75 dBm, 2462 MHz
+got (1393.0390697442722,-1950.3129892076574,215.3162594106183) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.608171, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.594171, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.591171, Name: NU-AP03084
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.591171, Name: NU-AP05116
+	Signal: -75 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.608171, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.594171, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.591171, Name: NU-AP05116
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.226171, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:11.097752
+got (19.484557905756873, 24.105 ,37.93321537308179) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:10.753800, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.739799, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.736800, Name: NU-AP05116
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.935800, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (19.2    , 33.76  ,    23.2) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:11.042800, Name: NU-AP04104
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.029800, Name: NU-AP06150
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.756800, Name: NU-AP03073
+	Signal: -78 dBm, 2462 MHz
+got (29.83319101128134,46.607789441134,52.81682779503506) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:11.042800, Name: NU-AP04104
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.029800, Name: NU-AP06150
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.756800, Name: NU-AP03073
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.753800, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:10.753800, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.739799, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:10.736800, Name: NU-AP05116
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:09.935800, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:11.482669
+got (31.46949351336911, 24.105 ,36.52956456027831) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:11.454290, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.428290, Name: NU-AP05135
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.427290, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.935290, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-271.1  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:11.454290, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.452290, Name: NU-AP09221
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:11.431290, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+got (287.434162366908,619.615764487184,-224.05060795767076) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:11.454290, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.452290, Name: NU-AP09221
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:11.431290, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.430290, Name: NU-AP06162
+	Signal: -71 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:11.454290, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.428290, Name: NU-AP05135
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.427290, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.935290, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:12.131178
+got (33.456936866926895, 24.105 ,36.68362644378927) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:12.050705, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:11.933705, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.906705, Name: NU-AP05135
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.757705, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:10.194705, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-330.52 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.050705, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.019705, Name: NU-AP06162
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:11.933705, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (7.732271306611574,-262.0735749570568,44.08397780800552) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.050705, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.019705, Name: NU-AP06162
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:11.933705, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.909705, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.050705, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:11.933705, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.906705, Name: NU-AP05135
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.757705, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:12.583406
+got (28.019973470211777, 24.105 ,36.46963692849902) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:12.518790, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.510790, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.500790, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.499790, Name: NU-AP05328
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.491790, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.491790, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.485790, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.824790, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:11.531790, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:09.968790, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-387.26 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.523790, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.518790, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.510790, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+got (17.087653993336353,-313.07627886821706,20.943940152904013) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.523790, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.518790, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.510790, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.500790, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.518790, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.510790, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.500790, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.499790, Name: NU-AP05328
+	Signal: -73 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:13.011442
+got (27.46053092196763, 24.105 ,37.11738006848066) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:12.886934, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.643934, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.628934, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.614934, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.595934, Name: NU-AP05328
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.837934, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.981934, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-147.64 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.914934, Name: NU-AP10243
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.886934, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+got (53.16518684854542,-28.381228430102134,23.455866274185176) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.914934, Name: NU-AP10243
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.886934, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.886934, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.784934, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.643934, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:13.439801
+got (27.46053092196763, 24.105 ,37.11738006848066) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:12.891378, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.648379, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.633379, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.619378, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:12.600379, Name: NU-AP05328
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:11.842378, Name: NU-AP05134
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:09.986378, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-147.64 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.974379, Name: NU-AP10243
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.891378, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+got (53.16518684854542,-28.381228430102134,23.455866274185176) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.974379, Name: NU-AP10243
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.891378, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:12.891378, Name: NU-AP05125
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.789379, Name: NU-AP05126
+	Signal: -74 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:12.648379, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:15.300795
+got (27.480848789303334, 24.105 ,37.66935287177088) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:14.767297, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.747297, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.394297, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.371296, Name: NU-AP05134
+	Signal: -59 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.359297, Name: NU-AP05128
+	Signal: -65 dBm, 2412 MHz
+got (-607.18 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:14.868297, Name: NU-AP06142
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.767297, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.747297, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+got (13.8012140751584,-476.0550258964369,-0.8479584671630293) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:14.868297, Name: NU-AP06142
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.767297, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.747297, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.741297, Name: NU-AP06161
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:14.767297, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.747297, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.394297, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.371296, Name: NU-AP05134
+	Signal: -59 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:15.708385
+got (32.74740329224392, 24.105 ,36.59776458366933) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:15.663400, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:15.594400, Name: NU-AP05128
+	Signal: -72 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.774400, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.754400, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.401400, Name: NU-AP05124
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.378400, Name: NU-AP05134
+	Signal: -59 dBm, 2412 MHz
+got (-394.78 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:15.663400, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:15.594400, Name: NU-AP05128
+	Signal: -72 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.875400, Name: NU-AP06142
+	Signal: -68 dBm, 2412 MHz
+got (-47.865200292642086,35.25116061683114,52.89746015166172) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:15.663400, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:15.594400, Name: NU-AP05128
+	Signal: -72 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.875400, Name: NU-AP06142
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.774400, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:15.663400, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:15.594400, Name: NU-AP05128
+	Signal: -72 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:14.774400, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:14.754400, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:18.016081
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:17.903684, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.134684, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:16.996684, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.752684, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-148.23 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:17.904684, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.903684, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.889684, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+got (139.60673718374832,-158.67184563344495,59.9580922136484) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:17.904684, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.903684, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.889684, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.878684, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:17.903684, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.134684, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:16.996684, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.752684, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:18.399932
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:18.219528, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.158529, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.020529, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.776529, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-113.56 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.253529, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.238528, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.227528, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (100.98449379702107,90.26282353971008,-19.327149794567553) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.253529, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.238528, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.227528, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.219528, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.219528, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.158529, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.020529, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.776529, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:18.795100
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:18.208532, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.147532, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.009532, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.765532, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-113.56 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.242532, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.227532, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.216532, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (100.98449379702107,90.26282353971008,-19.327149794567553) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.242532, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.227532, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.216532, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.208532, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.208532, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.147532, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.009532, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.765532, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:19.203348
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:18.229986, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.168986, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.030986, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.786986, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-113.56 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.263986, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.248986, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.237986, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (100.98449379702107,90.26282353971008,-19.327149794567553) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.263986, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.248986, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.237986, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.229986, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.229986, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.168986, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.030986, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.786986, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:19.621536
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:18.241264, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.180264, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.042264, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.798264, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-1428.81,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:19.561264, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.275264, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.260264, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+got (130.07718549657383,-178.7663469946467,67.48242414859762) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:19.561264, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.275264, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.260264, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.249264, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.241264, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.180264, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.042264, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.798264, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:20.065750
+got (21.301016475570805, 24.105 ,37.077444786209725) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:18.251640, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.190640, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.052640, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.808640, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-1428.81,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:19.935640, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.285640, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.270640, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+got (130.07718549657383,-178.7663469946467,67.48242414859762) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:19.935640, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.285640, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.270640, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.259640, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:18.251640, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.190640, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.052640, Name: NU-AP05128
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.808640, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:20.477713
+got (20.88903717929911, 24.105 ,36.60670058515285) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:20.401922, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:18.233922, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.172922, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.790922, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-332.58 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.401922, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:19.917922, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.267922, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+got (-2.5743292671546807,86.24278041933846,18.507832848553985) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.401922, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:19.917922, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.267922, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:18.252922, Name: NU-AP09223
+	Signal: -76 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.401922, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:18.233922, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:17.172922, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.790922, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:20.861112
+got (20.88903717929909, 24.105 ,36.60670058515287) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:20.787981, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.694981, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.146981, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.764981, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (-412.67 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.787981, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.694981, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:19.891981, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+got (129.41699224535208,181.8202700501655,27.806688993608635) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.787981, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.694981, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:19.891981, Name: NU-AP10243
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:18.241981, Name: NU-AP04104
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:20.787981, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.694981, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:17.146981, Name: NU-AP05124
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:15.764981, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:21.283907
+got (28.614628948879236, 24.105 ,39.28907814039381) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:21.222903, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.214903, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.206903, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.192903, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.883903, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:20.707903, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+got (-259.11 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.222903, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.214903, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.212903, Name: NU-AP09218
+	Signal: -70 dBm, 2462 MHz
+got (6.557113606666681,-50.1087463404317,59.43671973129411) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.222903, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.214903, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.212903, Name: NU-AP09218
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.206903, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.222903, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.214903, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.206903, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.192903, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:21.816870
+got (28.109070483201165, 24.105 ,39.58023705858445) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:21.746319, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.726319, Name: NU-AP05123
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.705319, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.697319, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:20.840319, Name: NU-AP05128
+	Signal: -70 dBm, 2412 MHz
+got (37.74   , 30.88  ,35.540000000000006) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.764319, Name: NU-AP08306
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.761319, Name: NU-AP07183
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.756319, Name: NU-AP02053
+	Signal: -69 dBm, 2462 MHz
+got (55.55257541588708,94.8087181940812,-153.63918224753058) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.764319, Name: NU-AP08306
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.761319, Name: NU-AP07183
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.756319, Name: NU-AP02053
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.754319, Name: NU-AP09218
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:21.746319, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.726319, Name: NU-AP05123
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:21.705319, Name: NU-AP05125
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:21.697319, Name: NU-AP05136
+	Signal: -65 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:22.199423
+got (32.66425881066466, 24.105 ,39.30657607062441) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:22.139931, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.136931, Name: NU-AP05123
+	Signal: -45 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.121931, Name: NU-AP05136
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.040931, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+got (-199.82 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.139931, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.136931, Name: NU-AP05123
+	Signal: -45 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.123931, Name: NU-AP00005
+	Signal: -68 dBm, 2412 MHz
+got (68.77508647804282,-17.536328008615673,-10.057822698550417) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.139931, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.136931, Name: NU-AP05123
+	Signal: -45 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.123931, Name: NU-AP00005
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:22.121931, Name: NU-AP05136
+	Signal: -68 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.139931, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.136931, Name: NU-AP05123
+	Signal: -45 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.121931, Name: NU-AP05136
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.040931, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:22.617946
+got (28.798064081373845, 24.105 ,38.574127638561265) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:22.573606, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.555606, Name: NU-AP05117
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:22.541606, Name: NU-AP05123
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.537606, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.286606, Name: NU-AP05136
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.266606, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+got (-297.58 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.573606, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.566606, Name: NU-AP06148
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.564606, Name: NU-AP10243
+	Signal: -68 dBm, 2437 MHz
+got (200.6007587903482,-41.03840732866946,130.8152262107069) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.573606, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.566606, Name: NU-AP06148
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.564606, Name: NU-AP10243
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:22.560606, Name: NU-AP06142
+	Signal: -61 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.573606, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.555606, Name: NU-AP05117
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:22.541606, Name: NU-AP05123
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.537606, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:23.016923
+got (24.623115563791803, 24.105 ,37.874605184027935) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:22.962898, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.952898, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.920898, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.780898, Name: NU-AP05117
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:22.714898, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+got (-337.4  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.962898, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.952898, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.942898, Name: NU-AP06164
+	Signal: -71 dBm, 2412 MHz
+got (15.308179920402267,-40.23075164559883,57.774894547260104) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.962898, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.952898, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.942898, Name: NU-AP06164
+	Signal: -71 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:22.942898, Name: NU-AP04105
+	Signal: -65 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:22.962898, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.952898, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.920898, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.780898, Name: NU-AP05117
+	Signal: -70 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:23.549752
+got (22.4324351701303, 24.105 ,33.65744985840607) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:23.463777, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.460777, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.452777, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.430777, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:22.901777, Name: NU-AP05117
+	Signal: -70 dBm, 2412 MHz
+got (-232.33 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.470777, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.463777, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.460777, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+got (-46.34435814478427,919.1108042471658,-17.44978578487632) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.470777, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.463777, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.460777, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.452777, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.463777, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.460777, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.452777, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.430777, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:24.064661
+got (26.377372713733756, 24.105 ,38.89148334541232) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:23.492269, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.473269, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.470269, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.462269, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-230.0  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.975269, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.500269, Name: NU-AP09218
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.492269, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (48.2577002338736,66.9424195468719,26.219685909832783) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.975269, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.500269, Name: NU-AP09218
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.492269, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.473269, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.492269, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.473269, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.470269, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.462269, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:24.486950
+got (26.377372713733756, 24.105 ,38.89148334541232) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:23.395183, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.376183, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.373183, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.365183, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-191.69 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:24.426183, Name: NU-AP06142
+	Signal: -61 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:24.210183, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.403183, Name: NU-AP09218
+	Signal: -66 dBm, 2462 MHz
+got (-106.55199289849274,186.15403102461065,49.02429925712648) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:24.426183, Name: NU-AP06142
+	Signal: -61 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:24.210183, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.403183, Name: NU-AP09218
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.395183, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:23.395183, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.376183, Name: NU-AP05123
+	Signal: -46 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.373183, Name: NU-AP05116
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:23.365183, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:25.048599
+got (28.57413740526567, 24.105 ,42.00864239735862) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:24.953029, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.944029, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.944029, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.922029, Name: NU-AP05136
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:24.913029, Name: NU-AP05122
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:23.458029, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-273.73 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:24.953029, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.950029, Name: NU-AP04105
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:24.950029, Name: NU-AP09218
+	Signal: -65 dBm, 2462 MHz
+got (20.538219261018885,-25.18913588294613,81.76827569257759) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:24.953029, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.950029, Name: NU-AP04105
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:24.950029, Name: NU-AP09218
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.947029, Name: NU-AP03084
+	Signal: -72 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:24.953029, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.944029, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.944029, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.922029, Name: NU-AP05136
+	Signal: -71 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:25.445294
+got (31.82987370616415, 24.105 ,41.02481148882334) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:25.382565, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.366565, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.105565, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.019565, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:24.956565, Name: NU-AP05136
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:24.812565, Name: NU-AP05122
+	Signal: -62 dBm, 2412 MHz
+got (-294.98 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.382565, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.370565, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.366565, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+got (16.10485520828985,20.313967923001734,57.84196798125396) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.382565, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.370565, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.366565, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.359565, Name: NU-AP09218
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.382565, Name: NU-AP05123
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.366565, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.105565, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.019565, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:25.969292
+got (29.751603083627685, 24.105 ,42.40230433260347) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:25.889276, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.884276, Name: NU-AP05133
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.878276, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.878276, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+got (-169.49 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.898276, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.896276, Name: NU-AP06142
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:25.889276, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+got (-54.975626891201586,478.4899585722681,7.089050443147078) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.898276, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.896276, Name: NU-AP06142
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:25.889276, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.884276, Name: NU-AP05133
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:25.889276, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.884276, Name: NU-AP05133
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.878276, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:25.878276, Name: NU-AP05123
+	Signal: -48 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:26.449553
+got (29.885898149557036, 24.105 ,41.838135405178576) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:26.361207, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.359207, Name: NU-AP05130
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:26.348207, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.346207, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.325207, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.058208, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.024207, Name: NU-AP05133
+	Signal: -71 dBm, 2462 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.361207, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.359207, Name: NU-AP05130
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:26.348207, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+got (-55.61602003114337,58.905895447284806,-53.78974717736337) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.361207, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.359207, Name: NU-AP05130
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:26.348207, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.347207, Name: NU-AP09231
+	Signal: -77 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.361207, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.359207, Name: NU-AP05130
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:26.348207, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.346207, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:26.848309
+got (30.071891090149347, 24.105 ,42.57409926574974) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:26.781793, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.639793, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.431793, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.429793, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.309793, Name: NU-AP05130
+	Signal: -70 dBm, 2437 MHz
+got (-825.8  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.781793, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.763793, Name: NU-AP06155
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.761793, Name: NU-AP03084
+	Signal: -74 dBm, 2462 MHz
+got (-6.537500679124794,-117.96197556506425,7.353270692665716) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.781793, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.763793, Name: NU-AP06155
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.761793, Name: NU-AP03084
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.756793, Name: NU-AP06161
+	Signal: -72 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:26.781793, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.639793, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.431793, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.429793, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:28.045543
+got (37.8748061550363, 24.105 ,45.8199418414299) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:27.970449, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.961449, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:27.905449, Name: NU-AP05137
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.443449, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+got (27.04   ,26.619999999999997,   42.92) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:27.979449, Name: NU-AP08306
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.974449, Name: NU-AP07183
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.973449, Name: NU-AP09231
+	Signal: -73 dBm, 2462 MHz
+got (92.0019103824223,-164.19557501742443,-134.41911736385134) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:27.979449, Name: NU-AP08306
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.974449, Name: NU-AP07183
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.973449, Name: NU-AP09231
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.970449, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:27.970449, Name: NU-AP05116
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:27.961449, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:27.905449, Name: NU-AP05137
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:26.443449, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:28.463573
+got (31.210741571705597, 24.105 ,44.07116504832452) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:28.408846, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.399846, Name: NU-AP05137
+	Signal: -51 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.383846, Name: NU-AP05117
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.382846, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.286846, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.440846, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+got (-489.1  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.408846, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.399846, Name: NU-AP05137
+	Signal: -51 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.383846, Name: NU-AP03082
+	Signal: -74 dBm, 2462 MHz
+got (-228.32726778584052,-644.613789950639,-1351.6147264276049) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.408846, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.399846, Name: NU-AP05137
+	Signal: -51 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.383846, Name: NU-AP03082
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.383846, Name: NU-AP05117
+	Signal: -62 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.408846, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.399846, Name: NU-AP05137
+	Signal: -51 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.383846, Name: NU-AP05117
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.382846, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:28.841093
+got (30.983101693538295, 24.105 ,43.79000496934239) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:28.795389, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.784389, Name: NU-AP05137
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.566389, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.555389, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.264389, Name: NU-AP05122
+	Signal: -57 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.418389, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+got (-233.65 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.795389, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.784389, Name: NU-AP05137
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.778389, Name: NU-AP04104
+	Signal: -73 dBm, 2462 MHz
+got (251.23922515083632,-818.4538816979851,-24.443968581926868) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.795389, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.784389, Name: NU-AP05137
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.778389, Name: NU-AP04104
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.606389, Name: NU-AP03082
+	Signal: -74 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:28.795389, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:28.784389, Name: NU-AP05137
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.566389, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:28.555389, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:29.250348
+got (30.99201116869368, 24.105 ,42.83014405415143) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:29.216002, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.209002, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.175002, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.455002, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+got (-95.72  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.216002, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.214002, Name: NU-AP09218
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.209002, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+got (83.75744135626242,-3.178768375725144,-157.25759022584657) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.216002, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.214002, Name: NU-AP09218
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.209002, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.175002, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.216002, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.209002, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.175002, Name: NU-AP05117
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:26.455002, Name: NU-AP05123
+	Signal: -52 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:29.614116
+got (31.874315014209895, 24.105 ,45.57506516557132) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:29.585303, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.573303, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.568303, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.480303, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.451303, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (47.62983, 29.84  ,   59.04) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.588303, Name: NU-AP06142
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.585303, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.573303, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+got (95.94222690765773,-434.82715331201655,86.27923665160053) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.588303, Name: NU-AP06142
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.585303, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.573303, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.568303, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:29.585303, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.573303, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.568303, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.480303, Name: NU-AP05137
+	Signal: -53 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:30.223650
+got (38.760256690224764, 24.105 ,48.07709368389296) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:30.134452, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:30.077452, Name: NU-AP05137
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.064452, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.049452, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:29.940452, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.893452, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+got (-253.29 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.134452, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:30.077452, Name: NU-AP05137
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.070452, Name: NU-AP04104
+	Signal: -74 dBm, 2462 MHz
+got (107.85990454853831,1667.0235911275834,-125.92111929593962) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.134452, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:30.077452, Name: NU-AP05137
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.070452, Name: NU-AP04104
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.064452, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.134452, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:30.077452, Name: NU-AP05137
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.064452, Name: NU-AP05123
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.049452, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:30.831244
+got (40.1506829919735, 24.105 ,51.217635394240254) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:30.792466, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.775465, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.285466, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.136466, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:29.942466, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:29.895465, Name: NU-AP05122
+	Signal: -55 dBm, 2412 MHz
+got (-497.81 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.792466, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.775465, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.717466, Name: NU-AP06155
+	Signal: -78 dBm, 2462 MHz
+got (-70.08234106020157,172.94314892100894,70.09258469456054) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.792466, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.775465, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.717466, Name: NU-AP06155
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.717466, Name: NU-AP03084
+	Signal: -74 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:30.792466, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.775465, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.285466, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:30.136466, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:31.251571
+got (31.652718235601817, 24.105 ,48.009173281846245) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:31.213274, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.209274, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.204274, Name: NU-AP05137
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.187274, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.183274, Name: NU-AP05124
+	Signal: -73 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.213274, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.209274, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.204274, Name: NU-AP05137
+	Signal: -47 dBm, 2462 MHz
+got (1295.9061971970402,-2391.0160737569367,1449.5302507874208) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.213274, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.209274, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.204274, Name: NU-AP05137
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.188274, Name: NU-AP08306
+	Signal: -75 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.213274, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.209274, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.204274, Name: NU-AP05137
+	Signal: -47 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.187274, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:31.676038
+got (35.1462829928319, 24.105 ,50.93771171823207) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:31.618672, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.608672, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.595672, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.514672, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.510672, Name: NU-AP05124
+	Signal: -73 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.458672, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+got (11.879990000000003, 36.94  ,40.14043) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.622672, Name: NU-AP06161
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.618672, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.616672, Name: NU-AP10243
+	Signal: -74 dBm, 2437 MHz
+got (72.19182398481848,-84.24109770500822,41.21350360686177) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.622672, Name: NU-AP06161
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.618672, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.616672, Name: NU-AP10243
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:31.608672, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:31.618672, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.608672, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.595672, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.514672, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:32.095202
+got (35.278036931193945, 24.105 ,49.11696746654777) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:32.030412, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.967412, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.876412, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.848412, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.508412, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.504412, Name: NU-AP05124
+	Signal: -73 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.030412, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.967412, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.876412, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+got (19.696240213730434,-157.64532076437646,120.40895277684955) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.030412, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.967412, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.876412, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.870412, Name: NU-AP04104
+	Signal: -74 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.030412, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.967412, Name: NU-AP05122
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:31.876412, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.848412, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:32.479554
+got (33.66967339231698, 24.105 ,48.50193544355518) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:32.444697, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.428697, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.424697, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.413697, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.243697, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:31.475698, Name: NU-AP05124
+	Signal: -73 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.444697, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.428697, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.424697, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+got (-84.89863957737894,-262.7438329886107,-306.4211250532989) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.444697, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.428697, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.424697, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.420697, Name: NU-AP09218
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.444697, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.428697, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.424697, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.413697, Name: NU-AP05137
+	Signal: -48 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:33.016924
+got (35.986446833157274, 24.105 ,53.473540597648096) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:32.953377, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.922377, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.870377, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.701377, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.407377, Name: NU-AP05123
+	Signal: -71 dBm, 2462 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.953377, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.922377, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.870377, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+got (-107.1138422160973,-179.41120903034974,-392.54351199013286) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.953377, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.922377, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.870377, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.735377, Name: NU-AP09218
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:32.953377, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.922377, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.870377, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.701377, Name: NU-AP05135
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:33.457760
+got (49.869959630067186, 24.105 ,55.43856883864761) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:33.423687, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.410687, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.331687, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.808687, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.756687, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+got (-862.46 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.423687, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.410687, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.394687, Name: NU-AP03062
+	Signal: -79 dBm, 2437 MHz
+got (-121.53596729290436,-71.66967518453583,-48.38046678297274) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.423687, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.410687, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.394687, Name: NU-AP03062
+	Signal: -79 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.331687, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.423687, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.410687, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.331687, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.808687, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:33.989822
+got (37.925026488004576, 24.105 ,49.44997741525295) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:33.900954, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.872954, Name: NU-AP05135
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.774954, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.681954, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:32.865954, Name: NU-AP05122
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:32.813954, Name: NU-AP05117
+	Signal: -66 dBm, 2412 MHz
+got (-129.88 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.911954, Name: NU-AP06142
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:33.900954, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.881954, Name: NU-AP10249
+	Signal: -77 dBm, 2462 MHz
+got (300.3363820003678,233.5977298445458,-416.47626698946414) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.911954, Name: NU-AP06142
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:33.900954, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.881954, Name: NU-AP10249
+	Signal: -77 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.872954, Name: NU-AP05135
+	Signal: -70 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:33.900954, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.872954, Name: NU-AP05135
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:33.774954, Name: NU-AP05118
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:33.681954, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:34.359510
+got (25.18089859079471, 24.105 ,40.55202559253681) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:34.324861, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:34.318861, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.304861, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.300861, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+got (-643.44 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:34.324861, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:34.318861, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.307861, Name: NU-AP06142
+	Signal: -65 dBm, 2412 MHz
+got (53.13399993325626,-111.32723988304302,29.43923332930826) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:34.324861, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:34.318861, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.307861, Name: NU-AP06142
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:34.304861, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:34.324861, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:34.318861, Name: NU-AP05137
+	Signal: -43 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.304861, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:34.300861, Name: NU-AP05117
+	Signal: -67 dBm, 2412 MHz
+Time of log: 2026-05-18 20:22:41.193687
+got (28.477018576891748, 24.105 ,40.28697980357138) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP05116
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.127552, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.122552, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.122552, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.121552, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:36.846552, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+got (-89.25  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.136552, Name: NU-AP09218
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP05116
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP09231
+	Signal: -74 dBm, 2462 MHz
+got (351.00126463378086,354.2433683104668,39.359507572410486) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.136552, Name: NU-AP09218
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP05116
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP09231
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP00009
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.134552, Name: NU-AP05116
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.127552, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.122552, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.122552, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:41.632072
+got (28.82826764631825, 24.105 ,40.19044234506879) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:41.565448, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.516448, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.471448, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.316448, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:36.863448, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+got (-407.98 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.570448, Name: NU-AP02053
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.565448, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.549448, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+got (9.147575371426695,107.48767106290349,42.95959701370232) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.570448, Name: NU-AP02053
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.565448, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.549448, Name: NU-AP04104
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.535448, Name: NU-AP06150
+	Signal: -78 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:41.565448, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.516448, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.471448, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.316448, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:42.240037
+got (30.79422847160145, 24.105 ,49.890734283712625) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:42.171689, Name: NU-AP05116
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.132689, Name: NU-AP05115
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:41.871689, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.633689, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.476689, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+got (-829.2  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.171689, Name: NU-AP05116
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.152689, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.144689, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+got (-577.4907604987684,219.3740501117095,221.16725905636088) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.171689, Name: NU-AP05116
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.152689, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.144689, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.144689, Name: NU-AP09218
+	Signal: -73 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.171689, Name: NU-AP05116
+	Signal: -50 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.132689, Name: NU-AP05115
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:41.871689, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.633689, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:42.740616
+got (30.163174229613166, 24.105 ,48.94825256831597) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:42.662885, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.652885, Name: NU-AP05117
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.645885, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.633885, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.243885, Name: NU-AP05115
+	Signal: -55 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:41.532885, Name: NU-AP05133
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:41.375885, Name: NU-AP05123
+	Signal: -68 dBm, 2462 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.662885, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.652885, Name: NU-AP05117
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.645885, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.662885, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.652885, Name: NU-AP05117
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.645885, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.633885, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:42.662885, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.652885, Name: NU-AP05117
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.645885, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.633885, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:43.109154
+got (26.161745923295527, 24.105 ,39.607633776269736) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:43.066258, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.038258, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.037258, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.917259, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:42.563258, Name: NU-AP05117
+	Signal: -55 dBm, 2412 MHz
+got (-188.22 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.066258, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.059258, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.045259, Name: NU-AP06150
+	Signal: -74 dBm, 2462 MHz
+got (-103.24141628872474,162.52011855636638,100.97853143946347) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.066258, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.059258, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.045259, Name: NU-AP06150
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.038258, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.066258, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.038258, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.037258, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:42.917259, Name: NU-AP05116
+	Signal: -52 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:43.500155
+got (27.811854655782582, 24.105 ,39.3487864440323) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:43.437985, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.410985, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.323985, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.295985, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.017985, Name: NU-AP05128
+	Signal: -66 dBm, 2412 MHz
+got (-403.65 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.445985, Name: NU-AP06330
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.437985, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.431985, Name: NU-AP00001
+	Signal: -75 dBm, 2462 MHz
+got (14.997366542441059,52.194425727146964,42.17977292253937) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.445985, Name: NU-AP06330
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.437985, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.431985, Name: NU-AP00001
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.430985, Name: NU-AP10249
+	Signal: -79 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.437985, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.410985, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.323985, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.295985, Name: NU-AP05135
+	Signal: -64 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:44.036775
+got (44.70546792411253, 24.105 ,40.5013747899345) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:43.918900, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.908900, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.887900, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.475900, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+got (-580.05 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.921900, Name: NU-AP09218
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.918900, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.908900, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+got (-33.190680853661306,-111.2062560901614,47.32208035105367) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.921900, Name: NU-AP09218
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.918900, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.908900, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.887900, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:43.918900, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.908900, Name: NU-AP05115
+	Signal: -45 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.887900, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:43.475900, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:44.392866
+got (44.64609288025233, 24.105 ,40.51135190210177) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:44.356262, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.220262, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.081262, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.413262, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+got (-51.22  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.356262, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.254262, Name: NU-AP09218
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.220262, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+got (-164.2996588682099,-48.74487056139264,41.68582037896994) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.356262, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.254262, Name: NU-AP09218
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.220262, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.081262, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.356262, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.220262, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.081262, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:43.413262, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:44.874438
+got (41.39581964574946, 24.105 ,40.39411193106643) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:44.727170, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.651170, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.288171, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.149171, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+got (-5.81   ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.805171, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.799170, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.728170, Name: NU-AP09231
+	Signal: -75 dBm, 2462 MHz
+got (59.882259765001784,52.03550558653875,30.645669540876845) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.805171, Name: NU-AP02053
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.799170, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.728170, Name: NU-AP09231
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.727170, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:44.727170, Name: NU-AP05116
+	Signal: -49 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.651170, Name: NU-AP05115
+	Signal: -41 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:44.288171, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:44.149171, Name: NU-AP05136
+	Signal: -69 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:45.261492
+got (31.833829727342707, 24.105 ,58.17776880198898) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:45.219731, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.202731, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.199731, Name: NU-AP05115
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.191731, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+got (-937.03 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.219731, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.206731, Name: NU-AP06155
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.202731, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+got (-139.58233627907055,-920.8427353385634,-23.727823730050293) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.219731, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.206731, Name: NU-AP06155
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.202731, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.199731, Name: NU-AP05115
+	Signal: -53 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.219731, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.202731, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.199731, Name: NU-AP05115
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.191731, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:45.653662
+got (29.186648793272077, 24.105 ,56.59892789600708) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:45.621226, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.620226, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.372226, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.355226, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+got (-427.04 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.621226, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.620226, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.596226, Name: NU-AP06330
+	Signal: -75 dBm, 2462 MHz
+got (274.30525061059825,3288.8382314622104,367.59913975406704) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.621226, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.620226, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.596226, Name: NU-AP06330
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.372226, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:45.621226, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.620226, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.372226, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.355226, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:46.062400
+got (22.695424504202983, 24.105 ,42.04727423242964) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:46.004474, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.993474, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.989474, Name: NU-AP05137
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.976474, Name: NU-AP05123
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.973474, Name: NU-AP05116
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.962474, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.813474, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+got (-464.37 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.010474, Name: NU-AP02051
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.004474, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.993474, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+got (-22.534379314949422,252.19368126073357,53.34370295026565) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.010474, Name: NU-AP02051
+	Signal: -71 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.004474, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.993474, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.989474, Name: NU-AP05137
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.004474, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.993474, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:45.989474, Name: NU-AP05137
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:45.976474, Name: NU-AP05123
+	Signal: -67 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:46.530922
+got (24.707737385841046, 24.105 ,47.25731127029699) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:46.470488, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.447488, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.334488, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.310488, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.064488, Name: NU-AP05137
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.051488, Name: NU-AP05123
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.048488, Name: NU-AP05116
+	Signal: -54 dBm, 2462 MHz
+got (-17.51  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.470488, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.447488, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.428488, Name: NU-AP04111
+	Signal: -61 dBm, 2412 MHz
+got (-175.87089618479092,154.22019186900835,7.334603379832548) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.470488, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.447488, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.428488, Name: NU-AP04111
+	Signal: -61 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:46.334488, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:46.470488, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.447488, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.334488, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.310488, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:47.128437
+got (26.8834479711345, 24.105 ,42.48315469909791) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:47.021719, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.975720, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.924720, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.450720, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.425719, Name: NU-AP05136
+	Signal: -66 dBm, 2437 MHz
+got (-223.88 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:47.049720, Name: NU-AP02052
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:47.043720, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:47.022720, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+got (-111.65453195415492,161.65161179462092,11.740322726458983) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:47.049720, Name: NU-AP02052
+	Signal: -68 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:47.043720, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:47.022720, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:47.021719, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:47.021719, Name: NU-AP05116
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.975720, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:46.924720, Name: NU-AP05115
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:46.450720, Name: NU-AP05130
+	Signal: -56 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:48.384244
+got (28.771739073921978, 24.105 ,41.855122811062415) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:48.324035, Name: NU-AP05130
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.305035, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.302035, Name: NU-AP05136
+	Signal: -63 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.293035, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+got (22.65   , 23.09  ,   57.32) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.330035, Name: NU-AP07183
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.324035, Name: NU-AP05130
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.305035, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+got (14.109786392191614,73.89827057391629,140.3671233735242) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.330035, Name: NU-AP07183
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.324035, Name: NU-AP05130
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.305035, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.305035, Name: NU-AP10243
+	Signal: -70 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.324035, Name: NU-AP05130
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.305035, Name: NU-AP05135
+	Signal: -54 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.302035, Name: NU-AP05136
+	Signal: -63 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.293035, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:48.964958
+got (23.828586285171568, 24.105 ,44.964918944765415) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.844695, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.828695, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.819695, Name: NU-AP05115
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.645694, Name: NU-AP05130
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.623695, Name: NU-AP05136
+	Signal: -63 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.357694, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+got (-589.1  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP09231
+	Signal: -79 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.849694, Name: NU-AP04111
+	Signal: -60 dBm, 2412 MHz
+got (-98.44711388085294,-5.787536411669084,-100.07568718112667) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP09231
+	Signal: -79 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.849694, Name: NU-AP04111
+	Signal: -60 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:48.844695, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:48.855695, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.844695, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.828695, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:48.819695, Name: NU-AP05115
+	Signal: -59 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:49.530129
+got (28.345534934429356, 24.105 ,50.31810362699156) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:49.289645, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.275645, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.261645, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.111645, Name: NU-AP05115
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:48.350645, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+got (-29.5   ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:49.386645, Name: NU-AP06155
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.379645, Name: NU-AP10249
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.368645, Name: NU-AP08306
+	Signal: -76 dBm, 2462 MHz
+got (22.223785488024767,31.192298277254675,38.34853126764804) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:49.386645, Name: NU-AP06155
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.379645, Name: NU-AP10249
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.368645, Name: NU-AP08306
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.365645, Name: NU-AP04111
+	Signal: -64 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:49.289645, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.275645, Name: NU-AP05123
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.261645, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:49.111645, Name: NU-AP05115
+	Signal: -59 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:51.715355
+got (29.101103325220947, 24.105 ,54.04976848283423) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:51.679466, Name: NU-AP05138
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.667465, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.291466, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:50.250465, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+got (-678.38 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:51.679466, Name: NU-AP05138
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.667465, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.419466, Name: NU-AP04111
+	Signal: -64 dBm, 2412 MHz
+got (440.78648004526974,2805.546443881921,-83.69574882962871) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:51.679466, Name: NU-AP05138
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.667465, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.419466, Name: NU-AP04111
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:51.291466, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:51.679466, Name: NU-AP05138
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.667465, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.291466, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:50.250465, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:52.111773
+got (27.979795369447526, 24.105 ,48.967210459951914) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:52.073937, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.055937, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.051937, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.037937, Name: NU-AP05123
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:51.802937, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+got (-121.39 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.073937, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.071937, Name: NU-AP07183
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.062937, Name: NU-AP07186
+	Signal: -68 dBm, 2437 MHz
+got (-3.5137077037588016,111.46250594633942,-38.71247212731523) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.073937, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.071937, Name: NU-AP07183
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.062937, Name: NU-AP07186
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:52.057937, Name: NU-AP09218
+	Signal: -70 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.073937, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.055937, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.051937, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.037937, Name: NU-AP05123
+	Signal: -66 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:52.505343
+got (35.0192477481948, 24.105 ,48.56000938465934) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:52.471444, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.460445, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.425445, Name: NU-AP05123
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.249445, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.233445, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+got (18.53   , 20.815 ,   58.61) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.471444, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.470444, Name: NU-AP03084
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.460445, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+got (87.5195360437234,43.542276033586354,-89.18478125392642) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.471444, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.470444, Name: NU-AP03084
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.460445, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.425445, Name: NU-AP05123
+	Signal: -62 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:52.471444, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.460445, Name: NU-AP05135
+	Signal: -48 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.425445, Name: NU-AP05123
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:52.249445, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:54.206431
+got (31.584286927777338, 24.105 ,55.41771759203315) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:54.150035, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.149035, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.138036, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.121035, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+got (-162.88 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.162035, Name: NU-AP11267
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.159035, Name: NU-AP04104
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.154036, Name: NU-AP00009
+	Signal: -70 dBm, 2462 MHz
+got (13.390228294326969,6.986056128767336,40.767247186892476) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.162035, Name: NU-AP11267
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.159035, Name: NU-AP04104
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.154036, Name: NU-AP00009
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.150035, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.150035, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.149035, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.138036, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.121035, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:54.614846
+got (27.841113282713476, 24.105 ,56.76640669441208) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:54.551114, Name: NU-AP05130
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.521114, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.280114, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.264114, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.252114, Name: NU-AP05135
+	Signal: -53 dBm, 2462 MHz
+got (-83.74  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.551114, Name: NU-AP05130
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.550114, Name: NU-AP06161
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.531114, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+got (-576.5142856098452,-167.54751611991358,-25.750372190071285) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.551114, Name: NU-AP05130
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.550114, Name: NU-AP06161
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.531114, Name: NU-AP04104
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.528114, Name: NU-AP03082
+	Signal: -72 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:54.551114, Name: NU-AP05130
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.521114, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.280114, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.264114, Name: NU-AP05138
+	Signal: -73 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:55.080324
+got (26.06861892815046, 24.105 ,44.33961047828462) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:55.011301, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.983301, Name: NU-AP05130
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.969301, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.740301, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+got (27.18981, 21.65  ,41.46018) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.017301, Name: NU-AP06150
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.014301, Name: NU-AP03084
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.014301, Name: NU-AP06161
+	Signal: -73 dBm, 2462 MHz
+got (16.876119227343047,20.549379585983974,51.750783761759635) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.017301, Name: NU-AP06150
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.014301, Name: NU-AP03084
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.014301, Name: NU-AP06161
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.011301, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.011301, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.983301, Name: NU-AP05130
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:54.969301, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:54.740301, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:55.542461
+got (25.057581173155725, 24.105 ,42.341995859519045) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:55.466781, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.265781, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.238781, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.025781, Name: NU-AP05130
+	Signal: -64 dBm, 2437 MHz
+got (26.92   , 21.965 ,   44.15) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.466781, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.265781, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.252781, Name: NU-AP09231
+	Signal: -69 dBm, 2462 MHz
+got (296.8042956285604,162.47988534118468,83.04994380921806) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.466781, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.265781, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.252781, Name: NU-AP09231
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.245781, Name: NU-AP06150
+	Signal: -74 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.466781, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.265781, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.238781, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.025781, Name: NU-AP05130
+	Signal: -64 dBm, 2437 MHz
+Time of log: 2026-05-18 20:22:56.034063
+got (23.06871055224024, 24.105 ,40.84416469352196) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:55.970017, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.958017, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.955017, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.941017, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.687017, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.266017, Name: NU-AP05135
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.052017, Name: NU-AP05130
+	Signal: -64 dBm, 2437 MHz
+got (-89.04  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.970017, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.960017, Name: NU-AP09218
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.958017, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+got (-25.73694553069616,-72.30483034781643,26.08518245601584) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.970017, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.960017, Name: NU-AP09218
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.958017, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.955017, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:55.970017, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.958017, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.955017, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.941017, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:56.439269
+got (33.22873937529127, 24.105 ,46.31412543521055) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:56.406177, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.303176, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:56.291177, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.956176, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:55.942177, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+got (-650.92 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.406177, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.377176, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.303176, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+got (71.94722220559552,-572.8447699852002,-41.67453924686658) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.406177, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.377176, Name: NU-AP06155
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.303176, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:56.291177, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.406177, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.303176, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:56.291177, Name: NU-AP05115
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:55.956176, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:56.977794
+got (27.395621449349274, 24.105 ,42.82477365140083) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:56.910801, Name: NU-AP05133
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.907801, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.899801, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.896801, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.894801, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:56.885802, Name: NU-AP05132
+	Signal: -53 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:56.386801, Name: NU-AP05125
+	Signal: -74 dBm, 2437 MHz
+got (-164.04 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.915801, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.914801, Name: NU-AP06155
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.911801, Name: NU-AP06163
+	Signal: -66 dBm, 2412 MHz
+got (6.493992602430668,111.29937658981903,29.442952585426145) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.915801, Name: NU-AP04104
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.914801, Name: NU-AP06155
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.911801, Name: NU-AP06163
+	Signal: -66 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:56.910801, Name: NU-AP05133
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:56.910801, Name: NU-AP05133
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.907801, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.899801, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.896801, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:57.397319
+got (25.599936304725414, 24.105 ,38.64356257234427) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:57.333359, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.320359, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.257359, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.053359, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.006359, Name: NU-AP05133
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:56.890359, Name: NU-AP05115
+	Signal: -68 dBm, 2437 MHz
+got (16.27   , 19.855 ,54.489999999999995) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.333359, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.327359, Name: NU-AP07183
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.320359, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+got (645.0116665214365,386.75141047324905,-463.90534201908713) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.333359, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.327359, Name: NU-AP07183
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.320359, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.315359, Name: NU-AP08306
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.333359, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.320359, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.257359, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.053359, Name: NU-AP05123
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:22:57.812503
+got (20.43325971666385, 24.105 ,54.38904461033663) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:22:57.724860, Name: NU-AP05133
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.628860, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.458860, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.266860, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+got (-16.53  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.745860, Name: NU-AP08306
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.741860, Name: NU-AP07194
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:57.740860, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+got (39.718889193865316,-157.25053272408547,9.791419580110402) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.745860, Name: NU-AP08306
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.741860, Name: NU-AP07194
+	Signal: -65 dBm, 2437 MHz
+	TS: 2026-05-18 20:22:57.740860, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.730860, Name: NU-AP06155
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:22:57.724860, Name: NU-AP05133
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.628860, Name: NU-AP05132
+	Signal: -52 dBm, 2412 MHz
+	TS: 2026-05-18 20:22:57.458860, Name: NU-AP05135
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:22:57.266860, Name: NU-AP05116
+	Signal: -69 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:01.462254
+got (31.588650400374544, 24.105 ,36.39714257308809) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.347648, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.336648, Name: NU-AP05123
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.215648, Name: NU-AP05117
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.107648, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.347648, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (23.92804706200711,-23.41531412848917,53.26508108904855) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.347648, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.342648, Name: NU-AP06155
+	Signal: -71 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05136
+	Signal: -60 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.365648, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.347648, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.336648, Name: NU-AP05123
+	Signal: -56 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:01.879367
+got (32.04718973056185, 24.105 ,37.578884541568634) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:01.802785, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.801785, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.725785, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.378785, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.367785, Name: NU-AP05123
+	Signal: -56 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.114785, Name: NU-AP05117
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.005785, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-621.33 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.810785, Name: NU-AP08207
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.804785, Name: NU-AP06161
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.802785, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+got (14.296420369200908,-58.76663855157573,38.723128616581874) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.810785, Name: NU-AP08207
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.804785, Name: NU-AP06161
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.802785, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.801785, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:01.802785, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.801785, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.725785, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.378785, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:02.246577
+got (29.81350886480083, 24.105 ,36.003450079728445) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:02.103917, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.832916, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.695917, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:00.975917, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-575.1  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.133917, Name: NU-AP07300
+	Signal: -76 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:02.111917, Name: NU-AP08207
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:02.103917, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+got (75.03725364752381,-106.56080717119696,26.56656935033155) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.133917, Name: NU-AP07300
+	Signal: -76 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:02.111917, Name: NU-AP08207
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:02.103917, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.835917, Name: NU-AP06161
+	Signal: -70 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.103917, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.832916, Name: NU-AP05135
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.695917, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:00.975917, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:02.874957
+got (31.258815681777463, 24.105 ,37.65663506878155) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:02.811289, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:02.804289, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.778289, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.305289, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.897289, Name: NU-AP05125
+	Signal: -72 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:01.177289, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.811289, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:02.804289, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.778289, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+got (128.08830168017323,184.0337691064012,118.69958772027351) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.811289, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:02.804289, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.778289, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.335289, Name: NU-AP07300
+	Signal: -76 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:02.811289, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:02.804289, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.778289, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.305289, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:03.318318
+got (33.56305554295646, 24.105 ,38.62395362757539) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:03.233813, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.193813, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.045813, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:02.877813, Name: NU-AP05135
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:02.124813, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:00.996813, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (33.620000000000005, 35.935 ,   50.39) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.233813, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP03084
+	Signal: -71 dBm, 2462 MHz
+got (193.13261280002095,-638.4002937187837,-8.118621492261319) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.233813, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP03084
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.224813, Name: NU-AP06161
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.233813, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.230814, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.193813, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.045813, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:03.721810
+got (33.21482225511045, 24.105 ,42.62564515182902) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:03.433660, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.348660, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.273660, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.078660, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.029660, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-230.13 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.433660, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.425660, Name: NU-AP06161
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.390660, Name: NU-AP03084
+	Signal: -71 dBm, 2462 MHz
+got (-60.7696908491163,-123.70251048418532,16.04526248054031) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.433660, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.425660, Name: NU-AP06161
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.390660, Name: NU-AP03084
+	Signal: -71 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.381660, Name: NU-AP03083
+	Signal: -69 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:03.433660, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.348660, Name: NU-AP05137
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.273660, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.078660, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:04.287061
+got (33.33634429629727, 24.105 ,42.67814228733303) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:04.189225, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.503225, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.343225, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.148225, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.099225, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (38.02   , 24.76  ,25.759999999999998) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:04.207225, Name: NU-AP07190
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:04.203225, Name: NU-AP06148
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:04.190225, Name: NU-AP07194
+	Signal: -64 dBm, 2437 MHz
+got (15.118274571400896,-52.95289594237047,35.07988896112676) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:04.207225, Name: NU-AP07190
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:04.203225, Name: NU-AP06148
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:04.190225, Name: NU-AP07194
+	Signal: -64 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:04.189225, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:04.189225, Name: NU-AP05137
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.503225, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:03.343225, Name: NU-AP05115
+	Signal: -73 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:03.148225, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:08.134771
+got (36.48499623670151, 24.105 ,39.37476038649224) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:08.027629, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:07.820629, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:07.683629, Name: NU-AP05136
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:07.554629, Name: NU-AP05134
+	Signal: -67 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.023629, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (26.68   , 18.16  ,43.959999999999994) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.070629, Name: NU-AP03084
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.063629, Name: NU-AP04105
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.050629, Name: NU-AP02051
+	Signal: -76 dBm, 2437 MHz
+got (-50.51959491466082,0.6073443819779437,78.65649321299331) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.070629, Name: NU-AP03084
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.063629, Name: NU-AP04105
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.050629, Name: NU-AP02051
+	Signal: -76 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.027629, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.027629, Name: NU-AP05116
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:07.820629, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:07.683629, Name: NU-AP05136
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:07.554629, Name: NU-AP05134
+	Signal: -67 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:08.695408
+got (32.702853360645534, 24.105 ,38.437704111267934) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:08.634382, Name: NU-AP05136
+	Signal: -57 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.610382, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:08.589382, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.587382, Name: NU-AP05134
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:08.577382, Name: NU-AP05123
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.576382, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.134382, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-37.78  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.634382, Name: NU-AP05136
+	Signal: -57 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.610382, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:08.604382, Name: NU-AP02053
+	Signal: -73 dBm, 2462 MHz
+got (19.330454164306623,125.38093806264662,60.00972124245155) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.634382, Name: NU-AP05136
+	Signal: -57 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.610382, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:08.604382, Name: NU-AP02053
+	Signal: -73 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.589382, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:08.634382, Name: NU-AP05136
+	Signal: -57 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:08.610382, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:08.589382, Name: NU-AP05137
+	Signal: -64 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:08.587382, Name: NU-AP05134
+	Signal: -69 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:10.109863
+got (32.66400260971856, 24.105 ,37.23694608927324) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:09.995266, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.964266, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:09.959266, Name: NU-AP05124
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:09.935266, Name: NU-AP05134
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:09.819266, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:01.151266, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-361.88 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:10.047266, Name: NU-AP08306
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.995266, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.991266, Name: NU-AP06150
+	Signal: -61 dBm, 2462 MHz
+got (-31.47270690941258,-199.82535647785056,31.930742487293205) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:10.047266, Name: NU-AP08306
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.995266, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.991266, Name: NU-AP06150
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.987266, Name: NU-AP06161
+	Signal: -68 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:09.995266, Name: NU-AP05116
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:09.964266, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:09.959266, Name: NU-AP05124
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:09.935266, Name: NU-AP05134
+	Signal: -64 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:10.736825
+got (30.68908690217825, 24.105 ,35.756317733459426) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:10.505722, Name: NU-AP05116
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:10.228722, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:10.021722, Name: NU-AP05124
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:09.997722, Name: NU-AP05134
+	Signal: -64 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:01.213722, Name: NU-AP05132
+	Signal: -65 dBm, 2412 MHz
+got (-119.12 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:10.665722, Name: NU-AP06148
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:10.542722, Name: NU-AP07183
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:10.505722, Name: NU-AP05116
+	Signal: -76 dBm, 2462 MHz
+got (-11.421725142963286,-180.23314813881083,20.260779474491077) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:10.665722, Name: NU-AP06148
+	Signal: -68 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:10.542722, Name: NU-AP07183
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:10.505722, Name: NU-AP05116
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:10.373722, Name: NU-AP06150
+	Signal: -61 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:10.505722, Name: NU-AP05116
+	Signal: -76 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:10.228722, Name: NU-AP05136
+	Signal: -56 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:10.021722, Name: NU-AP05124
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:09.997722, Name: NU-AP05134
+	Signal: -64 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:11.598173
+got (25.74012284256581, 24.105 ,37.16689721571886) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:11.563449, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.539448, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:11.535449, Name: NU-AP05137
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.435449, Name: NU-AP05124
+	Signal: -63 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:10.561449, Name: NU-AP05116
+	Signal: -76 dBm, 2462 MHz
+got (-311.39 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.563449, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.552449, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.539448, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+got (-19.782365522595704,-219.98771913757668,41.8382735278072) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.563449, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.552449, Name: NU-AP06161
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.539448, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:11.535449, Name: NU-AP05137
+	Signal: -68 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.563449, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.539448, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:11.535449, Name: NU-AP05137
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.435449, Name: NU-AP05124
+	Signal: -63 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:12.022548
+got (23.614604024005374, 24.105 ,39.60719764339824) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:11.950904, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.691904, Name: NU-AP05137
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.677904, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.526904, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:11.421904, Name: NU-AP05124
+	Signal: -63 dBm, 2412 MHz
+got (-176.4  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.958904, Name: NU-AP03084
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.958904, Name: NU-AP06150
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.953904, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+got (36.35478709045687,240.672782799886,68.79341388746444) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.958904, Name: NU-AP03084
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.958904, Name: NU-AP06150
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.953904, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.950904, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:11.950904, Name: NU-AP05135
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.691904, Name: NU-AP05137
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.677904, Name: NU-AP05123
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:11.526904, Name: NU-AP05136
+	Signal: -53 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:15.603748
+got (23.13527558612317, 24.105 ,40.27375464920724) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:15.550172, Name: NU-AP05136
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:15.540172, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:15.507172, Name: NU-AP05134
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:15.119172, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+got (-766.28 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:15.550172, Name: NU-AP05136
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:15.540172, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:15.533172, Name: NU-AP03083
+	Signal: -74 dBm, 2462 MHz
+got (-228.54004699886744,-921.0022725670418,205.30113250179) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:15.550172, Name: NU-AP05136
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:15.540172, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:15.533172, Name: NU-AP03083
+	Signal: -74 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:15.507172, Name: NU-AP05134
+	Signal: -70 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:15.550172, Name: NU-AP05136
+	Signal: -52 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:15.540172, Name: NU-AP05137
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:15.507172, Name: NU-AP05134
+	Signal: -70 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:15.119172, Name: NU-AP05124
+	Signal: -65 dBm, 2412 MHz
+Time of log: 2026-05-18 20:23:20.851427
+got (18.731367823834944, 24.105 ,41.42824782626775) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:20.782084, Name: NU-AP05116
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.772084, Name: NU-AP05328
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.718084, Name: NU-AP05136
+	Signal: -43 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:20.717084, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+got (-2009.25,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:20.782084, Name: NU-AP05116
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.778084, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.772084, Name: NU-AP05328
+	Signal: -78 dBm, 2462 MHz
+got (188.3128897027302,-260.25248348093777,-10.360119525119778) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:20.782084, Name: NU-AP05116
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.778084, Name: NU-AP06150
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.772084, Name: NU-AP05328
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.769084, Name: NU-AP03063
+	Signal: -78 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:20.782084, Name: NU-AP05116
+	Signal: -63 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.772084, Name: NU-AP05328
+	Signal: -78 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:20.718084, Name: NU-AP05136
+	Signal: -43 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:20.717084, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:23.441518
+got (31.24258828761109, 24.105 ,51.06070016045745) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:23.393991, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.266991, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.258991, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.181991, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.393991, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.266991, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.258991, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+got (-92.71770981903164,4074.9777244867505,423.16054690064317) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.393991, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.266991, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.258991, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.258991, Name: NU-AP06161
+	Signal: -61 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.393991, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.266991, Name: NU-AP05116
+	Signal: -68 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.258991, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.181991, Name: NU-AP05137
+	Signal: -65 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:23.906535
+got (19.849348044641253, 24.105 ,35.446925936345636) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:23.801909, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.799909, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.784909, Name: NU-AP05124
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:23.511909, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+got (-0.69   ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.801909, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.799909, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.798909, Name: NU-AP02053
+	Signal: -72 dBm, 2462 MHz
+got (407.2681673361014,1516.8326276416356,366.476049835256) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.801909, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.799909, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.798909, Name: NU-AP02053
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.788910, Name: NU-AP03084
+	Signal: -73 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:23.801909, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:23.799909, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.784909, Name: NU-AP05124
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:23.511909, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:24.360111
+got (15.793148825043932, 24.105 ,39.62339788572404) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:24.317742, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.306741, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.189742, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.072741, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:23.864741, Name: NU-AP05124
+	Signal: -69 dBm, 2412 MHz
+got (-398.98 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.317742, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.310741, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.306741, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+got (-95.94751989397905,-15.409391740342638,40.77722650602085) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.317742, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.310741, Name: NU-AP06161
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.306741, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.297742, Name: NU-AP04104
+	Signal: -62 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.317742, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.306741, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.189742, Name: NU-AP05328
+	Signal: -75 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.072741, Name: NU-AP05136
+	Signal: -50 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:24.751818
+got (29.272089003009654, 24.105 ,51.93644518872529) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:24.705458, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.699459, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:24.572459, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.561458, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+got (-339.31 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.705458, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.701458, Name: NU-AP06162
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:24.699459, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+got (-73.58712041156731,-3.5818350746718797,118.88741006923172) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.705458, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.701458, Name: NU-AP06162
+	Signal: -69 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:24.699459, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:24.687459, Name: NU-AP08200
+	Signal: -70 dBm, 2412 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:24.705458, Name: NU-AP05137
+	Signal: -59 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.699459, Name: NU-AP05115
+	Signal: -67 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:24.572459, Name: NU-AP05116
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:24.561458, Name: NU-AP05135
+	Signal: -62 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:26.051247
+got (24.12895356662047, 24.105 ,34.991970873450384) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:26.014271, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.002271, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:25.996271, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:25.846271, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.014271, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.002271, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:25.996271, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.014271, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.002271, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:25.996271, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:25.846271, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.014271, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.002271, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:25.996271, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:25.846271, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:26.444484
+got (32.01243351851039, 24.105 ,34.98006033965013) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:26.413399, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.410399, Name: NU-AP05128
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.376399, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.263399, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:25.993399, Name: NU-AP05135
+	Signal: -65 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:25.843399, Name: NU-AP05115
+	Signal: -69 dBm, 2437 MHz
+got (-555    ,  -555  ,    -555) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.413399, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.410399, Name: NU-AP05128
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.376399, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.413399, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.410399, Name: NU-AP05128
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.376399, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.263399, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.413399, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.410399, Name: NU-AP05128
+	Signal: -54 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.376399, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.263399, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:27.001532
+got (29.991663241729356, 24.105 ,36.77274157357198) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:26.889446, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.886446, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.875446, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.862446, Name: NU-AP05125
+	Signal: -76 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:26.850446, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:26.519446, Name: NU-AP05116
+	Signal: -67 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.369447, Name: NU-AP05136
+	Signal: -59 dBm, 2437 MHz
+got (-734.49 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.889446, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.886446, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.881446, Name: NU-AP06330
+	Signal: -72 dBm, 2462 MHz
+got (62.48190532457428,-126.54846025596974,-7.281133863460201) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.889446, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.886446, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.881446, Name: NU-AP06330
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.876446, Name: NU-AP02033
+	Signal: -78 dBm, 2437 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:26.889446, Name: NU-AP05128
+	Signal: -62 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:26.886446, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.875446, Name: NU-AP05137
+	Signal: -57 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:26.862446, Name: NU-AP05125
+	Signal: -76 dBm, 2437 MHz
+Time of log: 2026-05-18 20:23:27.668115
+got (22.27761116492635, 24.105 ,32.238574253608355) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:27.587602, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:27.578602, Name: NU-AP05328
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.561602, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.559602, Name: NU-AP05116
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.556602, Name: NU-AP05137
+	Signal: -58 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.507602, Name: NU-AP05135
+	Signal: -60 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.461602, Name: NU-AP05125
+	Signal: -76 dBm, 2437 MHz
+	TS: 2026-05-18 20:23:27.449602, Name: NU-AP05115
+	Signal: -70 dBm, 2437 MHz
+got (-403.48 ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:27.602602, Name: NU-AP06330
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.597602, Name: NU-AP06155
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.595602, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+got (20.074655496741286,-21.813744710295957,26.340371767782667) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:27.602602, Name: NU-AP06330
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.597602, Name: NU-AP06155
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.595602, Name: NU-AP07183
+	Signal: -72 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.588602, Name: NU-AP00001
+	Signal: -67 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:27.587602, Name: NU-AP05128
+	Signal: -55 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:27.578602, Name: NU-AP05328
+	Signal: -61 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.561602, Name: NU-AP05123
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.559602, Name: NU-AP05116
+	Signal: -66 dBm, 2462 MHz
+Time of log: 2026-05-18 20:23:28.156508
+got (25.247978039381614, 24.105 ,34.12062019704707) using 2D multilateration
+from cells:
+	TS: 2026-05-18 20:23:28.078308, Name: NU-AP05128
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:28.036308, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.981308, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.958308, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.947308, Name: NU-AP05135
+	Signal: -60 dBm, 2462 MHz
+got (-27.82  ,  -999  ,    -999) from 3D Trilateration
+from cells:
+	TS: 2026-05-18 20:23:28.083308, Name: NU-AP06161
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:28.078308, Name: NU-AP05128
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:28.036308, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+got (7.0930429133553226,-145.58659833134772,8.531399431027449) from Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:28.083308, Name: NU-AP06161
+	Signal: -69 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:28.078308, Name: NU-AP05128
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:28.036308, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:28.033308, Name: NU-AP03063
+	Signal: -76 dBm, 2462 MHz
+got (-333    ,  -333  ,    -333) from floor specific Mobile Trilateration
+from cells:
+	TS: 2026-05-18 20:23:28.078308, Name: NU-AP05128
+	Signal: -49 dBm, 2412 MHz
+	TS: 2026-05-18 20:23:28.036308, Name: NU-AP05328
+	Signal: -55 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.981308, Name: NU-AP05137
+	Signal: -66 dBm, 2462 MHz
+	TS: 2026-05-18 20:23:27.958308, Name: NU-AP05116
+	Signal: -70 dBm, 2462 MHz
