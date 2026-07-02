@@ -1,6 +1,9 @@
+import ast
+import json
 from queue import Queue
 from threading import Thread
 import time
+import datetime
 
 from src.iw_interpret import Cell
 from src.producer_consumer import consumer, single_producer, multi_producer
@@ -11,7 +14,7 @@ from src.scan import FindAPs
 from src.registries import RegisterFrequencies, RegisterUnknowns
 from src.coordinates import GetCoordinates, GetUnityCoordinates
 from src.enums import Band
-from src.makemap import PlotPointsOnFloor
+from src.makemap import PlotErrorOnFloor, PlotPointsOnFloor
      
 def ScanFloor(interface, ssids):
 
@@ -65,14 +68,15 @@ def ThesisDraftZero():
 
 def ThesisDraftOne():
     queue: Queue[list[Cell]] = Queue()
-    floor = int(input("what floor are we analysing?"))
+    floor = int(input("what floor are we analysing?\n"))
     name = input("log to what file?\n")
     logger = new_logger("draftone", name)
+    error_logger = new_logger("draftone", f"{name}-error")
     result = {"ml": [], "tl": [], "mb": [], "mbf": []}
     stop_threads = False
 
     prod_thread = Thread(target=single_producer, args=(lambda: stop_threads,queue, Band.G2_4,))
-    cons_thread = Thread(target=consumer, args=(lambda: stop_threads, queue, floor, logger, result,))
+    cons_thread = Thread(target=consumer, args=(lambda: stop_threads, queue, floor, logger, error_logger, result,))
     
     prod_thread.start()
     time.sleep(1)
@@ -92,7 +96,7 @@ def ThesisDraftOne():
     prod_thread.join()
     cons_thread.join()
     
-    PlotPointsOnFloor(result, floor)
+    PlotPointsOnFloor(result["ml"], floor)
 
 def ThesisDraftTwo():
     queue_all: Queue[list[Cell]] = Queue()
@@ -158,3 +162,22 @@ def ThesisDraftTwo():
     PlotPointsOnFloor(result_70, floor)
     # PlotPointsOnFloor(result_67, floor)
     PlotPointsOnFloor(result_5k, floor)
+
+def PlotErrors():
+    name = input("Which file are we plotting?\n")
+    floor = input("What floor are is this data from?\n")
+    # if not name.endswith("error"):
+    #     name += "-error"
+    lines = []
+    with open(f"experiments/draftone/{name}.log") as f:
+        lines = f.readlines()
+    # print(lines)
+    for line in lines:
+        print(line)
+        if line[0] != '{':
+            continue
+        log_dict = eval(line)
+        # print(log_dict)
+        if "prediction" not in log_dict:
+            log_dict["prediction"] = []
+        PlotErrorOnFloor(log_dict["coordinates"], log_dict["distances"], floor, log_dict["prediction"])

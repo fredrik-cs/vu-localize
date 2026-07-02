@@ -1,6 +1,7 @@
 class WifiInterface:
     WLAN0 = 'wlan0'
     WLP1S0 = 'wlp1s0'
+    WLP2S0 = 'wlp2s0'
     
 class SSIDs:
     VU_CAMPUSNET = 'VU-Campusnet'
@@ -36,6 +37,7 @@ class Colors:
     UNDERLINE = '\033[4m'
 
 class Experiment:
+    PLOT_ERRORS = 2
     SCAN_FLOOR = 1
     DRAFT_ZERO = 0
     DRAFT_ONE = -1

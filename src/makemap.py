@@ -1,29 +1,73 @@
 import re
 import matplotlib.pyplot as plt
 import matplotlib.colors as clr
+from matplotlib.patches import Circle
 import numpy as np
 import os
 
 from src.enums import Data
 
+X_SCALE = 24.2
+X_BIAS = 25.0
+Z_SCALE = -24.2
+Z_BIAS = 1785.0
+
+def PlotErrorOnFloor(coordinates, distances, floor, prediction = []):
+    points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[2] * Z_SCALE + Z_BIAS), coordinates))
+    sizes = list(map(lambda x: (x**2 * X_SCALE*2), distances))
+    pts = np.array(points)
+    print(pts)
+
+    image = ''
+    if int(floor) == 5:
+        image = 'map floor five.jpg'
+    else:
+        image = 'map floor six.jpg'
+    
+    fig, ax = plt.subplots(1)
+    image = plt.imread(image)
+    ax.set_aspect('equal')
+    ax.imshow(image)
+
+    # for a, b, size in zip(pts[: 0], pts[: 1], distances):
+    #     circle = Circle((a, b), size*X_SCALE*5)
+    #     ax.add_patch(circle)
+        
+
+    # plt.scatter(pts[:, 0], pts[:, 1], marker='o', edgecolors='red', s=sizes, facecolors='none')
+    plt.scatter(pts[:, 0], pts[:, 1], marker='x', c='green', s=10)
+    circles = [plt.Circle((x, y), r*X_SCALE, edgecolor='red', facecolor='none') for (x,y,r) in zip(pts[:, 0], pts[:, 1], distances)]
+    # radiuses = [[ptx, pty, ptx - d, pty, 'orange'] for (ptx, pty, d) in (pts[:, 0], pts[:, 1], distances)]
+    # radiuses = [x for xs in radiuses for x in xs]
+    # print(radiuses)
+    x1 = [pts[1, 0], pts[1, 0] - (distances[1] * X_SCALE)]
+    y1 = [pts[1, 1], pts[1, 1]]
+    print(x1, y1)
+    plt.plot(x1, y1, c="orange")
+    for circle in circles:
+        ax.add_patch(circle)
+    if prediction:
+        print(prediction)
+        prediction = [prediction[0] * X_SCALE + X_BIAS, prediction[2] * Z_SCALE + Z_BIAS]
+        print(prediction)
+        plt.scatter(prediction[0], prediction[1], marker='x', c='purple', s=20)
+    plt.show()
+
+    
+
 def PlotPointsOnFloor(points, floor):
     # print(f"points: {points}")
 
-    x_scale = 24.2
-    x_bias = 25.0
-    z_scale = -24.2
-    z_bias = 1785.0
+    points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[1] * Z_SCALE + Z_BIAS), points))
 
-    points["ml"] = list(map(lambda x : (x[0] * x_scale + x_bias, x[1] * z_scale + z_bias), points["ml"]))
-
-    ml_pts = np.array(points["ml"])
-    tl_pts = np.array(points["tl"])
-    mb_pts = np.array(points["mb"])
-    mbf_pts = np.array(points["mbf"]) 
-    ml_steps = np.linspace(0,1,len(points["ml"]))
-    tl_steps = np.linspace(0,1,len(points["tl"]))
-    mb_steps = np.linspace(0,1,len(points["mb"]))
-    mbf_steps = np.linspace(0,1,len(points["mbf"]))
+    ml_pts = np.array(points)
+    # tl_pts = np.array(points["tl"])
+    # mb_pts = np.array(points["mb"])
+    # mbf_pts = np.array(points["mbf"]) 
+    ml_steps = np.linspace(0,1,len(points))
+    # tl_steps = np.linspace(0,1,len(points["tl"]))
+    # mb_steps = np.linspace(0,1,len(points["mb"]))
+    # mbf_steps = np.linspace(0,1,len(points["mbf"]))
 
     image = ''
     if floor == 5:
@@ -60,11 +104,6 @@ def PlotPointsOnFloor(points, floor):
 def GetUnityCoordinates(selected_floor) -> list:
     lines = []
     unity_coordinates = []
-
-    x_scale = 24.2
-    x_bias = 25.0
-    z_scale = -24.2
-    z_bias = 1785.0
     
     with open(Data.UNITY_COORDS_ON_FLOOR.format(selected_floor)) as f:
         lines = f.readlines()
@@ -74,8 +113,8 @@ def GetUnityCoordinates(selected_floor) -> list:
     for line in lines:
         coord_line = re.match(coordinate_pattern, line)
         if coord_line:
-            x = float(coord_line.group(3)) * x_scale + x_bias
-            z = float(coord_line.group(5)) * z_scale + z_bias
+            x = float(coord_line.group(3)) * X_SCALE + X_BIAS
+            z = float(coord_line.group(5)) * Z_SCALE + Z_BIAS
             
             unity_coordinates.append((x, z))
             
@@ -85,11 +124,6 @@ def APCoordinates():
     lines = []
     coordinates = []
     floor = 5
-    
-    x_scale = 24.2
-    x_bias = 25.0
-    z_scale = -24.2
-    z_bias = 1785.0
     
     with open(Data.COORDS_OF_APS) as f:
         lines = f.readlines()
@@ -106,8 +140,8 @@ def APCoordinates():
     for line in lines:
         coord_line = re.match(coordinate_pattern, line)
         if coord_line:
-            x = float(coord_line.group(2)) * x_scale + x_bias
-            z = float(coord_line.group(4)) * z_scale + z_bias
+            x = float(coord_line.group(2)) * X_SCALE + X_BIAS
+            z = float(coord_line.group(4)) * Z_SCALE + Z_BIAS
             coordinates.append((x, z))
     
     return coordinates

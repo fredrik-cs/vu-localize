@@ -5,7 +5,7 @@ import time
 # from src.coordinates import UnityCoordinate
 from src.enums import WifiInterface, SSIDs
 
-VU_IF = WifiInterface.WLP1S0
+VU_IF = WifiInterface.WLP2S0
 
 class Cell:
     
@@ -69,12 +69,14 @@ class Cell:
         if freqs:
             frequencies = list(map(lambda x: str(x), freqs))
             subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'freq', *frequencies, 'flush']
+                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'freq', *frequencies, 'flush'],
+                stdout=subprocess.PIPE, stderr= subprocess.DEVNULL
                 )
 
         else:
             subprocess.run(
-                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush']
+                ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush'],
+                stdout=subprocess.PIPE, stderr= subprocess.DEVNULL
                 )
         # print("Finished triggering")
 
@@ -97,8 +99,8 @@ class Cell:
             readable_scans = re.findall(pattern, str(iwlist_scan))
             # print("yes!")
 
-            campnet_scan = filter(lambda x: str(x[4]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
-            sorted_scan = sorted(campnet_scan, key=lambda regex_group: int(regex_group[3]))
+            # campnet_scan = filter(lambda x: str(x[4]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
+            sorted_scan = sorted(readable_scans, key=lambda regex_group: int(regex_group[3]))
             # print(sorted_scan)
 
             cells: list[Cell] = []

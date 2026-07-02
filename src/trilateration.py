@@ -3,7 +3,7 @@ import numpy as np
 from src.coordinates import MeterToUnity, UnityCoordinate, UnityToMeter
 
 #https://iotandelectronics.wordpress.com/2016/10/07/how-to-calculate-distance-from-the-rssi-value-of-the-ble-beacon/
-def AnalyticalDistanceToAP(power, base_power = -47.0, environmental_factor = 4.0):
+def AnalyticalDistanceToAP(power, base_power = -50.0, environmental_factor = 2.13):
     ### power = measured signal right now
     ### base_power = signal strength at 1 meter. 
     #   -47 is measured from one AP, but different APs could have different base powers.
@@ -18,18 +18,18 @@ def AnalyticalDistanceToAP(power, base_power = -47.0, environmental_factor = 4.0
 #def DistanceToAP(signal_strength, frequency_in_MHz)
 
 def Trilaterate2D(coords_A, coords_B, coords_C, distance_A, distance_B, distance_C):
-    A = pow(coords_A.x, 2) + pow(coords_A.y, 2) - pow(distance_A, 2)
-    B = pow(coords_B.x, 2) + pow(coords_B.y, 2) - pow(distance_B, 2)
-    C = pow(coords_C.x, 2) + pow(coords_C.y, 2) - pow(distance_C, 2)
+    A = pow(coords_A.x, 2) + pow(coords_A.z, 2) - pow(distance_A, 2)
+    B = pow(coords_B.x, 2) + pow(coords_B.z, 2) - pow(distance_B, 2)
+    C = pow(coords_C.x, 2) + pow(coords_C.z, 2) - pow(distance_C, 2)
     X13 = coords_A.x - coords_C.x
     X21 = coords_B.x - coords_A.x
     X32 = coords_C.x - coords_B.x
-    Y13 = coords_A.y - coords_C.y
-    Y21 = coords_B.y - coords_A.y
-    Y32 = coords_C.y - coords_B.y
-    x = (A*Y32 + B*Y13 + C*Y21)/(2*(coords_A.x*Y32 + coords_B.x*Y13 + coords_C.x*Y21)) 
-    y = (A*X32 + B*X13 + C*X21)/(2*(coords_A.x*X32 + coords_B.x*X13 + coords_C.x*X21))
-    return UnityCoordinate(x, y, None)
+    z13 = coords_A.z - coords_C.z
+    z21 = coords_B.z - coords_A.z
+    z32 = coords_C.z - coords_B.z
+    x = (A*z32 + B*z13 + C*z21)/(2*(coords_A.x*z32 + coords_B.x*z13 + coords_C.x*z21)) 
+    z = (A*X32 + B*X13 + C*X21)/(2*(coords_A.x*X32 + coords_B.x*X13 + coords_C.x*X21))
+    return UnityCoordinate(x, None, z)
 
 def Trilaterate3D(cA, cB, cC, dA, dB, dC):
     #cX = coordinate X
@@ -75,6 +75,8 @@ def Trilaterate3D(cA, cB, cC, dA, dB, dC):
     M3 = (A*F*L) - (A*H*J) - (B*E*L) + (B*H*I) + (D*E*J) - (D*F*I)
     
     # Division by M fails if any two coordinates are the same
+    if M == 0:
+        return UnityCoordinate(-555, -555, -555)
     x = MeterToUnity(M1/M)
     y = MeterToUnity(M2/M)
     z = MeterToUnity(M3/M)
@@ -264,8 +266,8 @@ def Multilateration2D (coords: list, distances: list):
 def MobileTrilateration(coords: list, distances: list):
     G = np.array([
         [coords[1].x - coords[0].x, coords[1].y - coords[0].y, coords[1].z - coords[0].z],
-        [coords[3].x - coords[0].x, coords[2].y - coords[0].y, coords[2].z - coords[0].z],
-        [coords[2].x - coords[0].x, coords[3].y - coords[0].y, coords[3].z - coords[0].z],
+        [coords[2].x - coords[0].x, coords[2].y - coords[0].y, coords[2].z - coords[0].z],
+        [coords[3].x - coords[0].x, coords[3].y - coords[0].y, coords[3].z - coords[0].z]
         ])
     sq_coords = list(map(lambda p: UnityCoordinate(p.x**2, p.y**2, p.z**2), coords))
     sq_distances = list(map(lambda d: d**2, distances))
@@ -273,7 +275,7 @@ def MobileTrilateration(coords: list, distances: list):
         [
             .5*(sq_coords[1].x + sq_coords[1].y + sq_coords[1].z - sq_coords[0].x - sq_coords[0].y - sq_distances[1] + sq_distances[0]),
             .5*(sq_coords[2].x + sq_coords[2].y + sq_coords[2].z - sq_coords[0].x - sq_coords[0].y - sq_distances[2] + sq_distances[0]),
-            .5*(sq_coords[3].x + sq_coords[3].y + sq_coords[3].z - sq_coords[0].x - sq_coords[0].y - sq_distances[3] + sq_distances[0]),
+            .5*(sq_coords[3].x + sq_coords[3].y + sq_coords[3].z - sq_coords[0].x - sq_coords[0].y - sq_distances[3] + sq_distances[0])
         ])
     
     try:

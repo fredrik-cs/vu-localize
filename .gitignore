@@ -1,6 +1,12 @@
 __pycache__/
 .venv/
 .vscode/
+bin/
+lib/
+lib64/
+share/
+
+lib64
 
 notes.txt
 launch.sh

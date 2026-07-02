@@ -5,7 +5,7 @@ import time
 from queue import Queue
 
 from src.coordinates import GetAPUnityCoordinates, MeterToUnity, UnityCoordinate
-from src.trilateration import AnalyticalDistanceToAP, Multilateration2D, Trilaterate3DAlternate, MobileTrilateration
+from src.trilateration import AnalyticalDistanceToAP, Multilateration2D, Trilaterate3D, Trilaterate3DAlternate, MobileTrilateration
 from src.scan import FilterAPs
 from src.iw_interpret import Cell
 
@@ -64,7 +64,7 @@ def multi_producer(stopped, queues_and_rules: list[tuple[Queue[list[Cell]], int,
                 time.sleep(AS_SLEEP_DURATION)
         
 
-def consumer(stopped, queue: Queue[list[Cell]], floor: int, logger: Logger, results: list):
+def consumer(stopped, queue: Queue[list[Cell]], floor: int, logger: Logger, error_logger: Logger, results: list):
     
     level = logging.INFO
     logging.basicConfig(level=level, format="%(message)s")
@@ -74,7 +74,7 @@ def consumer(stopped, queue: Queue[list[Cell]], floor: int, logger: Logger, resu
         try:
             message = queue.get()
             
-            process_message(message, results, logger, floor)
+            process_message(message, results, logger, error_logger, floor)
             print(results)
 
             time.sleep(AS_ITERATIONS * AS_SLEEP_DURATION)
@@ -85,36 +85,41 @@ def consumer(stopped, queue: Queue[list[Cell]], floor: int, logger: Logger, resu
             print(e)
             time.sleep(AS_ITERATIONS * AS_SLEEP_DURATION)
 
-def process_message(message, results, logger, floor):
+def process_message(message, results, logger:Logger, error_logger:Logger, floor):
     timestamp = time.time_ns()
 
     message = sorted(message, key= lambda cell: cell.age)
-    # print(message)
 
-    # Get cells with unique addresses, not names?
+    named_APs, _ = FilterAPs(message)
+
+    # Get cells with unique names
     seen = set()
-    cells = []
-    for cell in message:
-        if cell.address not in seen:
-            cells.append(cell)
-            seen.add(cell.address)
+    unique_cells = []
+    for cell in named_APs:
+        if cell.name not in seen:
+            unique_cells.append(cell)
+            seen.add(cell.name)
 
-    # Get location of APs (mac -> name -> coords)
-    named_APs, _ = FilterAPs(cells)
-    GetAPUnityCoordinates(named_APs)
+    print(unique_cells)
+
+    GetAPUnityCoordinates(unique_cells)
 
     # Get distance of APs
-    for cell in named_APs:
+    for cell in unique_cells:
         cell.distance = AnalyticalDistanceToAP(cell.signal)
 
     # Sort APs for different algos
-    floor_APs = list(filter(lambda cell: cell.name[6] == f'{floor}', named_APs))
+    floor_APs = list(filter(lambda cell: cell.name[6] == f'{floor}', unique_cells))
     if len(floor_APs) < 3:
-        time.sleep(AS_ITERATIONS * AS_SLEEP_DURATION)
+        print(f"Too little APs: {floor_APs}")
         return 
-    first_three = named_APs[:3]
+    
+    unique_cells = sorted(unique_cells, key= lambda cell: cell.distance)
+    floor_APs = sorted(floor_APs, key= lambda cell: cell.distance)
+
+    first_three = unique_cells[:3]
     floor_three = floor_APs[:3]
-    first_four = named_APs[:4]
+    first_four = unique_cells[:4]
     floor_four = floor_APs[:4]
 
     # Translate coordinate representation
@@ -134,7 +139,7 @@ def process_message(message, results, logger, floor):
     # Triangulate
     ml_predicted_coord = Multilateration2D(ml_coords, ml_distances)
     tl_predicted_coord = Trilaterate3DAlternate(*tl_coords, *tl_distances)
-    t3_predicted_coord = Trilaterate3DAlternate(*t3_coords, *t3_distances)
+    t3_predicted_coord = Multilateration2D(t3_coords, t3_distances)
     mb_predicted_coord = MobileTrilateration(mb_coords, mb_distances)
     mbf_predicted_coord = MobileTrilateration(mbf_coords, mbf_distances)
 
@@ -150,7 +155,23 @@ def process_message(message, results, logger, floor):
     print(results)
 
     # New logger
-    def log_cell_list(cell_list: list[Cell]):
+    def log_cell_list(name_algorithm: str, predicted_coord:UnityCoordinate, cell_list: list[Cell]):
+        log_dict = {
+            "algorithm": name_algorithm,
+            "coordinates": [cell.coords for cell in cell_list],
+            "distances": [cell.distance for cell in cell_list],
+            "names": [cell.name for cell in cell_list],
+            "timestamps": [str(datetime.fromtimestamp(float(timestamp - cell.age * 1_000_000) / 1e9)) for cell in cell_list],
+            "signals": [cell.signal for cell in cell_list],
+            "frequencies": [cell.frequency for cell in cell_list],
+        }
+        if predicted_coord.x < 0:
+            error_logger.info(log_dict)
+        else:
+            log_dict["prediction"] = predicted_coord
+            logger.info(log_dict)
+
+    def log_cell_list_verbose(cell_list: list[Cell]):
         logger.info(f"from cells:")
         for cell in cell_list:
             ts = timestamp - cell.age * 1_000_000
@@ -159,15 +180,25 @@ def process_message(message, results, logger, floor):
             logger.info(f"\tSignal: {cell.signal} dBm, {cell.frequency} MHz")
 
     # Log results
-    logger.info(f"Time of log: {datetime.now()}")
-    logger.info(f"got {ml_predicted_coord} using 2D multilateration")
-    log_cell_list(floor_APs)
-    logger.info(f"got {tl_predicted_coord} from 3D Trilateration")
-    log_cell_list(first_three)
-    # logger.info(f"got {t3_predicted_coord} from floor specific 3D Trilateration")
-    # log_cell_list(floor_three)
-    logger.info(f"got {mb_predicted_coord} from Mobile Trilateration")
-    log_cell_list(first_four)
-    logger.info(f"got {mbf_predicted_coord} from floor specific Mobile Trilateration")
-    log_cell_list(floor_four)
+    VERBOSE = False
+
+    if VERBOSE:
+        logger.info(f"Time of log: {datetime.now()}")
+        logger.info(f"got {ml_predicted_coord} using 2D multilateration")
+        log_cell_list_verbose(floor_APs)
+        logger.info(f"got {tl_predicted_coord} from 3D Trilateration")
+        log_cell_list_verbose(first_three)
+        logger.info(f"got {t3_predicted_coord} from floor specific 3D Trilateration")
+        log_cell_list_verbose(floor_three)
+        logger.info(f"got {mb_predicted_coord} from Mobile Trilateration")
+        log_cell_list_verbose(first_four)
+        logger.info(f"got {mbf_predicted_coord} from floor specific Mobile Trilateration")
+        log_cell_list_verbose(floor_four)
+    else:
+        logger.info(datetime.now())
+        log_cell_list("ml",ml_predicted_coord, floor_APs)
+        log_cell_list("tl",tl_predicted_coord, first_three)
+        log_cell_list("t3", t3_predicted_coord, floor_three)
+        log_cell_list("mb",mb_predicted_coord, first_four)
+        log_cell_list("mbf",mbf_predicted_coord, floor_four)
         

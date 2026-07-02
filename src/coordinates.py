@@ -31,7 +31,7 @@ class UnityCoordinate:
         return UnityToMeter(d)
     
     def __str__(self):
-        return '({x:<8},{y:^8},{z:>8})'.format(
+        return '({x:<.3f}, {y:.3f}, {z:.3f})'.format(
             x = self.x,
             y = self.y,
             z = self.z,
@@ -61,11 +61,11 @@ class Coordinate:
  
 def UnityToMeter(x):
     # TODO: Meassure more precisely. 5 is a rough estimate.
-    return float(x) / 5.0 
+    return float(x) / 1.0 
 
 def MeterToUnity(x):
     # TODO: Meassure more precisely. 5 is a rough estimate.
-    return float(x) * 5.0  
+    return float(x) * 1.0  
             
 def GetCoordinates(selected_floor) -> list[Coordinate]:
     lines = []
