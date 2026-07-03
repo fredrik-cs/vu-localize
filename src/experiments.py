@@ -5,6 +5,7 @@ from threading import Thread
 import time
 from datetime import datetime
 
+from pathing import FindPosition, distance
 from src.iw_interpret import Cell
 from src.producer_consumer import Multilateration2D, collect_signals, consumer, single_producer, multi_producer
 from src.loggers import LogBandQualities, new_logger
@@ -176,9 +177,6 @@ def ThesisDraftThree():
     collect_thread = Thread(target=collect_signals, args=(collect_logger, lambda: stop_threads))
     stop_threads = False
 
-    # Fetch the pathway of the floor
-    #TODO: Make pathway algo
-
     # Give timer
     time.sleep(1)
     print("Start in 3...")
@@ -206,11 +204,17 @@ def ThesisDraftThree():
 
     begin_timestamp = int(lines[0].split()[2])
     end_timestamp = int(lines[-2].split()[2])
+    duration_in_ns = end_timestamp - begin_timestamp 
     last_second = begin_timestamp
     cells_in_second24 = 0
     cells_in_second50 = 0
     predictions_in_second24 = 0
     predictions_in_second50 = 0
+
+    def FindError(timestamp: int, predicted_coord: UnityCoordinate):
+        percentage = (timestamp - begin_timestamp) / duration_in_ns
+        actual_coord = FindPosition(floor, percentage)
+        return distance(actual_coord, (predicted_coord.x, predicted_coord.z))
     
 
     # File signals into their respective buckets (2.4/5G, >-80,>-70>-67)
@@ -288,8 +292,7 @@ def ThesisDraftThree():
                 bucket_distances = [cell.distance for cell in bucket]
                 predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
                 # Use the timestamp to find the percentage of the way into the path you are, then calculate error
-                #TODO: FIX
-                error = 0
+                error = FindError(timestamp, predicted_coord)
 
                 # File the prediction in a dictionary, with error, timestamp, AP names, AP locations and distances.
                 # Whenever a bucket can do multilateration, do so with as many signals as possible
@@ -303,21 +306,20 @@ def ThesisDraftThree():
                     prediction_buckets[prediction_tag].append(prediction_info)
 
                 if len(bucket) == 3:
-                    AddToPredictionBucket(predicted_coord, "tri", error, bucket)
+                    AddToPredictionBucket(predicted_coord, "-tri", error, bucket)
                     if bucket_tag[0] == "2":
                         predictions_in_second24 += 1
                     else:
                         predictions_in_second50 += 1
                 else:
-                    AddToPredictionBucket(predicted_coord, "mul", error, bucket)
+                    AddToPredictionBucket(predicted_coord, "-mul", error, bucket)
                     bucket = bucket[:3]
                     bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
                     bucket_distances = [cell.distance for cell in bucket]
                     predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
                     # Use the timestamp to find the percentage of the way into the path you are, then calculate error
-                    #TODO: FIX
-                    error = 0
-                    AddToPredictionBucket(predicted_coord, "tri", error, bucket)
+                    error = FindError(timestamp, predicted_coord)
+                    AddToPredictionBucket(predicted_coord, "-tri", error, bucket)
 
                     if bucket_tag[0] == "2":
                         predictions_in_second24 += 2
@@ -326,8 +328,21 @@ def ThesisDraftThree():
 
             # If a bucket cannot do either, take the previous prediction(s!) and calculate the new error
             else:
-                #TODO: FIX!
-                pass
+                tag_tri = bucket_tag+"-tri"
+                tag_mul = bucket_tag+"-mul"
+                if prediction_buckets[tag_tri]:
+                    last_prediction = prediction_buckets[tag_tri][-1].copy()
+                    prediction = last_prediction[0]
+                    error = FindError(timestamp, prediction)
+                    last_prediction[1] = error
+                    prediction_buckets[tag_tri].append(last_prediction)
+                
+                if prediction_buckets[tag_mul]:
+                    last_prediction = prediction_buckets[tag_mul][-1].copy()
+                    prediction = last_prediction[0]
+                    error = FindError(timestamp, prediction)
+                    last_prediction[1] = error
+                    prediction_buckets[tag_mul].append(last_prediction)
     
         # Whenever a second passes, for every bucket store the amount of new signals it got and new predictions made
         if timestamp - last_second >= 1e9:
@@ -347,10 +362,22 @@ def ThesisDraftThree():
     # Log each bucket at the end sequentially
     for bucket_tag in prediction_buckets:
         bucket = prediction_buckets[bucket_tag]
-        #TODO: FIX!
+        predict_logger.log(f"{bucket_tag}")
+        for prediction in bucket:
+            predict_logger.log(f"{prediction}")
 
     ## Part 3: Plot
-    # For every bucket, find the average and worst error, average and worst predictions (and signals?) per second
+    # For every bucket, find the average and worst error, average and worst predictions count (and signals count?) per second
+    for bucket_tag in prediction_buckets:
+        bucket = prediction_buckets[bucket_tag]
+        total_error = 0
+        worst_error = 0
+        for item in bucket:
+            error = item[1]
+            total_error += error
+            worst_error = max(error, worst_error)
+        average_error = total_error / len(bucket)
+
     # Make a table on that
     # For every bucket, make a scatterplot connecting the real locations to the predicted locations with a line
     # Might need to skip some timestamps for that one

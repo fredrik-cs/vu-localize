@@ -12,6 +12,32 @@ X_BIAS = 25.0
 Z_SCALE = -24.2
 Z_BIAS = 1785.0
 
+def PlotPathOnFloor(path: list[tuple[int, int]], floor):
+    points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[1] * Z_SCALE + Z_BIAS), path))
+    point_count = len(points)
+    points.append(points[0])
+    pts = np.array(points)
+    print(pts)
+
+    image = ''
+    if int(floor) == 5:
+        image = 'map floor five.jpg'
+    else:
+        image = 'map floor six.jpg'
+    
+    fig, ax = plt.subplots(1)
+    image = plt.imread(image)
+    ax.set_aspect('equal')
+    ax.imshow(image)
+
+    for i in range(point_count):
+        xline = [pts[i, 0], pts[i+1, 0]]
+        yline = [pts[i, 1], pts[i+1, 1]]
+        plt.plot(xline, yline, c="orange")
+
+    plt.show()
+
+
 def PlotErrorOnFloor(coordinates, distances, floor, prediction = []):
     points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[2] * Z_SCALE + Z_BIAS), coordinates))
     sizes = list(map(lambda x: (x**2 * X_SCALE*2), distances))
@@ -40,10 +66,10 @@ def PlotErrorOnFloor(coordinates, distances, floor, prediction = []):
     # radiuses = [[ptx, pty, ptx - d, pty, 'orange'] for (ptx, pty, d) in (pts[:, 0], pts[:, 1], distances)]
     # radiuses = [x for xs in radiuses for x in xs]
     # print(radiuses)
-    x1 = [pts[1, 0], pts[1, 0] - (distances[1] * X_SCALE)]
-    y1 = [pts[1, 1], pts[1, 1]]
-    print(x1, y1)
-    plt.plot(x1, y1, c="orange")
+    # x1 = [pts[1, 0], pts[1, 0] - (distances[1] * X_SCALE)]
+    # y1 = [pts[1, 1], pts[1, 1]]
+    # print(x1, y1)
+    # plt.plot(x1, y1, c="orange")
     for circle in circles:
         ax.add_patch(circle)
     if prediction:
