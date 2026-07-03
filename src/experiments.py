@@ -3,16 +3,16 @@ import json
 from queue import Queue
 from threading import Thread
 import time
-import datetime
+from datetime import datetime
 
 from src.iw_interpret import Cell
-from src.producer_consumer import consumer, single_producer, multi_producer
+from src.producer_consumer import Multilateration2D, collect_signals, consumer, single_producer, multi_producer
 from src.loggers import LogBandQualities, new_logger
-from src.analysis import PredictTrilaterate
+from src.analysis import AnalyticalDistanceToAP, PredictTrilaterate, UnityCoordinate
 from src.sampling import SampleTableManager
 from src.scan import FindAPs
 from src.registries import RegisterFrequencies, RegisterUnknowns
-from src.coordinates import GetCoordinates, GetUnityCoordinates
+from src.coordinates import GetAPUnityCoordinates, GetCoordinates, GetUnityCoordinates
 from src.enums import Band
 from src.makemap import PlotErrorOnFloor, PlotPointsOnFloor
      
@@ -162,6 +162,202 @@ def ThesisDraftTwo():
     PlotPointsOnFloor(result_70, floor)
     # PlotPointsOnFloor(result_67, floor)
     PlotPointsOnFloor(result_5k, floor)
+
+def ThesisDraftThree():
+    ## Part 0: Setup
+    # Ask for floor and filename
+    floor = int(input("what floor are we analysing?"))
+    name = input("log to what file?\n")
+
+    # Create a logger for collection, a logger for prediction
+    collect_logger = new_logger("draftthree", f"{name}-collect")
+    predict_logger = new_logger("draftthree", f"{name}-predict")
+    
+    collect_thread = Thread(target=collect_signals, args=(collect_logger, lambda: stop_threads))
+    stop_threads = False
+
+    # Fetch the pathway of the floor
+    #TODO: Make pathway algo
+
+    # Give timer
+    time.sleep(1)
+    print("Start in 3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print("GO!")
+
+    ## Part 1: Collection
+    # Keep scanning until enter is pressed
+    collect_thread.start()
+    time.sleep(5)
+    input("Press enter to finish course")
+    
+    stop_threads = True
+
+
+    ## Part 2: Simulation
+    # Read back your log, line for line
+    lines = []
+    with open(f"experiments/draftthree/{name}-collect.log") as f:
+        lines = f.readlines()
+
+    begin_timestamp = int(lines[0].split()[2])
+    end_timestamp = int(lines[-2].split()[2])
+    last_second = begin_timestamp
+    cells_in_second24 = 0
+    cells_in_second50 = 0
+    predictions_in_second24 = 0
+    predictions_in_second50 = 0
+    
+
+    # File signals into their respective buckets (2.4/5G, >-80,>-70>-67)
+    prediction_buckets = {
+        "24-80-tri": [],
+        "24-70-tri": [],
+        "24-67-tri": [],
+        "24-ALL-tri": [],
+        "50-80-tri": [],
+        "50-70-tri": [],
+        "50-67-tri": [],
+        "50-ALL-tri": [],
+        "24-80-mul": [],
+        "24-70-mul": [],
+        "24-67-mul": [],
+        "24-ALL-mul": [],
+        "50-80-mul": [],
+        "50-70-mul": [],
+        "50-67-mul": [],
+        "50-ALL-mul": [],
+    }
+
+    for i in range(len(lines)/2):
+        signal_buckets: dict[str, list[Cell]] = {
+        "24-80": [],
+        "24-70": [],
+        "24-67": [],
+        "24-ALL": [],
+        "50-80": [],
+        "50-70": [],
+        "50-67": [],
+        "50-ALL": [],
+        }
+
+        def AddToBucket(freq: str, cell: Cell):
+            if cell.signal >= -67:
+                signal_buckets[f"{freq}-67"].append(cell)
+            if cell.signal >= -70:
+                signal_buckets[f"{freq}-70"].append(cell)
+            if cell.signal > -80:
+                signal_buckets[f"{freq}-80"].append(cell)
+            signal_buckets[f"{freq}-ALL"].append(cell)
+
+        timestamp_line = lines[2*i]
+        cell_count24 = int(timestamp_line.split()[0])
+        cells_in_second24 += cell_count24
+        cell_count50 = int(timestamp_line.split()[1])
+        cells_in_second50 += cell_count50
+        timestamp = int(timestamp_line.split()[2])
+        signal_info = lines[2*i+1]
+        signal_dict = eval(signal_info)
+        cell_list = map(signal_dict)
+
+        for i, frequency in enumerate(signal_dict["frequencies"]):
+            cell = Cell()
+            cell.frequency = frequency
+            cell.name = signal_dict["names"][i]
+            cell.signal = signal_dict["signals"][i]
+            cell.timestamp
+            if frequency < 5000:
+                AddToBucket("50", signal_dict["signals"][i], signal_dict["names"][i])
+            else:
+                AddToBucket("24", signal_dict["signals"][i], signal_dict["names"][i])
+
+        # Whenever a bucket can do trilateration, make the prediction
+        for bucket_tag in signal_buckets:
+            bucket = signal_buckets[bucket_tag]
+            bucket = sorted(bucket, key=lambda c: c.timestamp, reverse=True)
+
+            if len(bucket) >= 3:
+                GetAPUnityCoordinates(bucket)
+                for cell in bucket:
+                    cell.distance = AnalyticalDistanceToAP(cell.signal)
+                bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
+                bucket_distances = [cell.distance for cell in bucket]
+                predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
+                # Use the timestamp to find the percentage of the way into the path you are, then calculate error
+                #TODO: FIX
+                error = 0
+
+                # File the prediction in a dictionary, with error, timestamp, AP names, AP locations and distances.
+                # Whenever a bucket can do multilateration, do so with as many signals as possible
+                # File this prediction similarly
+                def AddToPredictionBucket(prediction: UnityCoordinate, algorithm:str, error: int, bucket: list[Cell]):
+                    prediction_tag = bucket_tag+algorithm
+                    bucket_names = [cell.name for cell in bucket]
+                    bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
+                    bucket_distances = [cell.distance for cell in bucket]
+                    prediction_info = [prediction, error, timestamp, bucket_names, bucket_coords, bucket_distances]
+                    prediction_buckets[prediction_tag].append(prediction_info)
+
+                if len(bucket) == 3:
+                    AddToPredictionBucket(predicted_coord, "tri", error, bucket)
+                    if bucket_tag[0] == "2":
+                        predictions_in_second24 += 1
+                    else:
+                        predictions_in_second50 += 1
+                else:
+                    AddToPredictionBucket(predicted_coord, "mul", error, bucket)
+                    bucket = bucket[:3]
+                    bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
+                    bucket_distances = [cell.distance for cell in bucket]
+                    predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
+                    # Use the timestamp to find the percentage of the way into the path you are, then calculate error
+                    #TODO: FIX
+                    error = 0
+                    AddToPredictionBucket(predicted_coord, "tri", error, bucket)
+
+                    if bucket_tag[0] == "2":
+                        predictions_in_second24 += 2
+                    else:
+                        predictions_in_second50 += 2
+
+            # If a bucket cannot do either, take the previous prediction(s!) and calculate the new error
+            else:
+                #TODO: FIX!
+                pass
+    
+        # Whenever a second passes, for every bucket store the amount of new signals it got and new predictions made
+        if timestamp - last_second >= 1e9:
+            readable_time = datetime.fromtimestamp(float(last_second) / 1e9)
+            formatted_time = readable_time.strftime('%H:%M:%S')
+            predict_logger.log(f"in the second of {formatted_time}:")
+            predict_logger.log(f"\t{cells_in_second24} new cells on 2.4GHz, {cells_in_second50} new cells on 5 GHz")
+            predict_logger.log(f"\t{predictions_in_second24} new predictions on 2.4GHz, {predictions_in_second50} new predictions on 5 GHz")
+
+            last_second = timestamp
+            cells_in_second24 = 0
+            cells_in_second50 = 0
+            predictions_in_second24 = 0
+            predictions_in_second50 = 0
+
+
+    # Log each bucket at the end sequentially
+    for bucket_tag in prediction_buckets:
+        bucket = prediction_buckets[bucket_tag]
+        #TODO: FIX!
+
+    ## Part 3: Plot
+    # For every bucket, find the average and worst error, average and worst predictions (and signals?) per second
+    # Make a table on that
+    # For every bucket, make a scatterplot connecting the real locations to the predicted locations with a line
+    # Might need to skip some timestamps for that one
+    # Histograms of errors in x, z, and distance?
+
+
+
 
 def PlotErrors():
     name = input("Which file are we plotting?\n")

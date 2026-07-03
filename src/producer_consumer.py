@@ -6,7 +6,7 @@ from queue import Queue
 
 from src.coordinates import GetAPUnityCoordinates, MeterToUnity, UnityCoordinate
 from src.trilateration import AnalyticalDistanceToAP, Multilateration2D, Trilaterate3D, Trilaterate3DAlternate, MobileTrilateration
-from src.scan import FilterAPs
+from src.scan import FilterAPs, FindNames
 from src.iw_interpret import Cell
 
 AS_SLEEP_DURATION = 0.01
@@ -124,15 +124,15 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
 
     # Translate coordinate representation
     ml_coords = [UnityCoordinate(*cell.coords) for cell in floor_APs]
-    ml_distances = [MeterToUnity(cell.distance) for cell in floor_APs]
+    ml_distances = [cell.distance for cell in floor_APs]
     tl_coords = [UnityCoordinate(*cell.coords) for cell in first_three]
-    tl_distances = [MeterToUnity(cell.distance) for cell in first_three]
+    tl_distances = [cell.distance for cell in first_three]
     t3_coords = [UnityCoordinate(*cell.coords) for cell in floor_three]
-    t3_distances = [MeterToUnity(cell.distance) for cell in floor_three]
+    t3_distances = [cell.distance for cell in floor_three]
     mb_coords = [UnityCoordinate(*cell.coords) for cell in first_four]
-    mb_distances = [MeterToUnity(cell.distance) for cell in first_four]
+    mb_distances = [cell.distance for cell in first_four]
     mbf_coords = [UnityCoordinate(*cell.coords) for cell in floor_four]
-    mbf_distances = [MeterToUnity(cell.distance) for cell in floor_four]
+    mbf_distances = [cell.distance for cell in floor_four]
 
     # print(t3_coords, t3_distances)
 
@@ -186,19 +186,97 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
         logger.info(f"Time of log: {datetime.now()}")
         logger.info(f"got {ml_predicted_coord} using 2D multilateration")
         log_cell_list_verbose(floor_APs)
-        logger.info(f"got {tl_predicted_coord} from 3D Trilateration")
-        log_cell_list_verbose(first_three)
+        # logger.info(f"got {tl_predicted_coord} from 3D Trilateration")
+        # log_cell_list_verbose(first_three)
         logger.info(f"got {t3_predicted_coord} from floor specific 3D Trilateration")
         log_cell_list_verbose(floor_three)
-        logger.info(f"got {mb_predicted_coord} from Mobile Trilateration")
-        log_cell_list_verbose(first_four)
-        logger.info(f"got {mbf_predicted_coord} from floor specific Mobile Trilateration")
-        log_cell_list_verbose(floor_four)
+        # logger.info(f"got {mb_predicted_coord} from Mobile Trilateration")
+        # log_cell_list_verbose(first_four)
+        # logger.info(f"got {mbf_predicted_coord} from floor specific Mobile Trilateration")
+        # log_cell_list_verbose(floor_four)
     else:
         logger.info(datetime.now())
         log_cell_list("ml",ml_predicted_coord, floor_APs)
-        log_cell_list("tl",tl_predicted_coord, first_three)
+        # log_cell_list("tl",tl_predicted_coord, first_three)
         log_cell_list("t3", t3_predicted_coord, floor_three)
-        log_cell_list("mb",mb_predicted_coord, first_four)
-        log_cell_list("mbf",mbf_predicted_coord, floor_four)
+        # log_cell_list("mb",mb_predicted_coord, first_four)
+        # log_cell_list("mbf",mbf_predicted_coord, floor_four)
         
+def collect_signals(logger: Logger, stopped):
+    level = logging.INFO
+    logging.basicConfig(level=level, format="%(message)s")
+
+    young_unique_cells: dict[tuple, Cell] = {}
+    unique_name_frequency_pairs = set()
+
+    # Keep track of new names per band, and when those names get younger signals. 
+    # The count of this is the amount of signals per band
+    unique_cell_count24 = 0
+    unique_cell_count50 = 0
+
+    while not stopped():
+        Cell.trigger_scan([])
+        cell_dump = Cell.dump_scan()
+        timestamp = time.time_ns()
+        named_cells = list(filter(lambda cell: cell.name != "", FindNames(cell_dump)))
+        pairs_altered = set()
+
+        for cell in named_cells:
+            pair = (cell.name, cell.frequency)
+
+            if pair not in unique_name_frequency_pairs:
+                unique_name_frequency_pairs.add(pair)
+                cell.timestamp = timestamp - cell.age * 1e6 
+                young_unique_cells[pair] = cell
+                pairs_altered.add(pair)
+            elif timestamp - cell.age * 1e6 > young_unique_cells[(cell.name, cell.frequency)].timestamp:
+                cell.timestamp = timestamp - cell.age * 1e6 
+                young_unique_cells[pair] = cell
+                pairs_altered.add(pair)
+            else:
+                continue
+        
+        new_cell_count24 = len(filter(lambda pair: pair[1] < 5000, pairs_altered))
+        unique_cell_count24 += new_cell_count24
+        new_cell_count50 = len(filter(lambda pair: pair[1] > 4999, pairs_altered))
+        unique_cell_count50 += new_cell_count50
+
+        if new_cell_count24 > 0 or new_cell_count50:
+            names = []
+            addresses = []
+            ssids = []
+            signals = []
+            timestamps = []
+            frequencies = []
+
+            for pair in young_unique_cells:
+                curr_cell = young_unique_cells[pair]
+
+                if (timestamp - curr_cell.timestamp) > (6 * 1e6):
+                    young_unique_cells.pop(pair)
+                    unique_name_frequency_pairs.pop(pair)
+                    continue
+
+                names.append(curr_cell.name)
+                addresses.append(curr_cell.address)
+                ssids.append(curr_cell.ssid)
+                signals.append(curr_cell.signal)
+                timestamps.append(curr_cell.timestamp)
+                frequencies.append(curr_cell.frequency)
+
+            # Log time and the set of youngest received signals with unique name,frequency pairs that were collected within 6 seconds
+            # For the signal log name, mac, ssid, signal strength, timestamp, frequency
+            
+            cell_log = {
+                "names": names,
+                "addresses": addresses,
+                "ssids": ssids,
+                "signals": signals,
+                "timestamps": timestamps,
+                "frequencies": frequencies
+            }
+            logger.info(f"{unique_cell_count24} {unique_cell_count50} {timestamp}")
+            logger.info(f"{cell_log}")
+
+        time.sleep(AS_SLEEP_DURATION)
+    

@@ -1,6 +1,7 @@
 from random import uniform
 import re
 import subprocess
+import sys
 import time
 # from src.coordinates import UnityCoordinate
 from src.enums import WifiInterface, SSIDs
@@ -18,7 +19,8 @@ class Cell:
         self.name: str = ""
         self.distance: int = -999
         self.coord_transform = ""
-        self.coords: tuple = (None, None, None) 
+        self.coords: tuple = (None, None, None)
+        self.timestamp: int = sys.maxsize
     
     def __str__(self):
         return self.__repr__()

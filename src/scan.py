@@ -67,6 +67,20 @@ def Scan(interface = VU_IF, frequencies = []) -> Result[list[Cell], str]:
         print(e)
         return Err(str(e))
     
+def FindNames(cells: list[Cell]) -> list[Cell]:
+    for cell in cells:
+        address = cell.address[:-1]+"0"
+        in_excel = AP_DF["Base Radio MAC Address"].eq(address).any()
+
+        if in_excel:
+            query = "`Base Radio MAC Address` == @address"
+            name = AP_DF.query(query)["AP Name"].item()
+            cell.name = name
+        else:
+            cell.name = ''
+    
+    return cells
+
 def FilterAPs(cells: list[Cell]) -> tuple[list[Cell], list[Cell]]:
     excel_aps = []
     other_aps = []
