@@ -1,13 +1,9 @@
-from datetime import datetime
 from random import uniform
 import time
 from pandas import read_excel
-from rusty_results import Ok, Err, Result # type: ignore
+from rusty_results import Ok, Err, Result
 from src.iw_interpret import Cell
-# from ui import PrintCellSimple
 from src.enums import Data, WifiInterface
-
-from src.ui import PrintCellSimple
 
 VU_IF = WifiInterface.WLP1S0
 AP_DF = read_excel(Data.AP_MAC)
@@ -23,43 +19,23 @@ def APsFromScanList(ssids, frequencies, interface = VU_IF) -> Result[list[Cell],
                     result.append(cell)
                     
             if len(result):
-                # print(result)
                 return Ok(result)
 
             return Err(f"Connection with SSIDs {ssids} not found")
         
         case Err(e):
-            return Err(e)
-
-# def FindAtleastMinScans(ssid, frequencies, min = 3) -> Result[list[Cell], None]:
-#     result = []
-#     addresses = []
-    
-#     while len(result) < min:
-#         match FindFromScanList(ssid, frequencies):
-#             case Ok(cells):
-#                 for cell in cells:
-#                     if cell.address not in addresses:
-#                         addresses.append(cell.address)
-#                         result.append(cell)
-#             case Err(_):
-#                 pass
-    
-#     return Ok(result)
-            
+            return Err(e)        
 
 def Scan(interface = VU_IF, frequencies = []) -> Result[list[Cell], str]:
     cell_list = []
     
     try:
         cell_map = Cell.all(interface, frequencies)
-        # print(cell_map)
         
         for cell in cell_map:
             cell.address = cell.address.lower()
             cell_list.append(cell)       
         
-        # print(cell_list)
         return Ok(cell_list)
     
     except Exception as e:
@@ -93,23 +69,18 @@ def FilterAPs(cells: list[Cell]) -> tuple[list[Cell], list[Cell]]:
         if in_excel:
             query = "`Base Radio MAC Address` == @address"
             name = AP_DF.query(query)["AP Name"].item()
-            # print(f"Found! {name}")
             cell.name = name
             excel_aps.append(cell)
-            # excel_aps_names.append(name)
         else:
             other_aps.append(cell)
             
-        cell_index += 1    
-        # PrintCellSimple(cell, cell_index, in_excel)    
+        cell_index += 1      
     
     return excel_aps, other_aps
         
 def FindAPs(ssids, frequencies, interface, min_aps = -1) -> tuple[list[Cell], list[Cell]]:
    
     cell_list = APsFromScanList(ssids, frequencies, interface)
-    # cell_list = FindAtleastMinScans(ssid, interface, 3)
-    # cell_list = Scan(interface)
     excel_aps = []
     other_aps = []
     
@@ -150,10 +121,3 @@ def FindAPs(ssids, frequencies, interface, min_aps = -1) -> tuple[list[Cell], li
     print(excel_aps)
 
     return excel_aps, other_aps
-
-        
-    
-        
-        
-
-    

@@ -4,7 +4,7 @@ import logging
 import time
 from queue import Queue
 
-from src.coordinates import GetAPUnityCoordinates, MeterToUnity, UnityCoordinate
+from src.coordinates import GetAPUnityCoordinates, UnityCoordinate
 from src.trilateration import AnalyticalDistanceToAP, Multilateration2D, Trilaterate3D, Trilaterate3DAlternate, MobileTrilateration
 from src.scan import FilterAPs, FindNames
 from src.iw_interpret import Cell
@@ -75,13 +75,11 @@ def consumer(stopped, queue: Queue[list[Cell]], floor: int, logger: Logger, erro
             message = queue.get()
             
             process_message(message, results, logger, error_logger, floor)
-            print(results)
+            # print(results)
 
             time.sleep(AS_ITERATIONS * AS_SLEEP_DURATION)
 
         except Exception as e:
-            # raise e
-            
             print(e)
             time.sleep(AS_ITERATIONS * AS_SLEEP_DURATION)
 
@@ -134,8 +132,6 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
     mbf_coords = [UnityCoordinate(*cell.coords) for cell in floor_four]
     mbf_distances = [cell.distance for cell in floor_four]
 
-    # print(t3_coords, t3_distances)
-
     # Triangulate
     ml_predicted_coord = Multilateration2D(ml_coords, ml_distances)
     tl_predicted_coord = Trilaterate3DAlternate(*tl_coords, *tl_distances)
@@ -152,7 +148,6 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
         results["mb"].append((mb_predicted_coord.x, mb_predicted_coord.z))
     if mbf_predicted_coord.x > 0 and mbf_predicted_coord.z > 0:
         results["mbf"].append((mbf_predicted_coord.x, mbf_predicted_coord.z))
-    print(results)
 
     # New logger
     def log_cell_list(name_algorithm: str, predicted_coord:UnityCoordinate, cell_list: list[Cell]):
@@ -186,23 +181,15 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
         logger.info(f"Time of log: {datetime.now()}")
         logger.info(f"got {ml_predicted_coord} using 2D multilateration")
         log_cell_list_verbose(floor_APs)
-        # logger.info(f"got {tl_predicted_coord} from 3D Trilateration")
-        # log_cell_list_verbose(first_three)
         logger.info(f"got {t3_predicted_coord} from floor specific 3D Trilateration")
         log_cell_list_verbose(floor_three)
-        # logger.info(f"got {mb_predicted_coord} from Mobile Trilateration")
-        # log_cell_list_verbose(first_four)
-        # logger.info(f"got {mbf_predicted_coord} from floor specific Mobile Trilateration")
-        # log_cell_list_verbose(floor_four)
+
     else:
         logger.info(datetime.now())
         log_cell_list("ml",ml_predicted_coord, floor_APs)
-        # log_cell_list("tl",tl_predicted_coord, first_three)
         log_cell_list("t3", t3_predicted_coord, floor_three)
-        # log_cell_list("mb",mb_predicted_coord, first_four)
-        # log_cell_list("mbf",mbf_predicted_coord, floor_four)
-        
-def collect_signals(logger: Logger, stopped):
+            
+def collect_signals(logger: Logger, floor: int, stopped):
     level = logging.INFO
     logging.basicConfig(level=level, format="%(message)s")
 
@@ -218,10 +205,11 @@ def collect_signals(logger: Logger, stopped):
         Cell.trigger_scan([])
         cell_dump = Cell.dump_scan()
         timestamp = time.time_ns()
-        named_cells = list(filter(lambda cell: cell.name != "", FindNames(cell_dump)))
+        named_cells = filter(lambda cell: cell.name != "", FindNames(cell_dump))
+        floor_cells = filter(lambda cell: cell.name[:7] == f"NU-AP0{floor}", named_cells)
         pairs_altered = set()
 
-        for cell in named_cells:
+        for cell in floor_cells:
             pair = (cell.name, cell.frequency)
 
             if pair not in unique_name_frequency_pairs:
@@ -236,12 +224,13 @@ def collect_signals(logger: Logger, stopped):
             else:
                 continue
         
-        new_cell_count24 = len(filter(lambda pair: pair[1] < 5000, pairs_altered))
+        new_cell_count24 = len(list(filter(lambda pair: pair[1] < 5000, pairs_altered)))
         unique_cell_count24 += new_cell_count24
-        new_cell_count50 = len(filter(lambda pair: pair[1] > 4999, pairs_altered))
+        new_cell_count50 = len(list(filter(lambda pair: pair[1] > 4999, pairs_altered)))
         unique_cell_count50 += new_cell_count50
 
-        if new_cell_count24 > 0 or new_cell_count50:
+        removable_pairs = []
+        if new_cell_count24 > 0 or new_cell_count50 > 0:
             names = []
             addresses = []
             ssids = []
@@ -251,10 +240,11 @@ def collect_signals(logger: Logger, stopped):
 
             for pair in young_unique_cells:
                 curr_cell = young_unique_cells[pair]
+                print(curr_cell)
 
-                if (timestamp - curr_cell.timestamp) > (6 * 1e6):
-                    young_unique_cells.pop(pair)
-                    unique_name_frequency_pairs.pop(pair)
+                if (timestamp - curr_cell.timestamp) > (6 * 1e9):
+                    print(f"removed for {timestamp-curr_cell.timestamp} difference")
+                    removable_pairs.append(pair)
                     continue
 
                 names.append(curr_cell.name)
@@ -263,6 +253,10 @@ def collect_signals(logger: Logger, stopped):
                 signals.append(curr_cell.signal)
                 timestamps.append(curr_cell.timestamp)
                 frequencies.append(curr_cell.frequency)
+            
+            for pair in removable_pairs:
+                young_unique_cells.pop(pair)
+                unique_name_frequency_pairs.remove(pair)
 
             # Log time and the set of youngest received signals with unique name,frequency pairs that were collected within 6 seconds
             # For the signal log name, mac, ssid, signal strength, timestamp, frequency
@@ -279,4 +273,3 @@ def collect_signals(logger: Logger, stopped):
             logger.info(f"{cell_log}")
 
         time.sleep(AS_SLEEP_DURATION)
-    

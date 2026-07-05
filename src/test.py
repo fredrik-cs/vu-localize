@@ -1,6 +1,6 @@
 import unittest
 from coordinates import UnityCoordinate
-from trilateration import Trilaterate2D, Trilaterate3D, Trilaterate3DAlternate, Multilateration2D, MobileTrilateration
+from trilateration import Trilaterate3DAlternate, Multilateration2D
 
 THREE_SUCCESS = [
     UnityCoordinate(1,2,2),

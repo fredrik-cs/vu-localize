@@ -59,7 +59,6 @@ def process_dump(scan_dump, ssid):
     # 0 = BSS, 1 = frequency, 2 = signal, 3 = last seen, 4 = SSID
     pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
     readable_scan = re.findall(pattern, str(scan_dump))
-    # print(readable_scan)
     ssid_specific = filter(lambda scan_params: str(scan_params[4]).endswith(ssid), readable_scan)
     chronological_scan = sorted(ssid_specific, key=lambda scan_params: int(scan_params[3]))
     
@@ -79,8 +78,6 @@ def log_debug_scan(logger: Logger, results_per_iter):
         signals_per_dump, good_amounts = ([],[])
         mac_signal_dict, freq_signal_dict = ({}, {})
         MIN_SIGNAL_STRENGTH = -67
-        # OLDEST_IN_MS = 6000
-        # fresh_results = list(filter(lambda scan_params: int(scan_params[3]) <= OLDEST_IN_MS, chronological_scan))
 
         for results in results_per_iter:
 

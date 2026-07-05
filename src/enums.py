@@ -24,6 +24,10 @@ class Data:
 class Log:
     UNKNOWN_APS = 'log/unknowns.log'
     FREQUENCIES = 'log/frequencies.log'
+
+class Maps:
+    FLOOR5 = 'map floor five.jpg'
+    FLOOR6 = 'map floor six.jpg'
     
 class Colors:
     RESET = '\033[0m'
@@ -37,8 +41,10 @@ class Colors:
     UNDERLINE = '\033[4m'
 
 class Experiment:
+    PLOT_PATHS = 3
     PLOT_ERRORS = 2
     SCAN_FLOOR = 1
     DRAFT_ZERO = 0
     DRAFT_ONE = -1
     DRAFT_TWO = -2
+    DRAFT_THREE = -3

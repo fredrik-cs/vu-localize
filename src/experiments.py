@@ -1,11 +1,10 @@
-import ast
-import json
 from queue import Queue
 from threading import Thread
 import time
 from datetime import datetime
 
-from pathing import FindPosition, distance
+from src.plotresult import PlotHistogram, PlotPredictionError, PlotTable
+from src.pathing import PATH_FLOOR_5, PATH_FLOOR_6, FindPosition, distance
 from src.iw_interpret import Cell
 from src.producer_consumer import Multilateration2D, collect_signals, consumer, single_producer, multi_producer
 from src.loggers import LogBandQualities, new_logger
@@ -15,7 +14,7 @@ from src.scan import FindAPs
 from src.registries import RegisterFrequencies, RegisterUnknowns
 from src.coordinates import GetAPUnityCoordinates, GetCoordinates, GetUnityCoordinates
 from src.enums import Band
-from src.makemap import PlotErrorOnFloor, PlotPointsOnFloor
+from src.makemap import PlotErrorOnFloor, PlotPathOnFloor, PlotPointsOnFloor
      
 def ScanFloor(interface, ssids):
 
@@ -111,7 +110,7 @@ def ThesisDraftTwo():
                     #    (queue_67, -68, 0, 5000),
                        (queue_5k, -100, 4000, 10000)]
     
-    floor = int(input("what floor are we analysing?"))
+    floor = int(input("what floor are we analysing?\n"))
     name = input("log to what file?\n")
     logger_all = new_logger("drafttwo", "all_"+name)
     # logger_80 = new_logger("drafttwo", "80_"+name)
@@ -167,14 +166,14 @@ def ThesisDraftTwo():
 def ThesisDraftThree():
     ## Part 0: Setup
     # Ask for floor and filename
-    floor = int(input("what floor are we analysing?"))
+    floor = int(input("what floor are we analysing?\n"))
     name = input("log to what file?\n")
 
     # Create a logger for collection, a logger for prediction
     collect_logger = new_logger("draftthree", f"{name}-collect")
     predict_logger = new_logger("draftthree", f"{name}-predict")
     
-    collect_thread = Thread(target=collect_signals, args=(collect_logger, lambda: stop_threads))
+    collect_thread = Thread(target=collect_signals, args=(collect_logger, floor, lambda: stop_threads))
     stop_threads = False
 
     # Give timer
@@ -202,51 +201,54 @@ def ThesisDraftThree():
     with open(f"experiments/draftthree/{name}-collect.log") as f:
         lines = f.readlines()
 
-    begin_timestamp = int(lines[0].split()[2])
-    end_timestamp = int(lines[-2].split()[2])
-    duration_in_ns = end_timestamp - begin_timestamp 
-    last_second = begin_timestamp
+    begin_ts = int(lines[0].split()[2])
+    end_ts = int(lines[-2].split()[2])
+    duration_in_ns = end_ts - begin_ts 
+    last_second = begin_ts
     cells_in_second24 = 0
     cells_in_second50 = 0
     predictions_in_second24 = 0
     predictions_in_second50 = 0
 
-    def FindError(timestamp: int, predicted_coord: UnityCoordinate):
-        percentage = (timestamp - begin_timestamp) / duration_in_ns
+    def FindRealLocation(timestamp: int):
+        percentage = (ts - begin_ts) / duration_in_ns
         actual_coord = FindPosition(floor, percentage)
+        return actual_coord
+
+    def FindError(actual_coord: tuple, predicted_coord: UnityCoordinate):
         return distance(actual_coord, (predicted_coord.x, predicted_coord.z))
     
 
     # File signals into their respective buckets (2.4/5G, >-80,>-70>-67)
-    prediction_buckets = {
+    prediction_buckets: dict[str, list[list]] = {
+        "24-ALL-tri": [],
         "24-80-tri": [],
         "24-70-tri": [],
         "24-67-tri": [],
-        "24-ALL-tri": [],
+        "50-ALL-tri": [],
         "50-80-tri": [],
         "50-70-tri": [],
         "50-67-tri": [],
-        "50-ALL-tri": [],
+        "24-ALL-mul": [],
         "24-80-mul": [],
         "24-70-mul": [],
         "24-67-mul": [],
-        "24-ALL-mul": [],
+        "50-ALL-mul": [],
         "50-80-mul": [],
         "50-70-mul": [],
-        "50-67-mul": [],
-        "50-ALL-mul": [],
+        "50-67-mul": []
     }
 
-    for i in range(len(lines)/2):
+    for i in range(int(len(lines)/2)):
         signal_buckets: dict[str, list[Cell]] = {
+        "24-ALL": [],
         "24-80": [],
         "24-70": [],
         "24-67": [],
-        "24-ALL": [],
+        "50-ALL": [],
         "50-80": [],
         "50-70": [],
-        "50-67": [],
-        "50-ALL": [],
+        "50-67": []
         }
 
         def AddToBucket(freq: str, cell: Cell):
@@ -263,10 +265,10 @@ def ThesisDraftThree():
         cells_in_second24 += cell_count24
         cell_count50 = int(timestamp_line.split()[1])
         cells_in_second50 += cell_count50
-        timestamp = int(timestamp_line.split()[2])
+        ts = int(timestamp_line.split()[2])
         signal_info = lines[2*i+1]
         signal_dict = eval(signal_info)
-        cell_list = map(signal_dict)
+        # cell_list = map(signal_dict)
 
         for i, frequency in enumerate(signal_dict["frequencies"]):
             cell = Cell()
@@ -275,9 +277,9 @@ def ThesisDraftThree():
             cell.signal = signal_dict["signals"][i]
             cell.timestamp
             if frequency < 5000:
-                AddToBucket("50", signal_dict["signals"][i], signal_dict["names"][i])
+                AddToBucket("50", cell)
             else:
-                AddToBucket("24", signal_dict["signals"][i], signal_dict["names"][i])
+                AddToBucket("24", cell)
 
         # Whenever a bucket can do trilateration, make the prediction
         for bucket_tag in signal_buckets:
@@ -291,35 +293,37 @@ def ThesisDraftThree():
                 bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
                 bucket_distances = [cell.distance for cell in bucket]
                 predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
-                # Use the timestamp to find the percentage of the way into the path you are, then calculate error
-                error = FindError(timestamp, predicted_coord)
+                # Use the ts to find the percentage of the way into the path you are, then calculate error
+                actual_coord = FindRealLocation(ts)
+                error = FindError(actual_coord, predicted_coord)
 
                 # File the prediction in a dictionary, with error, timestamp, AP names, AP locations and distances.
                 # Whenever a bucket can do multilateration, do so with as many signals as possible
                 # File this prediction similarly
-                def AddToPredictionBucket(prediction: UnityCoordinate, algorithm:str, error: int, bucket: list[Cell]):
+                def AddToPredictionBucket(prediction: UnityCoordinate, reality: tuple, algorithm:str, error: int, bucket: list[Cell]):
                     prediction_tag = bucket_tag+algorithm
                     bucket_names = [cell.name for cell in bucket]
                     bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
-                    bucket_distances = [cell.distance for cell in bucket]
-                    prediction_info = [prediction, error, timestamp, bucket_names, bucket_coords, bucket_distances]
+                    bucket_signals = [cell.signal for cell in bucket]
+                    prediction_info = [prediction, reality, error, ts, bucket_names, bucket_coords, bucket_signals]
                     prediction_buckets[prediction_tag].append(prediction_info)
 
                 if len(bucket) == 3:
-                    AddToPredictionBucket(predicted_coord, "-tri", error, bucket)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
                     if bucket_tag[0] == "2":
                         predictions_in_second24 += 1
                     else:
                         predictions_in_second50 += 1
                 else:
-                    AddToPredictionBucket(predicted_coord, "-mul", error, bucket)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-mul", error, bucket)
                     bucket = bucket[:3]
                     bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
                     bucket_distances = [cell.distance for cell in bucket]
                     predicted_coord = Multilateration2D(bucket_coords, bucket_distances)
-                    # Use the timestamp to find the percentage of the way into the path you are, then calculate error
-                    error = FindError(timestamp, predicted_coord)
-                    AddToPredictionBucket(predicted_coord, "-tri", error, bucket)
+                    # Use the ts to find the percentage of the way into the path you are, then calculate error
+                    actual_coord = FindRealLocation(ts)
+                    error = FindError(actual_coord, predicted_coord)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
 
                     if bucket_tag[0] == "2":
                         predictions_in_second24 += 2
@@ -332,27 +336,31 @@ def ThesisDraftThree():
                 tag_mul = bucket_tag+"-mul"
                 if prediction_buckets[tag_tri]:
                     last_prediction = prediction_buckets[tag_tri][-1].copy()
-                    prediction = last_prediction[0]
-                    error = FindError(timestamp, prediction)
-                    last_prediction[1] = error
+                    predicted_coord = last_prediction[0]
+                    actual_coord = FindRealLocation(ts)
+                    error = FindError(actual_coord, predicted_coord)
+                    last_prediction[1] = actual_coord
+                    last_prediction[2] = error
                     prediction_buckets[tag_tri].append(last_prediction)
                 
                 if prediction_buckets[tag_mul]:
                     last_prediction = prediction_buckets[tag_mul][-1].copy()
-                    prediction = last_prediction[0]
-                    error = FindError(timestamp, prediction)
-                    last_prediction[1] = error
+                    predicted_coord = last_prediction[0]
+                    actual_coord = FindRealLocation(ts)
+                    error = FindError(actual_coord, predicted_coord)
+                    last_prediction[1] = actual_coord
+                    last_prediction[2] = error
                     prediction_buckets[tag_mul].append(last_prediction)
     
         # Whenever a second passes, for every bucket store the amount of new signals it got and new predictions made
-        if timestamp - last_second >= 1e9:
+        if ts - last_second >= 1e9:
             readable_time = datetime.fromtimestamp(float(last_second) / 1e9)
             formatted_time = readable_time.strftime('%H:%M:%S')
-            predict_logger.log(f"in the second of {formatted_time}:")
-            predict_logger.log(f"\t{cells_in_second24} new cells on 2.4GHz, {cells_in_second50} new cells on 5 GHz")
-            predict_logger.log(f"\t{predictions_in_second24} new predictions on 2.4GHz, {predictions_in_second50} new predictions on 5 GHz")
+            predict_logger.info(f"in the second of {formatted_time}:")
+            predict_logger.info(f"\t{cells_in_second24} new cells on 2.4 GHz, {cells_in_second50} new cells on 5 GHz")
+            predict_logger.info(f"\t{predictions_in_second24} new predictions on 2.4 GHz, {predictions_in_second50} new predictions on 5 GHz")
 
-            last_second = timestamp
+            last_second = ts
             cells_in_second24 = 0
             cells_in_second50 = 0
             predictions_in_second24 = 0
@@ -362,45 +370,60 @@ def ThesisDraftThree():
     # Log each bucket at the end sequentially
     for bucket_tag in prediction_buckets:
         bucket = prediction_buckets[bucket_tag]
-        predict_logger.log(f"{bucket_tag}")
+        predict_logger.info(f"{bucket_tag}")
         for prediction in bucket:
-            predict_logger.log(f"{prediction}")
+            predict_logger.info(f"{prediction}")
 
     ## Part 3: Plot
     # For every bucket, find the average and worst error, average and worst predictions count (and signals count?) per second
+    data: list[list[str]] = []
     for bucket_tag in prediction_buckets:
+        
         bucket = prediction_buckets[bucket_tag]
         total_error = 0
         worst_error = 0
-        for item in bucket:
-            error = item[1]
-            total_error += error
-            worst_error = max(error, worst_error)
-        average_error = total_error / len(bucket)
+
+        if(len(bucket) > 0):
+            for item in bucket:
+                error = item[2]
+                total_error += error
+                worst_error = max(error, worst_error)
+            average_error = round(total_error / len(bucket), 3)
+            worst_error = round(worst_error, 3)
+        else:
+            average_error = float('nan')
+            worst_error = float('nan')
+
+        data.append([f"{average_error:.3f}", f"{worst_error:.3f}"])
+        # data.append(str(average_error))
+        # data.append(str(worst_error))
 
     # Make a table on that
+    PlotTable(data, name)
     # For every bucket, make a scatterplot connecting the real locations to the predicted locations with a line
+    PlotPredictionError()
     # Might need to skip some timestamps for that one
     # Histograms of errors in x, z, and distance?
-
-
-
+    PlotHistogram()
 
 def PlotErrors():
     name = input("Which file are we plotting?\n")
     floor = input("What floor are is this data from?\n")
-    # if not name.endswith("error"):
-    #     name += "-error"
     lines = []
     with open(f"experiments/draftone/{name}.log") as f:
         lines = f.readlines()
     # print(lines)
     for line in lines:
-        print(line)
+        # print(line)
         if line[0] != '{':
             continue
         log_dict = eval(line)
-        # print(log_dict)
         if "prediction" not in log_dict:
             log_dict["prediction"] = []
         PlotErrorOnFloor(log_dict["coordinates"], log_dict["distances"], floor, log_dict["prediction"])
+
+def PlotFloorPaths():
+    path5 = PATH_FLOOR_5
+    path6 = PATH_FLOOR_6
+    PlotPathOnFloor(path5, 5)
+    PlotPathOnFloor(path6, 6)

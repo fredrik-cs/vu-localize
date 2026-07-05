@@ -3,9 +3,6 @@ import re
 import pandas as pd
 from itertools import islice
 
-# from src.iw_interpret import Cell
-# from src.enums import Data
-
 class Data:
     AP_MAC = 'data/NU-AP-MAC.xlsx'
     BUILDING_COORDS = 'data/samplesF5-multilayer.csv'
@@ -40,10 +37,6 @@ class UnityCoordinate:
     def __repr__(self):
         return self.__str__()
     
-    # def __format__(self, format_str):
-    #     print(str(self))
-    #     return format(str(self), format_str)
-
 class Coordinate:
     def __init__(self, floor, x, y):
         self.floor = floor
@@ -60,11 +53,9 @@ class Coordinate:
         return self.__str__()
  
 def UnityToMeter(x):
-    # TODO: Meassure more precisely. 5 is a rough estimate.
     return float(x) / 1.0 
 
 def MeterToUnity(x):
-    # TODO: Meassure more precisely. 5 is a rough estimate.
     return float(x) * 1.0  
             
 def GetCoordinates(selected_floor) -> list[Coordinate]:
@@ -134,9 +125,6 @@ def GetAPUnityCoordinates(cells: list):
             y = float(coord_line.group(3))
             z = float(coord_line.group(4))
             cell.coords = (x, y, z)
-            # coordinates.append(UnityCoordinate(x, y, z))
-
-    # return coordinates
 
 def MakeAPCoordinatesList():
     df = pd.read_csv(Data.BUILDING_COORDS)

@@ -3,7 +3,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 import pandas as pd
 from datetime import datetime
-from src.coordinates import Coordinate, UnityCoordinate
+from src.coordinates import UnityCoordinate
 from src.iw_interpret import Cell
 from src.enums import Data
 
@@ -46,4 +46,3 @@ class SampleTableManager:
         self.df = self.df.fillna(1)
         
         self.df.to_csv(self.filename)
-    

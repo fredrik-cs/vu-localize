@@ -1,11 +1,9 @@
 import re
 import matplotlib.pyplot as plt
-import matplotlib.colors as clr
-from matplotlib.patches import Circle
 import numpy as np
 import os
 
-from src.enums import Data
+from src.enums import Data, Maps
 
 X_SCALE = 24.2
 X_BIAS = 25.0
@@ -21,9 +19,9 @@ def PlotPathOnFloor(path: list[tuple[int, int]], floor):
 
     image = ''
     if int(floor) == 5:
-        image = 'map floor five.jpg'
+        image = Maps.FLOOR5
     else:
-        image = 'map floor six.jpg'
+        image = Maps.FLOOR6
     
     fig, ax = plt.subplots(1)
     image = plt.imread(image)
@@ -40,32 +38,22 @@ def PlotPathOnFloor(path: list[tuple[int, int]], floor):
 
 def PlotErrorOnFloor(coordinates, distances, floor, prediction = []):
     points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[2] * Z_SCALE + Z_BIAS), coordinates))
-    sizes = list(map(lambda x: (x**2 * X_SCALE*2), distances))
     pts = np.array(points)
     print(pts)
 
     image = ''
     if int(floor) == 5:
-        image = 'map floor five.jpg'
+        image = Maps.FLOOR5
     else:
-        image = 'map floor six.jpg'
+        image = Maps.FLOOR6
     
     fig, ax = plt.subplots(1)
     image = plt.imread(image)
     ax.set_aspect('equal')
     ax.imshow(image)
-
-    # for a, b, size in zip(pts[: 0], pts[: 1], distances):
-    #     circle = Circle((a, b), size*X_SCALE*5)
-    #     ax.add_patch(circle)
         
-
-    # plt.scatter(pts[:, 0], pts[:, 1], marker='o', edgecolors='red', s=sizes, facecolors='none')
     plt.scatter(pts[:, 0], pts[:, 1], marker='x', c='green', s=10)
     circles = [plt.Circle((x, y), r*X_SCALE, edgecolor='red', facecolor='none') for (x,y,r) in zip(pts[:, 0], pts[:, 1], distances)]
-    # radiuses = [[ptx, pty, ptx - d, pty, 'orange'] for (ptx, pty, d) in (pts[:, 0], pts[:, 1], distances)]
-    # radiuses = [x for xs in radiuses for x in xs]
-    # print(radiuses)
     # x1 = [pts[1, 0], pts[1, 0] - (distances[1] * X_SCALE)]
     # y1 = [pts[1, 1], pts[1, 1]]
     # print(x1, y1)
@@ -87,24 +75,13 @@ def PlotPointsOnFloor(points, floor):
     points = list(map(lambda x : (x[0] * X_SCALE + X_BIAS, x[1] * Z_SCALE + Z_BIAS), points))
 
     ml_pts = np.array(points)
-    # tl_pts = np.array(points["tl"])
-    # mb_pts = np.array(points["mb"])
-    # mbf_pts = np.array(points["mbf"]) 
     ml_steps = np.linspace(0,1,len(points))
-    # tl_steps = np.linspace(0,1,len(points["tl"]))
-    # mb_steps = np.linspace(0,1,len(points["mb"]))
-    # mbf_steps = np.linspace(0,1,len(points["mbf"]))
 
     image = ''
     if floor == 5:
-        image = 'map floor five.jpg'
+        image = Maps.FLOOR5
     else:
-        image = 'map floor six.jpg'
-
-    # f = plt.figure()    
-    # f, axes = plt.subplots(nrows = 2, ncols = 2)
-
-    
+        image = Maps.FLOOR6
 
     cwd = os.getcwd()
     print(cwd)
@@ -112,18 +89,6 @@ def PlotPointsOnFloor(points, floor):
     image = plt.imread(image)
     plt.imshow(image)
     plt.scatter(ml_pts[:, 0], ml_pts[:, 1], marker='x', c=ml_steps, cmap = 'hsv', s=10)
-    # if ml_pts.any(): 
-    #     axes[0][0].scatter(ml_pts[:, 0], ml_pts[:, 1], marker='o', c=ml_steps, cmap="hsv", s=5)
-    #     axes[0][0].set_xlabel('ML: Circles', labelpad = 5)
-    # if tl_pts.any(): 
-    #     axes[0][1].scatter(tl_pts[:, 0], tl_pts[:, 1], marker='x', c=tl_steps, cmap="hsv", s=5)
-    #     axes[0][1].set_xlabel('TL: Crosses', labelpad = 5)
-    # if mb_pts.any(): 
-    #     axes[1][0].scatter(mb_pts[:, 0], mb_pts[:, 1], marker='*', c=mb_steps, cmap="hsv", s=5)
-    #     axes[1][0].set_xlabel('MB: Stars', labelpad = 5)
-    # if mbf_pts.any(): 
-    #     axes[1][1].scatter(mbf_pts[:, 0], mbf_pts[:, 1], marker='s', c=mbf_steps, cmap="hsv", s=5)
-    #     axes[1][1].set_xlabel('MBF: Squares', labelpad = 5)
     plt.show()
     
 
@@ -174,12 +139,7 @@ def APCoordinates():
 
 
 if __name__ == "__main__":
-    import matplotlib as mpimg
-
-    # cwd = os.getcwd()
-    # print(cwd)
-
-    image = plt.imread("map floor five.jpg")
+    image = plt.imread(Maps.FLOOR5)
     ap_pts = np.array(APCoordinates())
     unitycoords = GetUnityCoordinates(5)
     un_pts = np.array(unitycoords)

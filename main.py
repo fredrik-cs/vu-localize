@@ -1,28 +1,32 @@
 import argparse
 
 from src.enums import SSIDs, WifiInterface, Experiment
-from src.experiments import PlotErrors, ScanFloor, ThesisDraftZero, ThesisDraftOne, ThesisDraftTwo
-  
+from src.experiments import PlotErrors, PlotFloorPaths, ScanFloor, ThesisDraftThree, ThesisDraftZero, ThesisDraftOne, ThesisDraftTwo
         
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-d', action='store_true')
+    parser.add_argument('-o', action='store_true')
     parser.add_argument('-p', action='store_true')
+    parser.add_argument('-e', action='store_true')
     args = parser.parse_args()
     
-    selected_arguments = Experiment.DRAFT_ONE
-    if args.p:
-        selected_arguments = Experiment.PLOT_ERRORS
-        # print("Plot!")
-    elif args.d:
-        # print("Draft!")
-        selected_arguments = Experiment.DRAFT_ONE
+    selected_arguments = Experiment.DRAFT_THREE
 
-    interface = WifiInterface.WLP1S0
+    if args.o:
+        selected_arguments = Experiment.DRAFT_ONE
+    elif args.p:
+        selected_arguments = Experiment.PLOT_PATHS
+    elif args.e:
+        selected_arguments = Experiment.PLOT_ERRORS
+
+    interface = WifiInterface.WLP2S0
     ssid = [SSIDs.VU_CAMPUSNET, SSIDs.EDUROAM, SSIDs.IOTROAM]
     
     match selected_arguments:
+        case Experiment.PLOT_PATHS:
+            PlotFloorPaths()
         case Experiment.PLOT_ERRORS:
             PlotErrors()
         case Experiment.SCAN_FLOOR:
@@ -33,4 +37,5 @@ if __name__ == "__main__":
             ThesisDraftOne()
         case Experiment.DRAFT_TWO:
             ThesisDraftTwo()
-
+        case Experiment.DRAFT_THREE:
+            ThesisDraftThree()

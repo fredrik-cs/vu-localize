@@ -6,7 +6,8 @@ from src.coordinates import MeterToUnity, UnityCoordinate, UnityToMeter
 def AnalyticalDistanceToAP(power, base_power = -50.0, environmental_factor = 2.13):
     ### power = measured signal right now
     ### base_power = signal strength at 1 meter. 
-    #   -47 is measured from one AP, but different APs could have different base powers.
+    # TODO: Find base_power and environmental_factor for 5 GHz
+    #   -50 is measured from one AP, but different APs could have different base powers.
     #   could look into effect of specifying base power for known APs
     ### environmental factor = a factor between 2 and 4
     ### 2 means lower power = big increase in distance, 4 means lower power = smaller increase in distance
@@ -131,9 +132,8 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
     # so x = x, y = ycos(theta) - zsin(theta) = 0 and z = ysin(theta) + zcos(theta)
     try: 
         x_rot = round(math.atan(cBy/cBz), 2)
-        # print(f"x_rot == {x_rot}")
+
         #cBy == 0?
-        # print(f"{cBy*math.cos(x_rot) - cBz*math.sin(x_rot)} == 0?")
         cBz = round(cBy*math.sin(x_rot) + cBz*math.cos(x_rot), 2)
         cCy_temp = round(cCy, 2)
         cCy = round(cCy_temp*math.cos(x_rot) - cCz*math.sin(x_rot), 2)
@@ -142,9 +142,8 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
         # Rotate B around Y axis till Z=0, -xsin(theta) + zcos(theta)=0, theta=atan(x/z)
 
         y_rot = round(math.atan(cBz/cBx) , 2)
-        # print(f"y_rot == {y_rot}")
+
         # Cbz == 0?
-        # print(f"{cBz*math.cos(y_rot) - cBx*math.sin(y_rot)} == 0?")
         cBx = round(cBx*math.cos(y_rot) + cBz*math.sin(y_rot), 2)
         cCx_temp = round(cCx, 2)
         cCx = round(cCx_temp*math.cos(y_rot) + cCz*math.sin(y_rot), 2)
@@ -225,7 +224,7 @@ def Trilaterate3DAlternate(cA, cB, cC, dA, dB, dC):
 # The estimated coordinate is the product of the inverse of A times B
 # This doesn't take height difference in APs into account.
 # since the coords are encoded with y as the height, z takes the role of "y"
-def Multilateration2D (coords: list, distances: list):
+def Multilateration2D (coords: list[UnityCoordinate], distances: list):
     if len(coords) < 3 or len(distances) < 3:
         print("Too few data points for multilateration")
         return UnityCoordinate(-777, -777, -777)

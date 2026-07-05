@@ -3,8 +3,7 @@ import re
 import subprocess
 import sys
 import time
-# from src.coordinates import UnityCoordinate
-from src.enums import WifiInterface, SSIDs
+from src.enums import WifiInterface
 
 VU_IF = WifiInterface.WLP2S0
 
@@ -37,8 +36,6 @@ class Cell:
             try:
                 if freqs:
                     freqs_strs = list(map(str, freqs))
-                    # print(interface)
-                    # print(freqs)
                     iwlist_scan = subprocess.check_output(
                         ['sudo', '/sbin/iw', 'dev', interface, 'scan', 'freq', *freqs_strs, 'flush'],
                                                             stderr=subprocess.STDOUT)
@@ -64,10 +61,7 @@ class Cell:
     
     @classmethod
     def trigger_scan(cls, freqs = []):
-        # subprocess.run(
-        #     ['sudo', '/sbin/iw', 'dev', WifiInterface.WLP1S0, 'scan', 'trigger', 'flush']
-        # )
-        # print("Triggering scan")
+    
         if freqs:
             frequencies = list(map(lambda x: str(x), freqs))
             subprocess.run(
@@ -80,11 +74,9 @@ class Cell:
                 ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'trigger', 'flush'],
                 stdout=subprocess.PIPE, stderr= subprocess.DEVNULL
                 )
-        # print("Finished triggering")
 
     @classmethod
     def _dump(cls):
-        # print("Dumping scan")
         iwlist_scan = subprocess.run(
                 ['sudo', '/sbin/iw', 'dev', VU_IF, 'scan', 'dump'],
                         capture_output=True).stdout
@@ -96,14 +88,11 @@ class Cell:
             iwlist_scan = Cell._dump()
             
             pattern = r"(?:BSS )((?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?freq: )(\d*)(?:.*?signal: )(-\d+)(?:.*?last seen: )(\d+)(?:.*?SSID: )([^\\]+)"
-            # pattern = r"(BSS (?:[\da-z]{2}:){5}[\da-z]{2})(?:.*?signal: )(-\d+)(?:\.\d* dBm\\n\\tlast seen: )(\d+ ms ago)(?:.*?)(SSID: [^\\]+)"
-            # print("no?")
             readable_scans = re.findall(pattern, str(iwlist_scan))
-            # print("yes!")
+        
 
             # campnet_scan = filter(lambda x: str(x[4]).endswith(SSIDs.VU_CAMPUSNET), readable_scans)
             sorted_scan = sorted(readable_scans, key=lambda regex_group: int(regex_group[3]))
-            # print(sorted_scan)
 
             cells: list[Cell] = []
             for scan in sorted_scan:
@@ -114,16 +103,6 @@ class Cell:
                 cell.age = int(scan[3])
                 cell.ssid = scan[4]
                 cells.append(cell)
-
-
-            # OLDEST_IN_MS = 1000
-            # shrunk_scan = list(filter(lambda x: int(x[2].split()[0]) <= OLDEST_IN_MS, shrunk_scan))
-            # print(shrunk_scan)
-            # strengths = map(lambda x: int(x[1].split(".")[0]), campnet_scan)
-            
-            # for result in results:
-            #     print(result)
-            # print("func2 succeeded!")
             return (cells)
         except:
             print("dump failed!")
@@ -164,15 +143,3 @@ def extract(text):
     return cell
     
     
-if __name__ == "__main__":
-    interface = "wlp1s0"
-    
-    # cells = Cell.all(interface)
-    cells = Cell.all(interface, [2412, 2437, 5200])
-    
-    for cell in cells:
-        print("-------------------")
-        print(cell.address)
-        print(cell.frequency)
-        print(cell.ssid)
-        print(cell.signal)
