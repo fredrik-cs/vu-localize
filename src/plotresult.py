@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
+from matplotlib import collections as mc
 from blume.table import table
 import numpy as np
+from src.enums import Maps
+from src.coordinates import UnityCoordinate
 
 X_SCALE = 24.2
 X_BIAS = 25.0
@@ -12,8 +15,8 @@ def PlotTable(data, name):
     fig_background_color = 'white'
     fig_border = 'white'
 
-    columns = ('Average Error', 'Worst Error')
-    column_widths = [0.2,0.2]
+    columns = ('Average Error', 'Worst Error', "Signal Rate", "Prediction Rate")
+    column_widths = [0.2,0.2,0.15,0.15]
     rows = (
         '2.4 GHz all trilateration', '2.4 GHz >-80 trilateration', '2.4 GHz >-70 trilateration', '2.4 GHz >-67 trilateration', 
         '5 GHz all trilateration', '5 GHz >-80 trilateration', '5 GHz >-70 trilateration', '5 GHz >-67 trilateration', 
@@ -52,17 +55,55 @@ def PlotTable(data, name):
     # plt.show()
     plt.draw()
 
-    plt.savefig(f"{name}-table",
+    plt.savefig(f"experiments/draftthree/tables/table-{name}",
                 bbox_inches='tight',
                 edgecolor=fig.get_edgecolor(),
                 facecolor=fig.get_facecolor(),
                 dpi=150)
+    plt.clf()
 
-def PlotHistogram():
-    return
-    plt.hist()
+def PlotHistogram(name, errors_x, errors_z, errors_d):
+    # return
+    plt.subplot(1,3,1)
+    plt.hist(errors_x)
+    
+    plt.subplot(1,3,2)
+    plt.hist(errors_z)
+    
+    plt.subplot(1,3,3)
+    plt.hist(errors_d)
 
-def PlotPredictionError():
-    return
-    plt.scatter()
-    plt.plot()
+    plt.savefig(f"experiments/draftthree/histograms/hist-{name}",
+                dpi=150)
+    plt.clf()
+    
+
+def PlotPredictionError(name, floor, predictions:list[UnityCoordinate], realities: tuple):
+    # return
+    points = list(map(lambda p : (p.x * X_SCALE + X_BIAS, p.z * Z_SCALE + Z_BIAS), predictions))
+    counter_points = list(map(lambda p : (p[0] * X_SCALE + X_BIAS, p[1] * Z_SCALE + Z_BIAS), realities))
+    pts = np.array(points)
+    cts = np.array(counter_points)
+
+    image = ''
+    if int(floor) == 5:
+        image = Maps.FLOOR5
+    else:
+        image = Maps.FLOOR6
+    
+    fig, ax = plt.subplots(1)
+    image = plt.imread(image)
+    ax.set_aspect('equal')
+    ax.imshow(image)
+        
+    plt.scatter(pts[:, 0], pts[:, 1], marker='x', c='green', s=10)
+    plt.scatter(cts[:, 0], cts[:, 1], marker='o', c='red', s=10)
+
+    lines = list(zip(points, counter_points))
+
+    errors = mc.LineCollection(lines, colors='blue', linewidths=2)
+    ax.add_collection(errors)
+    
+    plt.savefig(f"experiments/draftthree/scatterplots/scatter-{name}",
+                dpi=150)
+    plt.clf()

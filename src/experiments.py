@@ -205,10 +205,70 @@ def ThesisDraftThree():
     end_ts = int(lines[-2].split()[2])
     duration_in_ns = end_ts - begin_ts 
     last_second = begin_ts
-    cells_in_second24 = 0
-    cells_in_second50 = 0
-    predictions_in_second24 = 0
-    predictions_in_second50 = 0
+    seconds_elapsed = 0
+
+    cells_in_second24 = {
+        "24-ALL": 0,
+        "24-80": 0,
+        "24-70": 0,
+        "24-67": 0,
+    }
+    cells_in_second50 = {
+        "50-ALL": 0,
+        "50-80": 0,
+        "50-70": 0,
+        "50-67": 0,
+    }
+    predictions_in_second24 = {
+        "24-ALL-tri": 0,
+        "24-80-tri": 0,
+        "24-70-tri": 0,
+        "24-67-tri": 0,
+        "24-ALL-mul": 0,
+        "24-80-mul": 0,
+        "24-70-mul": 0,
+        "24-67-mul": 0,
+    }
+    predictions_in_second50 = {
+        "50-ALL-tri": 0,
+        "50-80-tri": 0,
+        "50-70-tri": 0,
+        "50-67-tri": 0,
+        "50-ALL-mul": 0,
+        "50-80-mul": 0,
+        "50-70-mul": 0,
+        "50-67-mul": 0,
+    }
+    cells_per_second24 = {
+        "24-ALL": [],
+        "24-80": [],
+        "24-70": [],
+        "24-67": [],
+    }
+    cells_per_second50 = {
+        "50-ALL": [],
+        "50-80": [],
+        "50-70": [],
+        "50-67": [],
+    }
+    predictions_per_second = {
+        "24-ALL-tri": [],
+        "24-80-tri": [],
+        "24-70-tri": [],
+        "24-67-tri": [],
+        "24-ALL-mul": [],
+        "24-80-mul": [],
+        "24-70-mul": [],
+        "24-67-mul": [],
+        "50-ALL-tri": [],
+        "50-80-tri": [],
+        "50-70-tri": [],
+        "50-67-tri": [],
+        "50-ALL-mul": [],
+        "50-80-mul": [],
+        "50-70-mul": [],
+        "50-67-mul": [],
+    }
 
     def FindRealLocation(timestamp: int):
         percentage = (ts - begin_ts) / duration_in_ns
@@ -261,10 +321,10 @@ def ThesisDraftThree():
             signal_buckets[f"{freq}-ALL"].append(cell)
 
         timestamp_line = lines[2*i]
-        cell_count24 = int(timestamp_line.split()[0])
-        cells_in_second24 += cell_count24
-        cell_count50 = int(timestamp_line.split()[1])
-        cells_in_second50 += cell_count50
+        # cell_count24 = int(timestamp_line.split()[0])
+        # cells_in_second24 += cell_count24
+        # cell_count50 = int(timestamp_line.split()[1])
+        # cells_in_second50 += cell_count50
         ts = int(timestamp_line.split()[2])
         signal_info = lines[2*i+1]
         signal_dict = eval(signal_info)
@@ -310,10 +370,13 @@ def ThesisDraftThree():
 
                 if len(bucket) == 3:
                     AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
-                    if bucket_tag[0] == "2":
-                        predictions_in_second24 += 1
+                    if bucket_tag[:2] == "24":
+                        # predictions_in_second24 += 1
+                        predictions_in_second24[bucket_tag+"-tri"] += 1
                     else:
-                        predictions_in_second50 += 1
+                        # predictions_in_second50 += 1
+
+                        predictions_in_second50[bucket_tag+"-tri"] += 1
                 else:
                     AddToPredictionBucket(predicted_coord, actual_coord, "-mul", error, bucket)
                     bucket = bucket[:3]
@@ -325,10 +388,14 @@ def ThesisDraftThree():
                     error = FindError(actual_coord, predicted_coord)
                     AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
 
-                    if bucket_tag[0] == "2":
-                        predictions_in_second24 += 2
+                    if bucket_tag[:2] == "24":
+                        predictions_in_second24[bucket_tag+"-tri"] += 1
+                        predictions_in_second24[bucket_tag+"-mul"] += 1
+                        # predictions_in_second24 += 2
                     else:
-                        predictions_in_second50 += 2
+                        predictions_in_second50[bucket_tag+"-tri"] += 1
+                        predictions_in_second50[bucket_tag+"-mul"] += 1
+                        # predictions_in_second50 += 2
 
             # If a bucket cannot do either, take the previous prediction(s!) and calculate the new error
             else:
@@ -357,14 +424,43 @@ def ThesisDraftThree():
             readable_time = datetime.fromtimestamp(float(last_second) / 1e9)
             formatted_time = readable_time.strftime('%H:%M:%S')
             predict_logger.info(f"in the second of {formatted_time}:")
-            predict_logger.info(f"\t{cells_in_second24} new cells on 2.4 GHz, {cells_in_second50} new cells on 5 GHz")
-            predict_logger.info(f"\t{predictions_in_second24} new predictions on 2.4 GHz, {predictions_in_second50} new predictions on 5 GHz")
+            seconds_elapsed += 1
+            
+            # predict_logger.info(f"\t{cells_in_second24} new cells on 2.4 GHz, {cells_in_second50} new cells on 5 GHz")
+            # predict_logger.info(f"\t{predictions_in_second24} new predictions on 2.4 GHz, {predictions_in_second50} new predictions on 5 GHz")
 
             last_second = ts
-            cells_in_second24 = 0
-            cells_in_second50 = 0
-            predictions_in_second24 = 0
-            predictions_in_second50 = 0
+            # TODO: Actual correct way to count cells. When do news cells happen?
+            # TODO: Store the counts, including zeroes
+            for bucket_tag in cells_in_second24:
+                new_count = len(signal_buckets[bucket_tag]) - cells_in_second24[bucket_tag]
+                if new_count == 0: continue
+                predict_logger.info(f"\t{new_count} new cells on {bucket_tag}")
+                cells_in_second24[bucket_tag] = len(signal_buckets[bucket_tag])
+
+            for bucket_tag in cells_in_second50:
+                new_count = len(signal_buckets[bucket_tag]) - cells_in_second50[bucket_tag]
+                if new_count == 0: continue
+                predict_logger.info(f"\t{new_count} new cells on {bucket_tag}")
+                cells_in_second50[bucket_tag] = len(signal_buckets[bucket_tag])
+            # cells_in_second24 = 0
+            # cells_in_second50 = 0
+            
+            for bucket_tag in predictions_in_second24:
+                new_count = predictions_in_second24[bucket_tag]
+                predictions_per_second[bucket_tag].append(new_count)
+                if new_count == 0: continue
+                predict_logger.info(f"\t{new_count} new predictions on {bucket_tag}")
+                predictions_in_second24[bucket_tag] = 0
+
+            for bucket_tag in predictions_in_second50:
+                new_count = predictions_in_second50[bucket_tag]
+                predictions_per_second[bucket_tag].append(new_count)
+                if new_count == 0: continue
+                predict_logger.info(f"\t{new_count} new predictions on {bucket_tag}")
+                predictions_in_second50[bucket_tag] = 0
+            # predictions_in_second24 = 0
+            # predictions_in_second50 = 0
 
 
     # Log each bucket at the end sequentially
@@ -376,35 +472,58 @@ def ThesisDraftThree():
 
     ## Part 3: Plot
     # For every bucket, find the average and worst error, average and worst predictions count (and signals count?) per second
-    data: list[list[str]] = []
+    table_data: list[list[str]] = []
+
     for bucket_tag in prediction_buckets:
+
+        # For every bucket, make a scatterplot connecting the real locations to the predicted locations with a line
+        predictions: list[UnityCoordinate] = []
+        realities: list[tuple] = []
+        # Might need to skip some timestamps for that one
+        # Histograms of errors in x, z, and distance?
+        errors_x: list[float] = []
+        errors_z: list[float] = []
+        errors_d: list[float] = []
         
-        bucket = prediction_buckets[bucket_tag]
+        prediction_bucket = prediction_buckets[bucket_tag]
+        seconds = predictions_per_second[bucket_tag]
+
         total_error = 0
         worst_error = 0
+        prediction_count = 0
 
-        if(len(bucket) > 0):
-            for item in bucket:
+        if(len(prediction_bucket) > 0):
+
+            for item in prediction_bucket:
                 error = item[2]
+                errors_d.append(error)
+
                 total_error += error
                 worst_error = max(error, worst_error)
-            average_error = round(total_error / len(bucket), 3)
+
+                predictions.append(item[0])
+                realities.append(item[1])
+
+                errors_x.append(item[0].x - item[1][0])
+                errors_z.append(item[0].z - item[1][1])
+
+
+            average_error = round(total_error / len(prediction_bucket), 3)
             worst_error = round(worst_error, 3)
         else:
             average_error = float('nan')
             worst_error = float('nan')
+        
+        for count in seconds:
+            prediction_count += count
 
-        data.append([f"{average_error:.3f}", f"{worst_error:.3f}"])
-        # data.append(str(average_error))
-        # data.append(str(worst_error))
+        table_data.append([f"{average_error:.3f}", f"{worst_error:.3f}", "nan", f"{prediction_count/seconds_elapsed}"])
+        if len(predictions) > 0:
+            PlotPredictionError(f"{name}-{bucket_tag}", floor, predictions, realities)
+        PlotHistogram(f"{name}-{bucket_tag}", errors_x, errors_z, errors_d)
 
     # Make a table on that
-    PlotTable(data, name)
-    # For every bucket, make a scatterplot connecting the real locations to the predicted locations with a line
-    PlotPredictionError()
-    # Might need to skip some timestamps for that one
-    # Histograms of errors in x, z, and distance?
-    PlotHistogram()
+    PlotTable(table_data, name)
 
 def PlotErrors():
     name = input("Which file are we plotting?\n")
