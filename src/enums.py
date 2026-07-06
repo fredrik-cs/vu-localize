@@ -41,6 +41,7 @@ class Colors:
     UNDERLINE = '\033[4m'
 
 class Experiment:
+    FIND_NEW = 4
     PLOT_PATHS = 3
     PLOT_ERRORS = 2
     SCAN_FLOOR = 1

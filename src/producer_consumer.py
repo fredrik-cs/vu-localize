@@ -190,9 +190,6 @@ def process_message(message, results, logger:Logger, error_logger:Logger, floor)
         log_cell_list("t3", t3_predicted_coord, floor_three)
             
 def collect_signals(logger: Logger, floor: int, stopped):
-    level = logging.INFO
-    logging.basicConfig(level=level, format="%(message)s")
-
     young_unique_cells: dict[tuple, Cell] = {}
     unique_name_frequency_pairs = set()
 
@@ -201,11 +198,26 @@ def collect_signals(logger: Logger, floor: int, stopped):
     unique_cell_count24 = 0
     unique_cell_count50 = 0
 
+    forbidden_names = ["NU-AP05385", 
+    "NU-AP05384", 
+    "NU-AP05383", 
+    "NU-AP05382", 
+    "NU-AP05381", 
+    "NU-AP05380", 
+    "NU-AP05379", 
+    "NU-AP05378", 
+    "NU-AP05377", 
+    "NU-AP05376", 
+    "NU-AP05375", 
+    "NU-AP05374", 
+    "NU-AP05373", 
+    "NU-AP05372"] 
+
     while not stopped():
         Cell.trigger_scan([])
         cell_dump = Cell.dump_scan()
         timestamp = time.time_ns()
-        named_cells = filter(lambda cell: cell.name != "", FindNames(cell_dump))
+        named_cells = filter(lambda cell: cell.name != "" and (cell.name not in forbidden_names), FindNames(cell_dump))
         floor_cells = filter(lambda cell: cell.name[:7] == f"NU-AP0{floor}", named_cells)
         pairs_altered = set()
 
@@ -240,10 +252,10 @@ def collect_signals(logger: Logger, floor: int, stopped):
 
             for pair in young_unique_cells:
                 curr_cell = young_unique_cells[pair]
-                print(curr_cell)
+                # print(curr_cell)
 
                 if (timestamp - curr_cell.timestamp) > (6 * 1e9):
-                    print(f"removed for {timestamp-curr_cell.timestamp} difference")
+                    print(f"discarded readings from {curr_cell.name} for old age of {((timestamp-curr_cell.timestamp) / 1e9):.3f} seconds")
                     removable_pairs.append(pair)
                     continue
 

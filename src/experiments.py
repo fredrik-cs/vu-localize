@@ -1,4 +1,6 @@
+import logging
 from queue import Queue
+import sys
 from threading import Thread
 import time
 from datetime import datetime
@@ -172,6 +174,18 @@ def ThesisDraftThree():
     # Create a logger for collection, a logger for prediction
     collect_logger = new_logger("draftthree", f"{name}-collect")
     predict_logger = new_logger("draftthree", f"{name}-predict")
+
+    level = logging.INFO
+    logging.basicConfig(level=level, format="%(message)s")
+
+    collect_logger.propagate = False
+    predict_logger.propagate = False
+    # mute_handler = logging.StreamHandler(stream=sys.stderr)
+    # mute_handler.setLevel(logging.INFO)
+    # mute_formatter = logging.Formatter('')
+    # mute_handler.setFormatter(mute_formatter)
+    # collect_logger.addHandler(mute_handler)
+    # predict_logger.addHandler(mute_handler)
     
     collect_thread = Thread(target=collect_signals, args=(collect_logger, floor, lambda: stop_threads))
     stop_threads = False
@@ -190,9 +204,10 @@ def ThesisDraftThree():
     # Keep scanning until enter is pressed
     collect_thread.start()
     time.sleep(5)
-    input("Press enter to finish course")
+    input("Press enter to finish course\n")
     
     stop_threads = True
+    print("Finished scanning! Starting simulating predictions")
 
 
     ## Part 2: Simulation
@@ -472,6 +487,7 @@ def ThesisDraftThree():
 
     ## Part 3: Plot
     # For every bucket, find the average and worst error, average and worst predictions count (and signals count?) per second
+    print("Finished simulating! Plotting results.")
     table_data: list[list[str]] = []
 
     for bucket_tag in prediction_buckets:
@@ -517,10 +533,10 @@ def ThesisDraftThree():
         for count in seconds:
             prediction_count += count
 
-        table_data.append([f"{average_error:.3f}", f"{worst_error:.3f}", "nan", f"{prediction_count/seconds_elapsed}"])
+        table_data.append([f"{average_error:.3f}", f"{worst_error:.3f}", "nan", f"{(prediction_count/seconds_elapsed):.3f}"])
         if len(predictions) > 0:
             PlotPredictionError(f"{name}-{bucket_tag}", floor, predictions, realities)
-        PlotHistogram(f"{name}-{bucket_tag}", errors_x, errors_z, errors_d)
+            PlotHistogram(f"{name}-{bucket_tag}", errors_x, errors_z, errors_d)
 
     # Make a table on that
     PlotTable(table_data, name)
@@ -546,3 +562,63 @@ def PlotFloorPaths():
     path6 = PATH_FLOOR_6
     PlotPathOnFloor(path5, 5)
     PlotPathOnFloor(path6, 6)
+
+def FindNewAPs():
+
+    macs = ["48:00:b3:5e:2c:c0",
+    "48:00:b3:5e:22:e0",
+    "10:e3:76:47:67:c0",
+    "10:e3:76:47:4a:e0",
+    "10:e3:76:47:44:40",
+    "10:e3:76:47:44:a0",
+    "10:e3:76:47:4d:00",
+    "48:00:b3:5a:c6:a0",
+    "48:00:b3:5e:44:80",
+    "48:00:b3:5e:54:40",
+    "48:00:b3:5e:25:00",
+    "48:00:b3:5e:33:40",
+    "48:00:b3:5e:2f:60",
+    "48:00:b3:5f:33:a0"]
+
+    names = ["NU-AP05385", #Maybe further into the cinema?
+    "NU-AP05384", #Found!
+    "NU-AP05383", #Found!
+    "NU-AP05382", #Found!
+    "NU-AP05381", #Found!
+    "NU-AP05380", #Found!
+    "NU-AP05379", #Found!
+    "NU-AP05378", #Found!
+    "NU-AP05377", #Found!
+    "NU-AP05376", #Found!
+    "NU-AP05375", #Found!
+    "NU-AP05374", #Found!
+    "NU-AP05373", #Found!
+    "NU-AP05372"] #Found!
+
+    new_aps = list(zip(macs, names))
+    timer = 0
+    dots = 0
+
+    while True:
+        Cell.trigger_scan()
+        cells = Cell.dump_scan()
+        cell_macs = [cell.address for cell in cells]
+        truncated_cell_macs = [cell.address[:-1] for cell in cells]
+        cell_signals = [cell.signal for cell in cells]
+
+        for ap in new_aps:
+            if ap[0][:-1] in truncated_cell_macs:
+                cell_index = truncated_cell_macs.index(ap[0][:-1])
+                signal = cell_signals[cell_index]
+                name = ap[1]
+                print(f"{name} is near with signal {signal}!")
+        
+        timer += 1
+        if timer >= 20:
+            timer = 0
+            print(f"Searching{'.'*(dots + 3)}")
+            dots = (dots + 1) % 3
+
+        time.sleep(0.05)
+                
+        

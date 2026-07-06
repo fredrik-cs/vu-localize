@@ -24,7 +24,7 @@ def PlotTable(data, name):
         '5 GHz all multilateration', '5 GHz >-80 multilateration', '5 GHz >-70 multilateration', '5 GHz -67 multilateration'
     )
     cell_text = data
-    print(data)
+    # print(data)
     # tab = plt.table(cellText=cell_text,
     #           rowLabels=rows,
     #           colLabels=columns,
@@ -61,6 +61,7 @@ def PlotTable(data, name):
                 facecolor=fig.get_facecolor(),
                 dpi=150)
     plt.clf()
+    print(f"Plotted table at experiments/draftthree/tables/table-{name}")
 
 def PlotHistogram(name, errors_x, errors_z, errors_d):
     # return
@@ -76,6 +77,7 @@ def PlotHistogram(name, errors_x, errors_z, errors_d):
     plt.savefig(f"experiments/draftthree/histograms/hist-{name}",
                 dpi=150)
     plt.clf()
+    print(f"Plotted histogram at experiments/draftthree/histograms/hist-{name}")
     
 
 def PlotPredictionError(name, floor, predictions:list[UnityCoordinate], realities: tuple):
@@ -107,3 +109,4 @@ def PlotPredictionError(name, floor, predictions:list[UnityCoordinate], realitie
     plt.savefig(f"experiments/draftthree/scatterplots/scatter-{name}",
                 dpi=150)
     plt.clf()
+    print(f"Plotted scatterplot at experiments/draftthree/scatterplots/scatter-{name}")

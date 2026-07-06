@@ -31,9 +31,9 @@ def FindPosition(floor, percentage: float):
     
     traveled = full_distance * percentage
     j = 0
-    print(f"percentage: {percentage}")
+    # print(f"percentage: {percentage}")
     while traveled > distances[j] and j < (len(distances) - 1):
-        print(f"traveled: {traveled}")
+        # print(f"traveled: {traveled}")
         traveled -= distances[j]
         j += 1
     percentage_on_line = traveled/distances[j]
