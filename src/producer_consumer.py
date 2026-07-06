@@ -228,18 +228,41 @@ def collect_signals(logger: Logger, floor: int, stopped):
                 unique_name_frequency_pairs.add(pair)
                 cell.timestamp = timestamp - cell.age * 1e6 
                 young_unique_cells[pair] = cell
-                pairs_altered.add(pair)
+                pairs_altered.add((cell.signal, cell.frequency))
             elif timestamp - cell.age * 1e6 > young_unique_cells[(cell.name, cell.frequency)].timestamp:
                 cell.timestamp = timestamp - cell.age * 1e6 
                 young_unique_cells[pair] = cell
-                pairs_altered.add(pair)
+                pairs_altered.add((cell.signal, cell.frequency))
             else:
                 continue
+
+        pairs24 = list(filter(lambda pair: pair[1] < 5000, pairs_altered))
+        pairs24_80 = list(filter(lambda pair: pair[0] >= -80, pairs24))
+        pairs24_70 = list(filter(lambda pair: pair[0] >= -70, pairs24))
+        pairs24_67 = list(filter(lambda pair: pair[0] >= -67, pairs24))
         
-        new_cell_count24 = len(list(filter(lambda pair: pair[1] < 5000, pairs_altered)))
-        unique_cell_count24 += new_cell_count24
-        new_cell_count50 = len(list(filter(lambda pair: pair[1] > 4999, pairs_altered)))
-        unique_cell_count50 += new_cell_count50
+        new_cell_count24 = len(pairs24)
+        # unique_cell_count24 += new_cell_count24
+        new_cell_count24_80 = len(pairs24_80)
+        # unique_cell_count24_80 += new_cell_count24_80
+        new_cell_count24_70 = len(pairs24_70)
+        # unique_cell_count24_70 += new_cell_count24_70
+        new_cell_count24_67 = len(pairs24_67)
+        # unique_cell_count24_67 += new_cell_count24_67
+
+        pairs50 = list(filter(lambda pair: pair[1] >= 5000, pairs_altered))
+        pairs50_80 = list(filter(lambda pair: pair[0] >= -80, pairs50))
+        pairs50_70 = list(filter(lambda pair: pair[0] >= -70, pairs50))
+        pairs50_67 = list(filter(lambda pair: pair[0] >= -67, pairs50))
+
+        new_cell_count50 = len(pairs50)
+        # unique_cell_count50 += new_cell_count50
+        new_cell_count50_80 = len(pairs50_80)
+        # unique_cell_count50_80 += new_cell_count50_80
+        new_cell_count50_70 = len(pairs50_70)
+        # unique_cell_count50_70 += new_cell_count50_70
+        new_cell_count50_67 = len(pairs50_67)
+        # unique_cell_count50_67 += new_cell_count50_67
 
         removable_pairs = []
         if new_cell_count24 > 0 or new_cell_count50 > 0:
@@ -281,7 +304,7 @@ def collect_signals(logger: Logger, floor: int, stopped):
                 "timestamps": timestamps,
                 "frequencies": frequencies
             }
-            logger.info(f"{unique_cell_count24} {unique_cell_count50} {timestamp}")
+            logger.info(f"{new_cell_count24} {new_cell_count24_80} {new_cell_count24_70} {new_cell_count24_67} {new_cell_count50} {new_cell_count50_80} {new_cell_count50_70} {new_cell_count50_67} {timestamp}")
             logger.info(f"{cell_log}")
 
         time.sleep(AS_SLEEP_DURATION)

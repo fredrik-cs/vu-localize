@@ -65,14 +65,20 @@ def PlotTable(data, name):
 
 def PlotHistogram(name, errors_x, errors_z, errors_d):
     # return
-    plt.subplot(1,3,1)
-    plt.hist(errors_x)
+    ax1: plt.Axes
+    ax2: plt.Axes
+    ax3: plt.Axes
+    plt.rc('axes', titlesize=8)
+
+    fig, (ax1, ax2, ax3) = plt.subplots(1,3)
+    ax1.hist(errors_x, bins=40)
+    ax1.set_title("Error distribution X (m)")
     
-    plt.subplot(1,3,2)
-    plt.hist(errors_z)
+    ax2.hist(errors_z, bins=40)
+    ax2.set_title("Error distribution Z (m)")
     
-    plt.subplot(1,3,3)
-    plt.hist(errors_d)
+    ax3.hist(errors_d, bins=40)
+    ax3.set_title("Error distribution (m)")
 
     plt.savefig(f"experiments/draftthree/histograms/hist-{name}",
                 dpi=150)

@@ -216,8 +216,8 @@ def ThesisDraftThree():
     with open(f"experiments/draftthree/{name}-collect.log") as f:
         lines = f.readlines()
 
-    begin_ts = int(lines[0].split()[2])
-    end_ts = int(lines[-2].split()[2])
+    begin_ts = int(lines[0].split()[8])
+    end_ts = int(lines[-2].split()[8])
     duration_in_ns = end_ts - begin_ts 
     last_second = begin_ts
     seconds_elapsed = 0
@@ -254,13 +254,11 @@ def ThesisDraftThree():
         "50-70-mul": 0,
         "50-67-mul": 0,
     }
-    cells_per_second24 = {
+    cells_per_second = {
         "24-ALL": [],
         "24-80": [],
         "24-70": [],
         "24-67": [],
-    }
-    cells_per_second50 = {
         "50-ALL": [],
         "50-80": [],
         "50-70": [],
@@ -286,7 +284,7 @@ def ThesisDraftThree():
     }
 
     def FindRealLocation(timestamp: int):
-        percentage = (ts - begin_ts) / duration_in_ns
+        percentage = (timestamp - begin_ts) / duration_in_ns
         actual_coord = FindPosition(floor, percentage)
         return actual_coord
 
@@ -331,16 +329,30 @@ def ThesisDraftThree():
                 signal_buckets[f"{freq}-67"].append(cell)
             if cell.signal >= -70:
                 signal_buckets[f"{freq}-70"].append(cell)
-            if cell.signal > -80:
+            if cell.signal >= -80:
                 signal_buckets[f"{freq}-80"].append(cell)
             signal_buckets[f"{freq}-ALL"].append(cell)
 
         timestamp_line = lines[2*i]
-        # cell_count24 = int(timestamp_line.split()[0])
-        # cells_in_second24 += cell_count24
+        cell_count24 = int(timestamp_line.split()[0])
+        cells_in_second24["24-ALL"] += cell_count24
+        cell_count24_80 = int(timestamp_line.split()[1])
+        cells_in_second24["24-80"] += cell_count24_80
+        cell_count24_70 = int(timestamp_line.split()[2])
+        cells_in_second24["24-70"] += cell_count24_70
+        cell_count24_67 = int(timestamp_line.split()[3])
+        cells_in_second24["24-67"] += cell_count24_67
+        cell_count50 = int(timestamp_line.split()[4])
+        cells_in_second50["50-ALL"] += cell_count50
+        cell_count50_80 = int(timestamp_line.split()[5])
+        cells_in_second50["50-80"] += cell_count50_80
+        cell_count50_70 = int(timestamp_line.split()[6])
+        cells_in_second50["50-70"] += cell_count50_70
+        cell_count50_67 = int(timestamp_line.split()[7])
+        cells_in_second50["50-67"] += cell_count50_67
         # cell_count50 = int(timestamp_line.split()[1])
         # cells_in_second50 += cell_count50
-        ts = int(timestamp_line.split()[2])
+        ts = int(timestamp_line.split()[8])
         signal_info = lines[2*i+1]
         signal_dict = eval(signal_info)
         # cell_list = map(signal_dict)
@@ -448,16 +460,18 @@ def ThesisDraftThree():
             # TODO: Actual correct way to count cells. When do news cells happen?
             # TODO: Store the counts, including zeroes
             for bucket_tag in cells_in_second24:
-                new_count = len(signal_buckets[bucket_tag]) - cells_in_second24[bucket_tag]
+                new_count = cells_in_second24[bucket_tag]
+                cells_per_second[bucket_tag].append(new_count)
                 if new_count == 0: continue
                 predict_logger.info(f"\t{new_count} new cells on {bucket_tag}")
-                cells_in_second24[bucket_tag] = len(signal_buckets[bucket_tag])
+                cells_in_second24[bucket_tag] = 0
 
             for bucket_tag in cells_in_second50:
-                new_count = len(signal_buckets[bucket_tag]) - cells_in_second50[bucket_tag]
+                new_count = cells_in_second50[bucket_tag]
+                cells_per_second[bucket_tag].append(new_count)
                 if new_count == 0: continue
                 predict_logger.info(f"\t{new_count} new cells on {bucket_tag}")
-                cells_in_second50[bucket_tag] = len(signal_buckets[bucket_tag])
+                cells_in_second50[bucket_tag] = 0
             # cells_in_second24 = 0
             # cells_in_second50 = 0
             
@@ -502,11 +516,13 @@ def ThesisDraftThree():
         errors_d: list[float] = []
         
         prediction_bucket = prediction_buckets[bucket_tag]
-        seconds = predictions_per_second[bucket_tag]
+        prediction_bucket_second = predictions_per_second[bucket_tag]
+        cell_bucket_second = cells_per_second[bucket_tag[:-4]]
 
         total_error = 0
         worst_error = 0
         prediction_count = 0
+        cell_count = 0
 
         if(len(prediction_bucket) > 0):
 
@@ -530,10 +546,13 @@ def ThesisDraftThree():
             average_error = float('nan')
             worst_error = float('nan')
         
-        for count in seconds:
+        for count in prediction_bucket_second:
             prediction_count += count
+        for count in cell_bucket_second:
+            cell_count += count
 
-        table_data.append([f"{average_error:.3f}", f"{worst_error:.3f}", "nan", f"{(prediction_count/seconds_elapsed):.3f}"])
+        
+        table_data.append([f"{average_error:.3f}", f"{worst_error:.3f}", f"{(cell_count/seconds_elapsed):.3f}", f"{(prediction_count/seconds_elapsed):.3f}"])
         if len(predictions) > 0:
             PlotPredictionError(f"{name}-{bucket_tag}", floor, predictions, realities)
             PlotHistogram(f"{name}-{bucket_tag}", errors_x, errors_z, errors_d)
