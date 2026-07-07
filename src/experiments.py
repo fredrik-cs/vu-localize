@@ -387,25 +387,33 @@ def ThesisDraftThree():
                 # File the prediction in a dictionary, with error, timestamp, AP names, AP locations and distances.
                 # Whenever a bucket can do multilateration, do so with as many signals as possible
                 # File this prediction similarly
-                def AddToPredictionBucket(prediction: UnityCoordinate, reality: tuple, algorithm:str, error: int, bucket: list[Cell]):
+                def AddToPredictionBucket(prediction: UnityCoordinate, reality: tuple, algorithm:str, error: int, bucket: list[Cell], timestamp):
                     prediction_tag = bucket_tag+algorithm
                     bucket_names = [cell.name for cell in bucket]
                     bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
                     bucket_signals = [cell.signal for cell in bucket]
-                    prediction_info = [prediction, reality, error, ts, bucket_names, bucket_coords, bucket_signals]
+                    prediction_info = [prediction, reality, error, timestamp, bucket_names, bucket_coords, bucket_signals]
                     prediction_buckets[prediction_tag].append(prediction_info)
 
                 if len(bucket) == 3:
-                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket, ts)
                     if bucket_tag[:2] == "24":
-                        # predictions_in_second24 += 1
                         predictions_in_second24[bucket_tag+"-tri"] += 1
                     else:
-                        # predictions_in_second50 += 1
-
                         predictions_in_second50[bucket_tag+"-tri"] += 1
+
+                    tag_mul = bucket_tag+"-mul"
+                    if prediction_buckets[tag_mul]:
+                        print(f"predicting of last multilateration for bucket {bucket_tag}")
+                        last_prediction = prediction_buckets[tag_mul][-1].copy()
+                        predicted_coord = last_prediction[0]
+                        actual_coord = FindRealLocation(ts)
+                        error = FindError(actual_coord, predicted_coord)
+                        last_prediction[1] = actual_coord
+                        last_prediction[2] = error
+                        prediction_buckets[tag_mul].append(last_prediction)
                 else:
-                    AddToPredictionBucket(predicted_coord, actual_coord, "-mul", error, bucket)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-mul", error, bucket, ts)
                     bucket = bucket[:3]
                     bucket_coords = [UnityCoordinate(*cell.coords) for cell in bucket]
                     bucket_distances = [cell.distance for cell in bucket]
@@ -413,7 +421,7 @@ def ThesisDraftThree():
                     # Use the ts to find the percentage of the way into the path you are, then calculate error
                     actual_coord = FindRealLocation(ts)
                     error = FindError(actual_coord, predicted_coord)
-                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket)
+                    AddToPredictionBucket(predicted_coord, actual_coord, "-tri", error, bucket, ts)
 
                     if bucket_tag[:2] == "24":
                         predictions_in_second24[bucket_tag+"-tri"] += 1
@@ -429,6 +437,7 @@ def ThesisDraftThree():
                 tag_tri = bucket_tag+"-tri"
                 tag_mul = bucket_tag+"-mul"
                 if prediction_buckets[tag_tri]:
+                    print(f"predicting of last trilateration for bucket {bucket_tag}")
                     last_prediction = prediction_buckets[tag_tri][-1].copy()
                     predicted_coord = last_prediction[0]
                     actual_coord = FindRealLocation(ts)
@@ -438,6 +447,7 @@ def ThesisDraftThree():
                     prediction_buckets[tag_tri].append(last_prediction)
                 
                 if prediction_buckets[tag_mul]:
+                    print(f"predicting of last multilateration for bucket {bucket_tag}")
                     last_prediction = prediction_buckets[tag_mul][-1].copy()
                     predicted_coord = last_prediction[0]
                     actual_coord = FindRealLocation(ts)

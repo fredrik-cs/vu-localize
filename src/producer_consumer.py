@@ -306,5 +306,17 @@ def collect_signals(logger: Logger, floor: int, stopped):
             }
             logger.info(f"{new_cell_count24} {new_cell_count24_80} {new_cell_count24_70} {new_cell_count24_67} {new_cell_count50} {new_cell_count50_80} {new_cell_count50_70} {new_cell_count50_67} {timestamp}")
             logger.info(f"{cell_log}")
+        else:
+
+            cell_log = {
+                "names": [],
+                "addresses": [],
+                "ssids": [],
+                "signals": [],
+                "timestamps": [],
+                "frequencies": []
+            }
+            logger.info(f"{new_cell_count24} {new_cell_count24_80} {new_cell_count24_70} {new_cell_count24_67} {new_cell_count50} {new_cell_count50_80} {new_cell_count50_70} {new_cell_count50_67} {timestamp}")
+            logger.info(f"{cell_log}")
 
         time.sleep(AS_SLEEP_DURATION)
